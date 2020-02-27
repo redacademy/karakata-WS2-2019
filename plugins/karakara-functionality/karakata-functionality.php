@@ -1,16 +1,16 @@
 <?php
  /**
  *
- * @package   [SITE NAME] Functionality
- * @author    Your Name <your_email@email.com>
+ * @package   karakata Functionality
+ * @author    Phillip Chadwick <phillipchadwick@hotmail.com>
  * @license   GPL-2.0+
- * @copyright 2015 Your Name or Company
+ * @copyright 2020 Phillip Chadwick
  *
  * @wordpress-plugin
- * Plugin Name: [SITE NAME] Functionality
- * Description: This very important plugin contains all of the core functionality for this website so that it remains theme-independent.
+ * Plugin Name: Karakata Functionality
+ * Description: Adds custom post-types and taxonomies for the karakata wp theme
  * Version:     1.0.0
- * Author:      Your Name
+ * Author:      Phillip Chadwick
  * License:     GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
