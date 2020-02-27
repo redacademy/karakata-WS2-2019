@@ -1,3 +1,3 @@
-# RED Functionality Plugin
+# Karakata Functionality Plugin
 
-A template for a WordPress functionality plugin for RED Academy students.
+Adds custom post-types and taxonomies for the karakata wp theme

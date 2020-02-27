@@ -2,7 +2,7 @@
   "name": "karakata",
   "version": "1.0.0",
   "description": "a website",
-  "author": "yourname",
+  "author": "Phillip Chadwick",
   "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.26.0",
