@@ -1,6 +1,6 @@
 <?php
 /**
- * The about farming of the AVR page.
+ * The about Kitchen of the AVR page.
  *
  * @package RED_Starter_Theme
  */
@@ -9,8 +9,6 @@
 
 <?php get_header(); ?>
 
-
-<h1> FARMING PAGE </h1>
 
 
 

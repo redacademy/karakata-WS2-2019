@@ -6,7 +6,6 @@
  */
 
 ?>
-<h1> TEST </h1>
 			</div><!-- #content -->
 
 			<footer id="colophon" class="site-footer" role="contentinfo">
