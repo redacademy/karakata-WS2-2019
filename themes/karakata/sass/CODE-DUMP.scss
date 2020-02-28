@@ -1,0 +1,52 @@
+header {
+    height: 0vh;
+}
+
+.intro-title {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0rem 1rem 0rem;
+    font-size: 1.2rem;
+}
+
+
+.main-content-container {
+    background: $color__theme_magenta;
+    background: $color__theme_magenta_gradient;
+    width: 100vw;
+    height: 100vh;
+}
+
+.music-main {
+    background-position: center;
+}
+
+.inner-nav {
+    display: flex;
+    align-items: center;
+    background-color: rgba($color: white, $alpha: .5);
+    margin-left: 10%;
+    border-radius: 30px 0px 0px 30px;
+    height: 15vw;
+
+    ul {
+        margin: 0px;
+        display: flex;
+        
+        li {
+            text-decoration: none;
+            list-style-type: none;
+
+            a{
+                color: white;
+
+                &:hover {
+                    color: white;
+                }
+                &:visited {
+                    color: white;
+                }
+            }
+        }
+    }
+}

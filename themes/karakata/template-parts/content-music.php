@@ -1,2 +1,9 @@
-<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'music' ) ); ?>
+<div class='main-content-container'>
 
+    <div class='intro-title'>
+        <?php the_title() ?>
+    </div>
+    <div class='inner-nav'> 
+        <?php wp_nav_menu( array( 'menu' => 'music' ) ); ?>
+    </div>
+</div>
