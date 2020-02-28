@@ -13,6 +13,4 @@
 			<?php endwhile; // End of the loop. ?>
 
 		</main><!-- #main -->
-    </div><!-- #primary -->
-    
-    <?php get_footer(); ?>
+	</div><!-- #primary -->

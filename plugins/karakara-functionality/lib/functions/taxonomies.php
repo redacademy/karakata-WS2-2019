@@ -78,7 +78,7 @@ function event_taxonomy() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'events', array( 'events_post_type' ), $args );
+	register_taxonomy( 'event', array( 'event_post_type' ), $args );
 
 }
 
@@ -159,29 +159,29 @@ function meditation_taxonomy() {
 }
 
 // Register Custom Taxonomy
-function music_taxonomy() {
+function MusicClass_taxonomy() {
 
 	$labels = array(
-		'name'                       => _x( 'music', 'Taxonomy General Name', 'text_domain' ),
-		'singular_name'              => _x( 'music', 'Taxonomy Singular Name', 'text_domain' ),
-		'menu_name'                  => __( 'music', 'text_domain' ),
-		'all_items'                  => __( 'All music', 'text_domain' ),
-		'parent_item'                => __( 'Parent music', 'text_domain' ),
-		'parent_item_colon'          => __( 'Parent music:', 'text_domain' ),
-		'new_item_name'              => __( 'New music Name', 'text_domain' ),
-		'add_new_item'               => __( 'Add New music', 'text_domain' ),
-		'edit_item'                  => __( 'Edit music', 'text_domain' ),
-		'update_item'                => __( 'Update music', 'text_domain' ),
-		'view_item'                  => __( 'View music', 'text_domain' ),
-		'separate_items_with_commas' => __( 'Separate music with commas', 'text_domain' ),
-		'add_or_remove_items'        => __( 'Add or remove music', 'text_domain' ),
+		'name'                       => _x( 'MusicClass', 'Taxonomy General Name', 'text_domain' ),
+		'singular_name'              => _x( 'MusicClass', 'Taxonomy Singular Name', 'text_domain' ),
+		'menu_name'                  => __( 'MusicClass', 'text_domain' ),
+		'all_items'                  => __( 'All MusicClass', 'text_domain' ),
+		'parent_item'                => __( 'Parent MusicClass', 'text_domain' ),
+		'parent_item_colon'          => __( 'Parent MusicClass:', 'text_domain' ),
+		'new_item_name'              => __( 'New MusicClass Name', 'text_domain' ),
+		'add_new_item'               => __( 'Add New MusicClass', 'text_domain' ),
+		'edit_item'                  => __( 'Edit MusicClass', 'text_domain' ),
+		'update_item'                => __( 'Update MusicClass', 'text_domain' ),
+		'view_item'                  => __( 'View MusicClass', 'text_domain' ),
+		'separate_items_with_commas' => __( 'Separate MusicClass with commas', 'text_domain' ),
+		'add_or_remove_items'        => __( 'Add or remove MusicClass', 'text_domain' ),
 		'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
-		'popular_items'              => __( 'Popular music', 'text_domain' ),
-		'search_items'               => __( 'Search music', 'text_domain' ),
+		'popular_items'              => __( 'Popular MusicClass', 'text_domain' ),
+		'search_items'               => __( 'Search MusicClass', 'text_domain' ),
 		'not_found'                  => __( 'Not Found', 'text_domain' ),
-		'no_terms'                   => __( 'No music', 'text_domain' ),
-		'items_list'                 => __( 'music list', 'text_domain' ),
-		'items_list_navigation'      => __( 'music list navigation', 'text_domain' ),
+		'no_terms'                   => __( 'No MusicClass', 'text_domain' ),
+		'items_list'                 => __( 'MusicClass list', 'text_domain' ),
+		'items_list_navigation'      => __( 'MusicClass list navigation', 'text_domain' ),
 	);
 	$args = array(
 		'labels'                     => $labels,
@@ -192,7 +192,7 @@ function music_taxonomy() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'music', array( 'services_post_type' ), $args );
+	register_taxonomy( 'MusicClass', array( 'services_post_type' ), $args );
 
 }
 
@@ -273,7 +273,7 @@ function cook_taxonomy() {
 }
 add_action( 'init', 'cook_taxonomy', 0 );
 add_action( 'init', 'yoga_taxonomy', 0 );
-add_action( 'init', 'music_taxonomy', 0 );
+add_action( 'init', 'MusicClass_taxonomy', 0 );
 add_action( 'init', 'meditation_taxonomy', 0 );
 add_action( 'init', 'drum_taxonomy', 0 );
 add_action( 'init', 'event_taxonomy', 0 );
