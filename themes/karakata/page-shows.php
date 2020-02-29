@@ -4,7 +4,7 @@
 <?php get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main music-main" role="main" style="background-image: url('<?php echo $featuredimg[0] ?>')">
+		<main id="main" class="site-main music-main music-shows-main" role="main" style="background-image: url('<?php echo $featuredimg[0] ?>')">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
