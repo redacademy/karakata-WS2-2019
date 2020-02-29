@@ -17,7 +17,6 @@
 <?php get_header(); ?>
 
 
-<h1> FARMING PAGE </h1>
 
 
 
