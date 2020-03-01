@@ -12,21 +12,24 @@
  * @package RED_Starter_Theme
  */
 ?>
- 
+
+ <?php $featuredimg = wp_get_attachment_image_src( get_post_thumbnail_id($page->ID), 'full' )?>
+
+
 
 <?php get_header(); ?>
 
 
-<h1> FARMING PAGE </h1>
 
 
 
 <div id="primary" class="content-area">
-    <main id="main" class="site-main avr-main" role="main">
+    <main id="main" class="site-main avr-main" role="main" style="background-image: url('<?php echo $featuredimg[0] ?>')">
 
         <?php while ( have_posts() ) : the_post(); ?>
-
-            <?php get_template_part( 'template-parts/content', 'african-village-retreat' ); ?>
+        
+        <?php get_template_part( 'template-parts/content', 'african-village-classes' ); ?>
+         
 
         <?php endwhile; // End of the loop. ?>
 

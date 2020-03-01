@@ -10,3 +10,39 @@
 	margin-left: auto;
 	margin-right: auto;
 }
+
+@mixin flex-c {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin submenu {
+	
+	ul {
+		display: flex;
+		justify-content: space-between;
+		margin: 0px;
+		padding-left: 0.7rem;
+		
+		li {
+			list-style-type: none;
+			border-radius: 1.3rem;
+
+			&:hover {
+				background-color: rgba($color: white, $alpha: .4);
+			}
+
+			&:last-child {
+				padding-right: 8px;
+				border-radius: 1.3rem;
+			}
+
+			a {
+				color: white;
+				text-decoration: none;
+				font-size: $font__size_sub_menu;
+			}
+		}
+	}
+}

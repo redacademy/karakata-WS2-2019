@@ -4,12 +4,12 @@
         <?php the_title() ?>
     </h1>
     <div class='inner-nav'> 
-        <div class = 'inner-nav-container'>
-            <?php wp_nav_menu( array( 'menu' => 'music' ) ); ?>
-        </div>
+        <?php wp_nav_menu( array( 'menu' => 'music' ) ); ?>
     </div>
 
     <div class='music-content-container'>
-        <?php the_content() ?>
+        <div class = 'gallery-grid'>
+            <?php the_content() ?>
+        </div>
     </div>
 </div>
