@@ -99,3 +99,27 @@ p, h1, h2, h3, h4, a, span {
         display: none;
     }
 }
+
+//music/songs audio player test
+
+.media-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    width: 100%;
+    height: 25vh;
+
+    .player-title {
+        color: white;
+    }
+
+    .player-controls {
+        display:flex;
+
+        .controls {
+            margin: 1rem;
+        }
+    }
+    
+}

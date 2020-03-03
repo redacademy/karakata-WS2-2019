@@ -8,9 +8,11 @@
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'template-parts/content', 'music' ); ?>
+				<?php get_template_part( 'template-parts/content', 'songs' ); ?>
 
 			<?php endwhile; // End of the loop. ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
+
+	<?php get_footer(); ?>
