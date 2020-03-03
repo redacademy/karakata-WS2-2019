@@ -1,13 +1,54 @@
 .home-headings{
     text-align: center;
+    
 }
 .front-scroll{
     padding: 50px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .header-image{
+        widows: 100px;
+        padding: 12px;
+        box-shadow: 1px 0px black;
 
+    }
     p{
-        text-align: center;
+        text-align:center;
     }
     ul{
         text-align: left;
     }
 }
+.welcome{
+    background-image: url(home.jpg);
+    background-size: 200vw auto;
+    background-position:center;
+}
+.front-page-main{
+    background-image:linear-gradient(90deg ,rgba(255, 184, 70, 0.8) , rgba(255, 140, 74, 0.8)),  url(desktop-bg.JPEG);
+    background-size: 150vw auto;
+    background-position: center;
+}
+.main-carousel{
+    width: 100vw;
+    
+}
+.carousel-cell{
+    transform: scale(0.9);
+    width: 70vw;
+  img{
+      transform: translateX(35%);
+      border-radius: 10px;
+      margin: 0 auto;
+      width:60vw;
+      height: auto;
+  }
+}
+.is-selected{
+    left:0;
+    transition: all 1s ease;
+    transform: scale(1);
+  }
