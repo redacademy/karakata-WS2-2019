@@ -23,6 +23,7 @@
   margin-top: 50px;
   padding: 0 20px 0 10px;
   height: 100vh;
+  position: relative;
 }
 
 /////// CLASSES PAGE
@@ -32,6 +33,14 @@
   grid-template-rows: auto auto auto;
   grid-gap: 10px;
   border: 1px solid white;
+}
+
+.haha123 {
+  position:absolute;
+  top: 0;
+  left:0;
+
+
 }
 
 .service-icon {

@@ -105,3 +105,17 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
+
+
+// CUSTOM ADMIN LOGIN HEADER LOGO
+
+<?php
+
+function my_custom_login_logo() {
+    echo '<style type="text/css">
+	h1 a {background-image:url(http://localhost/karakata/wp-content/themes/2020/01/logo-black-300x172.png) !important; margin:0 auto;}
+	</style>';
+}
+add_filter( 'login_head', 'my_custom_login_logo' );
+
+?>
