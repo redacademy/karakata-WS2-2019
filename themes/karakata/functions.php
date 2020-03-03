@@ -7,6 +7,7 @@
  * @package RED_Starter_Theme
  */
 
+
 if ( ! function_exists( 'red_starter_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -109,13 +110,25 @@ require get_template_directory() . '/inc/extras.php';
 
 // CUSTOM ADMIN LOGIN HEADER LOGO
 
-<?php
 
-function my_custom_login_logo() {
-    echo '<style type="text/css">
-	h1 a {background-image:url(http://localhost/karakata/wp-content/themes/2020/01/logo-black-300x172.png) !important; margin:0 auto;}
-	</style>';
-}
-add_filter( 'login_head', 'my_custom_login_logo' );
 
-?>
+// function my_custom_login_logo() {
+//     echo '<style type="text/css">
+// 	h1 a {background-image:url(http://localhost/karakata/wp-content/themes/2020/01/logo-black.png) !important; margin:0 auto;}
+// 	</style>';
+// }
+// add_filter( 'login_head', 'my_custom_login_logo' );
+
+
+
+function my_login_logo_one() { 
+		?> 
+		<style type="text/css"> 
+		body.login div#login h1 a {
+		background-image: url("http://localhost/karakata/wp-content/themes/2020/01/logo-black.png");  //Add your own logo image in this url 
+		padding-bottom: 30px; 
+		} 
+		</style>
+		<?php 
+		} add_action( 'login_enqueue_scripts', 'my_login_logo_one' );
+		
