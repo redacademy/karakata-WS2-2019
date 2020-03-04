@@ -40,10 +40,12 @@
 
             </a>
 
+        <a class = "back-button">
+            <p class = "view-all">View all</p>
+        </a>
+
+
         </div>
-
-
-
 
 
 

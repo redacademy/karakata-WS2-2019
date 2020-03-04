@@ -36,11 +36,9 @@
 }
 
 .haha123 {
-  position:absolute;
+  position: absolute;
   top: 0;
-  left:0;
-
-
+  left: 0;
 }
 
 .service-icon {
@@ -60,4 +58,19 @@
 
 p.section-tag {
   padding: 15px;
+}
+
+p.view-all {
+  text-align: -webkit-center;
+}
+
+a.back-button {
+  display: flex;
+  border: 3px solid white;
+  border-radius: 25%;
+  flex-direction: row;
+  padding: -9px;
+  margin-left: 0;
+  margin-right: 35px;
+  align-self: flex-end;
 }
