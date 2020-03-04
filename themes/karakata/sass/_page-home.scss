@@ -1,14 +1,38 @@
+html{
+    width:100vw;
+}
+body{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 .home-headings{
     text-align: center;
     
 }
+main{
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100vh;
+
+}
 .front-scroll{
+    color:white;
+    scroll-snap-align: start;
+    box-sizing: border-box;
     padding: 50px;
+    background-color: rgba(255, 184, 70, 0.8);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 100vw;
     .header-image{
         widows: 100px;
         padding: 12px;
@@ -22,24 +46,34 @@
         text-align: left;
     }
 }
+.front-page-main:nth-child(2n){
+    background-color: rgba(252, 255, 70, 0.8);
+}
+.active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+    transform: scale(1);
+  }
 .welcome{
     background-image: url(home.jpg);
     background-size: 200vw auto;
     background-position:center;
 }
 .front-page-main{
-    background-image:linear-gradient(90deg ,rgba(255, 184, 70, 0.8) , rgba(255, 140, 74, 0.8)),  url(desktop-bg.JPEG);
+    background-image: url(desktop-bg.JPEG);
     background-size: 150vw auto;
     background-position: center;
 }
 .main-carousel{
-    width: 100vw;
-    
+    width:100vw;
+    height: auto;
 }
 .carousel-cell{
     transform: scale(0.9);
     width: 70vw;
+    filter: contrast(0.6);
   img{
+      
       transform: translateX(35%);
       border-radius: 10px;
       margin: 0 auto;
@@ -48,7 +82,39 @@
   }
 }
 .is-selected{
+    filter: contrast(1);
     left:0;
     transition: all 1s ease;
     transform: scale(1);
   }
+  .nav-dots{
+    float: right;
+    position:fixed;
+    top:40%;
+    color: rgba(255, 255, 255, 0.541);
+    font-size: 30px;
+    font-weight: bolder;
+    right:30px;
+    line-height: 25px;
+    width:fit-content;
+    background: none;
+    z-index: 2;
+    height: 30vh;
+    list-style: none;
+    a{
+        text-decoration: none;
+        padding: 0;
+        float: right;
+        opacity: .6;
+        &:hover{
+            opacity: 1;
+            font-weight: bolder;
+
+            transition: all .4s ease;
+        }
+    }
+  }
+footer{
+    position: absolute;
+    top:-20px;
+}
