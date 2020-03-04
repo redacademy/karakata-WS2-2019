@@ -7,6 +7,7 @@
  * @package RED_Starter_Theme
  */
 
+
 if ( ! function_exists( 'red_starter_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -90,7 +91,9 @@ function red_starter_scripts() {
 	wp_enqueue_script( 'flickityjs', get_template_directory_uri() . '/build/js/flickity.pkgd.min.js', array('jquery'), '20151215', true );
 	wp_enqueue_script( 'frontjs', get_template_directory_uri() . '/build/js/front.min.js', array('jquery'), '20151215', true );
 	wp_enqueue_script( 'red-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true );
-	
+	wp_enqueue_script( 'functions', get_template_directory_uri() . '/build/js/functions.min.js', array ( 'jquery' ), '', true);
+	wp_enqueue_script( 'classes-navigation', get_template_directory_uri() . '/build/js/classes-navigation.min.js', array ( 'jquery' ), '', true);
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -106,3 +109,29 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
+
+
+// CUSTOM ADMIN LOGIN HEADER LOGO
+
+
+
+// function my_custom_login_logo() {
+//     echo '<style type="text/css">
+// 	h1 a {background-image:url(http://localhost/karakata/wp-content/themes/2020/01/logo-black.png) !important; margin:0 auto;}
+// 	</style>';
+// }
+// add_filter( 'login_head', 'my_custom_login_logo' );
+
+
+
+function my_login_logo_one() { 
+		?> 
+		<style type="text/css"> 
+		body.login div#login h1 a {
+		background-image: url("http://localhost/karakata/wp-content/themes/2020/01/logo-black.png");  //Add your own logo image in this url 
+		padding-bottom: 30px; 
+		} 
+		</style>
+		<?php 
+		} add_action( 'login_enqueue_scripts', 'my_login_logo_one' );
+		
