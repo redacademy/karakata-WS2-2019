@@ -7,6 +7,13 @@
 
 get_header(); ?>
 	<div id="primary" class="content-area">
+		<div class="karakata first">
+		<img class=" front-logo black-logo" src=<?php echo get_stylesheet_directory_uri() ."/icons/logo-black.png";?> alt="logo black">
+		<a class="start-button">Enter</a>
+		</div>
+		<div class="karakata second">
+		<img class=" front-logo white-logo" src=<?php echo get_stylesheet_directory_uri() ."/icons/logo-white.png";?> alt="logo white">
+		</div>
 		<main id="main" class="front-page-main" role="main">
 		<ul class="nav-dots">
 			<li><a href="#1">•</a></li>
@@ -14,9 +21,10 @@ get_header(); ?>
 			<li><a href="#3">•</a></li>
 			<li><a href="#4">•</a></li>
 			<li><a href="#5">•</a></li>
-			<li><a href="#6">•</a></li>
+			<li><a id="last-section" href="#6">•</a></li>
 		</ul>
-		<a id="arrow-down">⟱</a>
+		<a id="arrow-down"><img src=<?php echo get_stylesheet_directory_uri() ."/icons/Down_arrow.svg";?> alt="down-arrow"></a>
+		<div class="front-container">
 		<?php
 		global $post;
 		
@@ -140,6 +148,7 @@ get_header(); ?>
 		
 
 		?>
+		</div>
 			
 		</main><!-- #main -->
 	</div><!-- #primary -->

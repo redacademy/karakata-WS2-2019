@@ -9,6 +9,56 @@ body{
     -ms-user-select: none;
     user-select: none;
 }
+
+.karakata{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.front-logo{
+    width: 250px;
+    margin: 30px;
+}
+.first{
+    background-color: white;
+    z-index: 5;
+
+}
+.second{
+    background-color: black;
+    z-index: 4;
+    padding: 20px;
+}
+.in-position{
+    background-color: rgba(0, 0, 0, 0);
+    width: 150px;
+    height: 80px;
+    top:0px;
+    left: 0px;
+    transition:all 1s 1.2s ease, background-color 1.5s ease-out ;
+}
+.start-button{
+    color: black;
+    box-shadow: none;
+    font-weight: bolder;
+    border: 2px black solid;
+    border-radius: 50px;
+    padding: 10px 30px;
+    &:hover{
+    cursor: pointer;
+    }
+    
+}
+
+
+
+
+
+
 .home-headings{
     text-align: center;
     
@@ -26,7 +76,6 @@ main{
     scroll-snap-align: start;
     box-sizing: border-box;
     padding: 50px;
-    background-color: rgba(255, 184, 70, 0.8);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -36,7 +85,7 @@ main{
     .header-image{
         widows: 100px;
         padding: 12px;
-        box-shadow: 1px 0px black;
+
 
     }
     p{
@@ -46,9 +95,7 @@ main{
         text-align: left;
     }
 }
-.front-page-main:nth-child(2n){
-    background-color: rgba(252, 255, 70, 0.8);
-}
+
 .active {
     cursor: grabbing;
     cursor: -webkit-grabbing;
@@ -58,6 +105,14 @@ main{
     background-image: url(home.jpg);
     background-size: 200vw auto;
     background-position:center;
+}
+.front-scroll{
+    &:nth-child(2n) {
+    background-color: rgba(255, 184, 70, 0.8);
+    }
+    &:nth-child(2n + 1) {
+        background-color: rgba(241, 223, 64, 0.8);
+      }
 }
 .front-page-main{
     background-image: url(desktop-bg.JPEG);
@@ -119,16 +174,36 @@ footer{
     top:-20px;
 }
 #arrow-down{
+    height: fit-content;
+    z-index:3;
     position:fixed;
     font-size: 30px;
     color: white;
-    text-shadow: 0px 3px 8px rgba(226, 216, 216, 0.726);
     bottom:3%;
-    left:50%;
-    transform: translateX(-50%);
+    left:48%;
+    transform: rotate(360deg);
+    background-color: rgba(0, 0, 0, 0.034);    
+    transition: all .7s ease;
     &:hover{
         cursor: pointer;
-        text-shadow: 0px 3px 8px rgb(226, 216, 216);
-        transition: text-shadow .2s ease;
     }
+}
+#arrow-down.arrow-up{
+    transform: rotate(180deg);
+}
+.flickity-page-dots{
+    display:none;
+}
+
+.front-scroll .flickity-prev-next-button.next{
+    right:10%;
+}
+.front-scroll .flickity-prev-next-button.previous{
+    left:10%;
+}
+.front-scroll .flickity-prev-next-button{
+    color:wheat;
+    background: rgba(255, 255, 255, 0);
+    box-shadow: none;
+    transition: background-color .6s ease;
 }

@@ -16,6 +16,5 @@
 		</div><!-- #page -->
 
 		<?php wp_footer(); ?>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.1/flickity.pkgd.js"></script>
 		</body>
 </html>

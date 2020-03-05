@@ -20,21 +20,28 @@
                   window.location.href = "#5";
             } else if(isScrolledIntoView('#5')){
                   window.location.href = "#6";
-                  $('#arrow-down').text('⟰');
             } else if(isScrolledIntoView('#6')){
                   console.log(isScrolledIntoView('#6'));
                   window.location.href = "#1";
-                  $('#arrow-down').text('⟱'); 
             }  
       });
-      $(window).scroll(function(){
-            if($(this).scrollTop()>$('#6').offset().top){
-                        alert('hi')
-                        $('#arrow-down').text('⟰'); 
-                  } 
+            
+      $('.front-page-main').scroll(function(){
+            if(isScrolledIntoView('#6')){
+                  $('#arrow-down').addClass( "arrow-up");
+            } else{
+                  $('#arrow-down').removeClass( "arrow-up"); 
+
+            };
 
       });
-            
+      $('.start-button').click(function () {
+            $(".first").css("background-color", "black");
+            $(".first").fadeOut(700);
+            setTimeout(() => {
+                  $('.second').addClass( "in-position");
+            }, 1000);
+      })      
 
 })( jQuery );
 
