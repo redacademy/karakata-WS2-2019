@@ -1,0 +1,95 @@
+.events-main{
+    background-image: url(sunrise-farm.jpeg);
+    background-size: cover;
+    height: 100%;
+    padding: 30px;
+    padding-bottom: 90px;
+}
+.event-content{
+    height: max-content;
+}
+.events-heading{
+    text-align: center;
+    line-height: 35px;
+    margin:40px 15% ;
+    color: white;
+}
+.events-container{
+    margin: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+.event{
+    background-color: white;
+    width:300px;
+    position: relative;
+    border-radius: 50px ;
+}
+.find-out{
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 20px;
+    color: black;
+    border: 1px solid black;
+    border-radius: 50px;
+    text-decoration: none;
+    grid-column: 1 /-1;
+    margin:10px 25px;
+    &:hover{
+        background-color: black;
+        color: white;
+        transition: all .6s ease;
+    }
+
+}
+.event-info{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 25% 25%;
+    margin: 10px;
+}
+.date{
+    font-weight: bolder;
+    color: rgb(223, 120, 61);
+    grid-column: 1 /2;
+    grid-row: 1/-1;
+    text-align: center;
+    margin: 0 20px;
+}
+.event-address{
+    margin: 0;
+    font-size: 12px;
+    grid-column:2/-1 ;
+    grid-row: 2/-1;
+    i{
+        color: rgb(223, 120, 61);
+        font-size: 17px;
+        margin:0 7px;
+    }
+}
+.event-title{
+    margin: 0;
+    font-size: 15px;
+    grid-column: 2/-1;
+    grid-row: 1/2;
+}
+.price{
+    font-weight: bolder;
+    position: absolute;
+    background-color: white;
+    padding: 5px 13px;
+    border-radius: 20px;
+    top:25px;
+    left:25px;
+}
+.event-image{
+    width: 100%;
+    perspective: 1px; 
+    overflow: hidden;
+    border-radius: 50px 50px 0px 0px;
+    img{
+        width: 100%;
+    }
+}

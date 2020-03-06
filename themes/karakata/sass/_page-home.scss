@@ -63,7 +63,8 @@ body{
     text-align: center;
     
 }
-main{
+.front-page-main{
+    
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
@@ -103,7 +104,7 @@ main{
   }
 .welcome{
     background-image: url(home.jpg);
-    background-size: 200vw auto;
+    background-size: cover;
     background-position:center;
 }
 .front-scroll{
