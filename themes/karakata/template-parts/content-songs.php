@@ -26,7 +26,7 @@
  
  
          $the_query->the_post();
-         echo '<li class= "song-list">' . get_field('song')['title'] . '</li>';
+         echo '<li class= "song-list playicon"><span><img src="' . get_template_directory_uri() . '/Icons/play.svg' . '"></span>' . get_field('song')['title'] . '</li>';
      }
      echo '</ul>';
  } else {

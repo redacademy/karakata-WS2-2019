@@ -2,20 +2,22 @@
   background: $color_theme_green_gradient;
   color: WHITESMOKE; /// for text color
 }
-.inner-nav {
-  -ms-flex-align: center;
-  align-items: center;
-  background: linear-gradient(90deg, hsla(0, 0%, 100%, 0.15), hsla(0, 0%, 100%, 0.15) 90%, hsla(0, 0%, 100%, 0.4));
-  border-radius: 30px;
-  height: 13vw;
-  @include submenu;
+.avr-main {
+  .inner-nav {
+    -ms-flex-align: center;
+    align-items: center;
+    background: linear-gradient(90deg, hsla(0, 0%, 100%, 0.15), hsla(0, 0%, 100%, 0.15) 90%, hsla(0, 0%, 100%, 0.4));
+    border-radius: 30px;
+    height: 13vw;
+    @include submenu;
 
-  p {
-    color: white;
-  }
-  ul {
-    margin: 0 30px;
-    padding: 0;
+    p {
+      color: white;
+    }
+    ul {
+      margin: 0 30px;
+      padding: 0;
+    }
   }
 }
 

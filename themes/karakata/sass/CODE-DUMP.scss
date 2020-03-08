@@ -8,6 +8,15 @@ p, h1, h2, h3, h4, a, span {
     font-family: $font__main;
 }
 
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    list-style: none;
+}
+
 .intro-title {
     display: flex;
     justify-content: center;
@@ -143,4 +152,13 @@ p, h1, h2, h3, h4, a, span {
 
 .song-list {
     color: white;
+}
+
+.playicon {
+    margin: 1rem;
+
+    img {
+        width: 1rem;
+        margin-right: 2rem;
+    }
 }

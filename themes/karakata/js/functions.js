@@ -9,9 +9,9 @@
 //transitions to next song position in list
     let nextSong = function () {
      playlist.position++
-     if (playlist.position > playlist.songURL.length - 1) [
+     if (playlist.position > playlist.songURL.length - 1) {
          playlist.position = 0
-     ]
+    }
      console.log(playlist.position)
     }
     
