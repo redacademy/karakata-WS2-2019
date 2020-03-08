@@ -97,6 +97,11 @@ function red_starter_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	wp_localize_script( 'functions', 'functionVars', array(
+		'karakata_url' => esc_url_raw( rest_url() ),
+		'karakata_nonce' => wp_create_nonce( 'wp_rest' ),
+	) );
 }
 add_action( 'wp_enqueue_scripts', 'red_starter_scripts' );
 
@@ -135,3 +140,23 @@ function my_login_logo_one() {
 		<?php 
 		} add_action( 'login_enqueue_scripts', 'my_login_logo_one' );
 		
+register_meta('post', 'audio_testing', [
+    'type'           => 'array',
+    'description'    => 'should be the audio file...',
+    'single'         => true,
+	'show_in_rest' => array(
+		'schema' => array(
+			'type'  => 'array',
+			'items' => array(
+				'author' => 'string',
+			),
+		),
+	),
+]);
+
+register_meta('post', 'test', [
+    'type'           => 'string',
+    'description'    => 'should be the audio file...',
+    'single'         => true,
+	'show_in_rest'   => true
+]);

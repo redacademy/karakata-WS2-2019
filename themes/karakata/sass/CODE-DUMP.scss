@@ -119,7 +119,28 @@ p, h1, h2, h3, h4, a, span {
 
         .controls {
             margin: 1rem;
+            width: 3rem;
+            height: 3rem;
         }
-    }
-    
+    }   
+}
+
+.play-container {
+    background-image: url(../../Icons/Play.svg);
+    background-size: contain;
+    background-position: center;
+}
+.pause-container {
+    background-image: url(../../Icons/Play.svg);
+    background-size: contain;
+    background-position: center;
+}
+.stop-container {
+    background-image: url(../../Icons/Pause.svg);
+    background-size: contain;
+    background-position: center;
+}
+
+.song-list {
+    color: white;
 }
