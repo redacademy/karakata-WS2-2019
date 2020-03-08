@@ -41,7 +41,26 @@
             setTimeout(() => {
                   $('.second').addClass( "in-position");
             }, 1000);
-      })      
+      })   
+      $(window).click(function() {
+            $('.slide-menu').removeClass( "slide-open");
+            $('.hamburger').removeClass( "hamburger-open");
+
+            });   
+      $('.hamburger').click(function (event) {
+            event.stopPropagation();
+            $('.slide-menu').addClass( "slide-open");
+            $('.hamburger').addClass( "hamburger-open");
+            
+      }) 
+      $('#close-menu').click(function () {
+            $('.slide-menu').removeClass( "slide-open");
+            $('.hamburger').removeClass( "hamburger-open");
+            
+      })             
+      $('.slide-menu').click(function(event){
+          event.stopPropagation();
+      });
 
 })( jQuery );
 
