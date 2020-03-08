@@ -86,8 +86,10 @@ add_filter( 'stylesheet_uri', 'red_starter_minified_css', 10, 2 );
 function red_starter_scripts() {
 	wp_enqueue_style( 'red-starter-style', get_template_directory_uri() .'/build/css/style.min.css' );
 	wp_enqueue_style( 'flickitycss', get_template_directory_uri() . '/build/css/flickity.css' );
+	wp_enqueue_style( 'font-awesome-free', '//use.fontawesome.com/releases/v5.2.0/css/all.css' );
 	wp_enqueue_script( 'red-starter-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true );
-	wp_enqueue_script( 'flickityjs', get_template_directory_uri() . '/build/js/flickity.pkgd.min.js', array('jQuery'), '20151215', true );
+	wp_enqueue_script( 'flickityjs', get_template_directory_uri() . '/build/js/flickity.pkgd.min.js', array('jquery'), '20151215', true );
+	wp_enqueue_script( 'frontjs', get_template_directory_uri() . '/build/js/front.min.js', array('jquery'), '20151215', true );
 	wp_enqueue_script( 'red-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'functions', get_template_directory_uri() . '/build/js/functions.min.js', array ( 'jquery' ), '', true);
 	wp_enqueue_script( 'classes-navigation', get_template_directory_uri() . '/build/js/classes-navigation.min.js', array ( 'jquery' ), '', true);
@@ -98,6 +100,7 @@ function red_starter_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'red_starter_scripts' );
+
 /**
  * Custom template tags for this theme.
  */
