@@ -23,6 +23,15 @@
         $('.service-icon').show();
     })
 
+    $(".music-service").on('click', function () {
+        $(".service-info-box").removeClass('hidden')
+    })
+
+    
+
+    // come back to this to make the correct box infomation to go with correct tab 
+
+
 
 
 })(jQuery);

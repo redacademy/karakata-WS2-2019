@@ -12,10 +12,12 @@
 
   p {
     color: white;
-  }
-  ul {
-    margin: 0 30px;
-    padding: 0;
+    margin: 0;
+    margin-bottom: 0;
+    ul {
+      margin: 0 30px;
+      padding: 0;
+    }
   }
 }
 
@@ -73,4 +75,15 @@ a.back-button {
   margin-left: 0;
   margin-right: 35px;
   align-self: flex-end;
+}
+
+.meta-data-container {
+  border: 1px solid white;
+  color: purple;
+  background: red;
+  margin: 2rem;
+}
+
+.hidden {
+  display: none;
 }

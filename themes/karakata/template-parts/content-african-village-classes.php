@@ -44,15 +44,13 @@
             <p class = "view-all">View all</p>
         </a>
 
-
         </div>
 
 
 
 
-        <div class="service-info-box" data-section="music" style="display:none;">
-        <h1>Music Class</h1>
-        
+        <div class="service-info-box hidden" data-section="music" >
+     
         </div>
 
         <div class="service-info-box" data-section="yoga" style="display:none;">
