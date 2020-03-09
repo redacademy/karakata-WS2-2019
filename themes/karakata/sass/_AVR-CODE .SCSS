@@ -1,0 +1,65 @@
+.about-content-container {
+  background: $color_theme_green_gradient;
+  color: WHITESMOKE; /// for text color
+}
+.avr-main {
+  .inner-nav {
+    -ms-flex-align: center;
+    align-items: center;
+    background: linear-gradient(90deg, hsla(0, 0%, 100%, 0.15), hsla(0, 0%, 100%, 0.15) 90%, hsla(0, 0%, 100%, 0.4));
+    border-radius: 30px;
+    height: 13vw;
+    @include submenu;
+
+    p {
+      color: white;
+    }
+    ul {
+      margin: 0 30px;
+      padding: 0;
+    }
+  }
+}
+
+.about-content {
+  margin-top: 50px;
+  padding: 0 20px 0 10px;
+  height: 100vh;
+  position: relative;
+}
+
+/////// CLASSES PAGE
+.services-provided {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+  grid-gap: 10px;
+  border: 1px solid white;
+}
+
+.haha123 {
+  position:absolute;
+  top: 0;
+  left:0;
+
+
+}
+
+.service-icon {
+  border: 1px solid white;
+  width: 200px;
+  height: 180px;
+  border-radius: 17%;
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(white, 0.5);
+  padding: 20px;
+
+  p {
+    margin: 0;
+  }
+}
+
+p.section-tag {
+  padding: 15px;
+}

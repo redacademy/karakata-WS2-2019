@@ -69,11 +69,13 @@ li {
 }
 
 .music-content-container {
-    max-width: 80%;
+    max-width: 90%;
 
     p {
         font-family: $font__main;
         color: whitesmoke;
+        margin: 0rem 1.5rem 1rem 1.5rem;
+        line-height: 2rem;
     }
 }
 

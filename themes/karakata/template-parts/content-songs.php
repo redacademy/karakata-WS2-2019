@@ -11,30 +11,34 @@
     </div>
 
     <div class='music-content-container'>
-    <?php
- 
- // The Query
- $args = array('post_type' => 'beats');
- 
- $the_query = new WP_Query( $args );
-  
- // The Loop
- if ( $the_query->have_posts() ) {
-     echo '<ul>';
-     while ( $the_query->have_posts() ) {
-         // $audioObject = get_field('audio_testing');
- 
- 
-         $the_query->the_post();
-         echo '<li class= "song-list playicon"><span><img src="' . get_template_directory_uri() . '/Icons/play.svg' . '"></span>' . get_field('song')['title'] . '</li>';
-     }
-     echo '</ul>';
- } else {
-     // no posts found
- }
- 
- /* Restore original Post Data */
- wp_reset_postdata(); ?>
+
+        <div>
+            <?php the_content(); ?>
+        </div>
+        
+        <?php
+    
+        $args = array('post_type' => 'beats');
+        
+        $the_query = new WP_Query( $args );
+        
+        if ( $the_query->have_posts() ) {
+            echo '<ul>';
+            while ( $the_query->have_posts() ) {
+        
+                $the_query->the_post();
+                
+                echo '<li class= "song-list playicon"><span><img src="' . get_template_directory_uri() . '/Icons/play.svg' . '"></span>' . get_field('song')['title'] . '</li>';
+            }
+            echo '</ul>';
+        } else {
+            // no posts found
+        }
+        
+        wp_reset_postdata(); 
+        
+        ?>
+
     </div>
 </div>
 
