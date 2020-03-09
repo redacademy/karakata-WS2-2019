@@ -1,3 +1,14 @@
+@mixin tablet {
+    @media screen and (min-width:600px) {
+      @content;
+    }
+  }
+  
+  @mixin desktop {
+    @media screen and (min-width: 700px) {
+      @content;
+    }
+  }
 html{
     width:100vw;
 }
@@ -30,17 +41,25 @@ body{
 }
 .second{
     background-color: black;
-    z-index: 4;
     padding: 20px;
+    z-index: 4;
+
 }
 .in-position{
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 1s, opacity 0.5s linear;
+    @include desktop{
+    z-index: 4;
+    opacity: 1;
+    visibility: visible;
     background-color: rgba(0, 0, 0, 0);
     width: 150px;
     height: 80px;
     top:0px;
     left: 0px;
     transition:all 1s 1.2s ease, background-color 1.5s ease-out ;
-}
+}}
 .start-button{
     color: black;
     box-shadow: none;
@@ -64,7 +83,7 @@ body{
     
 }
 .front-page-main{
-    
+
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
@@ -78,11 +97,17 @@ body{
     box-sizing: border-box;
     padding: 50px;
     min-height: 100vh;
+    font-size: 12px;
     display: flex;
+    text-shadow:0 0 2px black;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     max-width: 100vw;
+    @include desktop{
+        font-size: 20px;
+        padding: 80px;
+    }
     .header-image{
         widows: 100px;
         padding: 12px;
@@ -93,7 +118,23 @@ body{
         text-align:center;
     }
     ul{
+        margin:0;
+        padding: 0;
         text-align: left;
+        list-style: none;
+        li{
+            padding: 10px 0;
+            &:before {    
+                font-family:'Font Awesome 5 free';
+                font-weight: normal;
+                content: '\f185';
+                text-shadow:none;
+                color: rgba(0, 0, 0, 0);
+                background-image: url(christmas-star.png);
+                background-size: contain;
+                margin:0 5px 0 -15px;
+                
+        }}
     }
 }
 
@@ -103,7 +144,7 @@ body{
     transform: scale(1);
   }
 .welcome{
-    background-image: url(home.jpg);
+    background-image:linear-gradient(90deg, rgba(black,.2),rgba(black,.2),rgba(black,.2)), url(home.jpg);
     background-size: cover;
     background-position:center;
 }
@@ -127,14 +168,23 @@ body{
 .carousel-cell{
     transform: scale(0.9);
     width: 70vw;
+    padding-bottom: 50px;
     filter: contrast(0.6);
+    @include desktop{
+        width: 50vw;
+    }
   img{
       
       transform: translateX(35%);
       border-radius: 10px;
       margin: 0 auto;
       width:60vw;
+      box-shadow:  0 20px 30px rgba(0, 0, 0, 0.404);
       height: auto;
+      @include desktop{
+        transform: translateX(75%);
+          width: 40vw;
+      }
   }
 }
 .is-selected{
@@ -150,13 +200,16 @@ body{
     color: rgba(255, 255, 255, 0.541);
     font-size: 30px;
     font-weight: bolder;
-    right:30px;
+    right:10px;
     line-height: 25px;
     width:fit-content;
     background: none;
     z-index: 2;
     height: 30vh;
     list-style: none;
+    @include desktop{
+        right:30px;
+    }
     a{
         text-decoration: none;
         padding: 0;
@@ -203,6 +256,7 @@ footer{
     left:10%;
 }
 .front-scroll .flickity-prev-next-button{
+    z-index: 3;
     color:wheat;
     background: rgba(255, 255, 255, 0);
     box-shadow: none;
