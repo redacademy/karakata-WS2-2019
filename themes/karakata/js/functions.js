@@ -23,6 +23,20 @@
                 }
             },
 
+            listPlaying: function () {
+                let n = this.position + 1;
+
+                $('.songsList').find(`li:nth-child(${n})`).find('img').addClass('playing');
+                $('.songsList').find(`li:nth-child(${n})`).find('img').attr('src', `${functionVars.karakata_template_path}/Icons/Pause.svg`);
+            },
+
+            listStopped: function () {
+                if ($('.playing')) {
+                    $('.playing').attr('src', `${functionVars.karakata_template_path}/Icons/Play.svg`);
+                    $('.playing').removeClass('playing');
+                }
+            },
+
             playSong: function() {
                     $('#audioPlayer')[0].src = this.songURL[this.position];
                     $('.player-title').html(this.songTitle[this.position]);
@@ -30,46 +44,59 @@
                     $('#audioPlayer')[0].play();
                     $('.play-container').addClass('stop-container');
                     $('.stop-container').removeClass('play-container');
+                    $('.pause-container').addClass('stop-container');
+                    $('.stop-container').removeClass('pause-container');
+                    this.listPlaying();
             },
 
             pauseSong: function() {
                     $('#audioPlayer')[0].pause();
                     $('.stop-container').addClass('pause-container');
                     $('.pause-container').removeClass('stop-container');
+
+                    this.listStopped();
             },
 
             resumeSong: function() {
                     $('#audioPlayer')[0].play();
                     $('.pause-container').addClass('stop-container');
                     $('.stop-container').removeClass('pause-container');
+
+                    this.listPlaying();
             },
 
             nextSong: function() {
                     $('#audioPlayer')[0].pause();
                     
-                    if ($('.controls').hasClass('play-container')) {
-                        $('.play-container').addClass('stop-container');
-                        $('.stop-container').removeClass('play-container');
+                    if ($('.controls').hasClass('pause-container')) {
+                        $('.pause-container').addClass('stop-container');
+                        $('.stop-container').removeClass('pause-container');
                     }
                     this.nextSongPos();
                     $('#audioPlayer')[0].src = this.songURL[this.position];
                     $('.player-title').html(this.songTitle[this.position]);
                     $('#audioPlayer')[0].load();
                     $('#audioPlayer')[0].play();
+
+                    this.listStopped();
+                    this.listPlaying();
             },
 
             prevSong: function() {
                     $('#audioPlayer')[0].pause();
                     
                     if ($('.controls').hasClass('play-container')) {
-                        $('.play-container').addClass('stop-container');
-                        $('.stop-container').removeClass('play-container');
+                        $('.pause-container').addClass('stop-container');
+                        $('.stop-container').removeClass('pause-container');
                     }
                     this.prevSongPos();
                     $('#audioPlayer')[0].src = this.songURL[this.position];
                     $('.player-title').html(this.songTitle[this.position]);
                     $('#audioPlayer')[0].load();
                     $('#audioPlayer')[0].play();
+
+                    this.listStopped();
+                    this.listPlaying();
             }
         };
             
@@ -120,6 +147,19 @@
             playlist.prevSong()
         });
 
-    });   
+        // song button functionality
+        $('.playicon').on('click', function () {
+            let n = $('.playicon').index(this) + 1;
 
+            playlist.position = $('.playicon').index(this)
+
+            playlist.listStopped();
+            
+           $('.songsList').find(`li:nth-child(${n})`).find('img').addClass('playing');
+           $('.songsList').find(`li:nth-child(${n})`).find('img').attr('src', `${functionVars.karakata_template_path}/Icons/Pause.svg`);
+
+            playlist.playSong();
+        });
+
+    });   
 })(jQuery);

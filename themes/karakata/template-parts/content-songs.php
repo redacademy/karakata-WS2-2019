@@ -23,12 +23,12 @@
         $the_query = new WP_Query( $args );
         
         if ( $the_query->have_posts() ) {
-            echo '<ul>';
+            echo '<ul class="songsList">';
             while ( $the_query->have_posts() ) {
         
                 $the_query->the_post();
                 
-                echo '<li class= "song-list playicon"><span><img src="' . get_template_directory_uri() . '/Icons/play.svg' . '"></span>' . get_field('song')['title'] . '</li>';
+                echo '<li class= "song-list playicon"><span><img src="' . get_template_directory_uri() . '/Icons/Play.svg' . '"></span>' . get_field('song')['title'] . '</li>';
             }
             echo '</ul>';
         } else {
@@ -52,7 +52,6 @@
         </div>
         <div class = "play-container controls">
             <a class = "play">
-                <!-- <img src = "<?php echo get_template_directory_uri() . '/Icons/Play.svg' ?>"> -->
             </a>
         </div>
         <div class = "next-container controls">

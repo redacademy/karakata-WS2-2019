@@ -101,6 +101,7 @@ function red_starter_scripts() {
 	wp_localize_script( 'functions', 'functionVars', array(
 		'karakata_url' => esc_url_raw( rest_url() ),
 		'karakata_nonce' => wp_create_nonce( 'wp_rest' ),
+		'karakata_template_path' => get_template_directory_uri(),
 	) );
 }
 add_action( 'wp_enqueue_scripts', 'red_starter_scripts' );
