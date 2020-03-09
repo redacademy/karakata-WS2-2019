@@ -89,7 +89,7 @@ class RF_General {
     */
    public function remove_menus() {
    	global $menu;
-   	$restricted = array();
+   	$restricted = array('Posts', 'Comments');
    	// Example:
    	//$restricted = array( __('Dashboard'), __('Posts'), __('Media'), __('Pages'), __('Appearance'), __('Tools'), __('Users'), __('Settings'), __('Comments'), __('Plugins') );
    	end ($menu);

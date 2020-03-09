@@ -2,6 +2,8 @@
 
     $(document).ready(function() {
     
+    /////////////Media Player
+
         let playlist = {
             position: 0,
             songURL: [],
@@ -22,8 +24,9 @@
                     this.position--;
                 }
             },
-
+            
             listPlaying: function () {
+                //changes play/pause icon beside the list of songs
                 let n = this.position + 1;
 
                 $('.songsList').find(`li:nth-child(${n})`).find('img').addClass('playing');
@@ -31,6 +34,8 @@
             },
 
             listStopped: function () {
+                //changes play/pause icon beside the list of songs
+                
                 if ($('.playing')) {
                     $('.playing').attr('src', `${functionVars.karakata_template_path}/Icons/Play.svg`);
                     $('.playing').removeClass('playing');
@@ -38,6 +43,8 @@
             },
 
             playSong: function() {
+                //plays the currently selected song
+
                     $('#audioPlayer')[0].src = this.songURL[this.position];
                     $('.player-title').html(this.songTitle[this.position]);
                     $('#audioPlayer')[0].load();
@@ -50,6 +57,7 @@
             },
 
             pauseSong: function() {
+                //pauses the song
                     $('#audioPlayer')[0].pause();
                     $('.stop-container').addClass('pause-container');
                     $('.pause-container').removeClass('stop-container');
@@ -58,6 +66,7 @@
             },
 
             resumeSong: function() {
+                //resumes the song 
                     $('#audioPlayer')[0].play();
                     $('.pause-container').addClass('stop-container');
                     $('.stop-container').removeClass('pause-container');
@@ -66,6 +75,8 @@
             },
 
             nextSong: function() {
+                //selects and plays next song on the playlist
+
                     $('#audioPlayer')[0].pause();
                     
                     if ($('.controls').hasClass('pause-container')) {
@@ -83,6 +94,8 @@
             },
 
             prevSong: function() {
+                //selects and plays previous song on the playlist
+
                     $('#audioPlayer')[0].pause();
                     
                     if ($('.controls').hasClass('play-container')) {
@@ -147,7 +160,7 @@
             playlist.prevSong()
         });
 
-        // song button functionality
+        // plays a song when selected from the list of songs
         $('.playicon').on('click', function () {
             let n = $('.playicon').index(this) + 1;
 
@@ -160,6 +173,16 @@
 
             playlist.playSong();
         });
+
+        /////////////////GALLERY
+
+        // $('main-content-container').on('click', function () {
+        //     console.log('you freaking clicked it my dude!');
+        //     // let n = $('.wp-block-image').index(this) + 1;
+        //     // console.log($('.wp-block-image').index(this));
+
+        //     // $('.gallery-grid').find(`figure:nth-child(${n})`).find('img').addClass('fullscreen');
+        // });
 
     });   
 })(jQuery);

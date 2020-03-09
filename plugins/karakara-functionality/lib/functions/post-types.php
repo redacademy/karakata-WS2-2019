@@ -12,8 +12,8 @@ function event_post_type() {
 	$labels = array(
 		'name'                  => _x( 'Event Post Types', 'Post Type General Name', 'text_domain' ),
 		'singular_name'         => _x( 'Event Post Type', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'             => __( 'Post Event', 'text_domain' ),
-		'name_admin_bar'        => __( 'Post Event', 'text_domain' ),
+		'menu_name'             => __( 'Events/Shows', 'text_domain' ),
+		'name_admin_bar'        => __( 'Events/Shows', 'text_domain' ),
 		'archives'              => __( 'Event Archives', 'text_domain' ),
 		'attributes'            => __( 'Event Attributes', 'text_domain' ),
 		'parent_item_colon'     => __( 'Parent Event:', 'text_domain' ),
@@ -68,8 +68,8 @@ function services_post_type() {
 	$labels = array(
 		'name'                  => _x( 'services Post Types', 'Post Type General Name', 'text_domain' ),
 		'singular_name'         => _x( 'service Post Type', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'             => __( 'Post service', 'text_domain' ),
-		'name_admin_bar'        => __( 'Post service', 'text_domain' ),
+		'menu_name'             => __( 'Services', 'text_domain' ),
+		'name_admin_bar'        => __( 'Services', 'text_domain' ),
 		'archives'              => __( 'service Archives', 'text_domain' ),
 		'attributes'            => __( 'service Attributes', 'text_domain' ),
 		'parent_item_colon'     => __( 'Parent service:', 'text_domain' ),
