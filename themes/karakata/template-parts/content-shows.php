@@ -12,7 +12,18 @@
 
     <div class='music-event-content-container'>
         
-        <?php $args =  array('post_type' => 'event_post_type'); ?>
+        <?php $args =  array(
+            'post_type' => 'event_post_type',
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'show',
+                    'field'    => 'slug',
+                    'terms'    => 'event',
+                    'operator' => 'NOT EXISTS'
+                ),
+            ),
+        ); 
+        ?>
             <?php
 
             $the_query = new WP_Query( $args );

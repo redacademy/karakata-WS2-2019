@@ -182,8 +182,8 @@ li {
     grid-template-columns: 1fr 3fr;
 
     .info {
-        margin: 1rem 0rem;
-        font-size: 1.1rem;
+        margin: 4vw 0;
+        font-size: 5vw;    
     }
 }
 
@@ -206,7 +206,7 @@ li {
     width: 80%;
 
     .event-date {
-        font-size: 1.5rem;
+        font-size: 7vw;
         text-align: center;
         color: $color__text_orange;
     }
@@ -216,8 +216,8 @@ li {
     display: grid;
     grid-template-rows: 1fr 1fr;
     height: 80vw;
-    margin: 2rem 0rem;
-    border-radius: 1rem;
+    margin: 9vw 0rem;
+    border-radius: 5vw;
     background-color: white;
     overflow: hidden;
 
@@ -229,11 +229,13 @@ li {
         .event-price-container {
             display: flex;
             flex-direction: column;
-            width: 12vw;
-            margin: 1rem;
+            width: 15vw;
+            padding: 1vw;
+            margin: 5vw;
             text-align: center;
             background-color: white;
-            border-radius: 1rem;
+            border-radius: 5vw;
+            font-size: 4vw;
         }
     }
 }
@@ -244,8 +246,9 @@ li {
     align-items: center;
     color: #000;
     border: 1px solid #000;
-    border-radius: 1rem;
+    border-radius: 5vw;
     width: 90%;
-    height: 2rem;
-    margin: 0rem auto;
+    height: 9vw;
+    margin: 0 auto;
+    font-size: 4vw;
 }
