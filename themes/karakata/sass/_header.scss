@@ -1,0 +1,127 @@
+@mixin tablet {
+    @media screen and (min-width:600px) {
+      @content;
+    }
+  }
+  
+  @mixin desktop {
+    @media screen and (min-width: 700px) {
+      @content;
+    }
+  }
+.top-menu{
+    @include desktop{
+        display: flex;  
+        position: absolute;
+        top:0;
+        font-size: 15px;
+        width: 100%;
+        justify-content: space-evenly;
+        
+        ul{
+            display: block;
+            margin: 20px auto;
+        }
+        nav{
+            width: fit-content;
+
+            a{
+            padding:0 1.5vw;
+        }}
+    }
+}
+.karakata-logo {
+    display: none;
+    @include desktop{
+    display: block;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    width: 100px; 
+    img{
+        margin: 0;
+
+     }  
+    }
+    }
+.mobile-nav{
+    color:white;
+
+    @include desktop{
+        display: none;
+
+    }
+}
+.hamburger{
+    z-index: 9;
+    font-size: 25px;
+    width: fit-content;
+    padding: 20px 20px;
+    transform:rotate(0deg);
+    transition: transform 1.6s ease-out;
+    &:hover{
+        cursor: pointer;
+    }
+}
+.hamburger-open{
+    transform:rotate(360deg);
+}
+
+.slide-menu{
+    min-height: 100vh;
+    z-index: 10;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    right: 110vw;
+    width:70vw;
+    text-align: center;
+    transition: right 1.3s ease;
+    background: rgb(22, 22, 22);
+    ul{
+         margin:0 auto;
+         padding: 0;
+        list-style: none;
+        text-align: center;
+        li{
+            margin:5%;
+            a{
+            
+            text-decoration: none;
+            } 
+        }
+        
+    }
+}
+.slide-open{
+    right:30vw;
+}
+.slide-logo{
+    width: 25% ;
+    margin:0 auto;
+    margin-bottom: 50px;
+    img{
+        margin:0;
+        width: 100%;
+    }
+}
+.social-media{
+    position: fixed ;
+    bottom: 0;
+    width:70vw;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px;
+    margin: 10px auto;
+}
+.close-menu{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    i{
+        text-decoration: none;
+        font-size: 30px;
+        padding: 0 20px;
+        transform: translateY(10px);
+    }
+}

@@ -1,5 +1,6 @@
 <div class='main-content-container'>
-<audio id="audioPlayer" src="http://localhost/karakata/wp-content/uploads/2020/02/The_DeLong_Incident.mp3"></audio>
+<audio id="audioPlayer" src=""></audio>
+
     <h1 class='intro-title'>
         <?php the_title() ?>
     </h1>
@@ -9,29 +10,55 @@
         </div>
     </div>
 
-    <h1> THIS IS A BUTTON <a class = 'testplay'>PLAY</a></h1>
-    <h1> THIS IS A BUTTON <a class = 'teststop'>STOP</a></h1>
-
-
     <div class='music-content-container'>
-        <?php the_content() ?>
+
+        <div>
+            <?php the_content(); ?>
+        </div>
+        
+        <?php
+    
+        $args = array('post_type' => 'beats');
+        
+        $the_query = new WP_Query( $args );
+        
+        if ( $the_query->have_posts() ) {
+            echo '<ul>';
+            while ( $the_query->have_posts() ) {
+        
+                $the_query->the_post();
+                
+                echo '<li class= "song-list playicon"><span><img src="' . get_template_directory_uri() . '/Icons/play.svg' . '"></span>' . get_field('song')['title'] . '</li>';
+            }
+            echo '</ul>';
+        } else {
+            // no posts found
+        }
+        
+        wp_reset_postdata(); 
+        
+        ?>
+
     </div>
 </div>
 
 <div class = "media-player">
-    <h3 class = "player-title">Song Title<?php ?></h3>
+    <h3 class = "player-title">Karakata Media Player<?php ?></h3>
     <div class = "player-controls">
         <div class = "prev-container controls">
             <a class = "prev">
-                <!-- <img src = "../../icons/Reverse.svg"> -->
-                <?php echo get_home_path() ?>
+                <img src = "<?php echo get_template_directory_uri() . '/Icons/Reverse.svg' ?>">
             </a>
         </div>
-        <div class = "play-contianer controls">
-            <a class = "play">play</a>
+        <div class = "play-container controls">
+            <a class = "play">
+                <!-- <img src = "<?php echo get_template_directory_uri() . '/Icons/Play.svg' ?>"> -->
+            </a>
         </div>
         <div class = "next-container controls">
-            <a class = "next">next</a>
+            <a class = "next">
+                <img src = "<?php echo get_template_directory_uri() . '/Icons/Fast_Forward.svg' ?>">
+            </a>
         </div>
     </div>
 </div>

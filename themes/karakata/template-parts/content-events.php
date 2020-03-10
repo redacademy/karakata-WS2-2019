@@ -12,7 +12,7 @@
 	<div class="entry-content">
 	<?php $lastposts = get_posts(
             array(
-                'posts_per_page' => -1,
+                'posts_per_page' => 3,
                 'post_type' => 'events_post_type',
                  'category_name' => 'event'
 	)); 

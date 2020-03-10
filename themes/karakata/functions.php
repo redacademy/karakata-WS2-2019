@@ -98,6 +98,11 @@ function red_starter_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	wp_localize_script( 'functions', 'functionVars', array(
+		'karakata_url' => esc_url_raw( rest_url() ),
+		'karakata_nonce' => wp_create_nonce( 'wp_rest' ),
+	) );
 }
 add_action( 'wp_enqueue_scripts', 'red_starter_scripts' );
 
