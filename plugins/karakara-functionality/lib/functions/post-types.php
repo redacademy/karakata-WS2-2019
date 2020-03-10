@@ -43,7 +43,7 @@ function event_post_type() {
 		'description'           => __( 'adds a custom post-type for events', 'text_domain' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
-		'taxonomies'            => array(),
+		'taxonomies'            => array('show_taxonomy'),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
