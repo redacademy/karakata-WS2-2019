@@ -1,0 +1,61 @@
+
+.contact-main{
+    background-image: linear-gradient(180deg,rgba(0, 0, 0, 0.801),rgba(75, 0, 31, 0.774)), url(sunrise-farm.jpeg);
+    min-height: 120vh;
+    color: white;
+    width: 100vw;
+    padding: 30px;
+    margin-top: -35px;
+}
+.contact-logo{
+    width: 100%;
+    text-align: center;
+    img{
+        
+        width:150px;
+    }
+
+}
+.contact-form{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-weight: bold;
+    input{
+        color: white;
+        font-weight: lighter;
+        width:100%;
+        border: 2px solid white;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0);
+        box-shadow: none;
+    }
+    
+}
+input.send-email{
+    margin-left: 50%;
+    transform: translateX(-50%);
+    padding:12px 35px;
+    border: 1px white solid;
+    border-radius: 50px;
+    width: fit-content;
+    color: white;
+    &:hover{
+        box-shadow: none;
+
+    }
+}
+.contact-map{
+    height: 300px;
+}
+.contact-address{
+
+    width: 50%;
+    margin: 20px auto;
+    text-align: center;
+    color: white;
+    i{
+        padding: 0 10px;
+    }
+}
