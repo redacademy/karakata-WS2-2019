@@ -18,24 +18,24 @@
 }
 
 @mixin submenu {
-	
+
 	ul {
 		display: flex;
 		justify-content: space-between;
 		margin: 0px;
-		padding-left: 0.7rem;
+		padding-left: 3.5vw;
 		
 		li {
 			list-style-type: none;
-			border-radius: 1.3rem;
+			border-radius: 6.5vw;
 
 			&:hover {
 				background-color: rgba($color: white, $alpha: .4);
 			}
 
 			&:last-child {
-				padding-right: 8px;
-				border-radius: 1.3rem;
+				padding-right: 2.5vw;
+				border-radius: 6.5vw;
 			}
 
 			a {

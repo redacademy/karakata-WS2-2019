@@ -176,13 +176,16 @@
 
         /////////////////GALLERY
 
-        // $('main-content-container').on('click', function () {
-        //     console.log('you freaking clicked it my dude!');
-        //     // let n = $('.wp-block-image').index(this) + 1;
-        //     // console.log($('.wp-block-image').index(this));
+        $('.wp-block-image').on('click', function () {
+            console.log('you freaking clicked it my dude!');
+            let n = $('.wp-block-image').index(this) + 1;
+            console.log($('.wp-block-image').index(this));
 
-        //     // $('.gallery-grid').find(`figure:nth-child(${n})`).find('img').addClass('fullscreen');
-        // });
+            if ($('.fullscreen')) {
+                $('.fullscreen').removeClass('fullscreen');
+            }
+            $('.gallery-grid').find(`figure:nth-child(${n})`).find('img').addClass('fullscreen');
+        });
 
     });   
 })(jQuery);
