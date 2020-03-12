@@ -18,7 +18,7 @@
 
         <?php while ( have_posts() ) : the_post(); ?>
 
-            <?php get_template_part( 'template-parts/content', 'african-village-retreat' ); ?>
+            <?php get_template_part( 'template-parts/content', 'african-vilage-kitchen' ); ?>
 
         <?php endwhile; // End of the loop. ?>
 

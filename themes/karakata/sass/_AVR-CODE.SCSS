@@ -21,6 +21,20 @@
   }
 }
 
+.inner-nav {
+  width: 100%;
+
+  .menu-african-retreat-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: 5%;
+    border-radius: 9.4vw 0 0 9.4vw;
+    height: 13vw;
+    @include submenu;
+  }
+}
+
 .about-content {
   margin-top: 50px;
   padding: 0 20px 0 10px;
@@ -157,4 +171,15 @@ p.event-ticket-tab {
 p.event-address-tab {
   font-size: 24px;
   font-weight: 400;
+}
+
+.kitchen {
+  img {
+    width: 100vw;
+    height: 200px;
+  }
+  h2 {
+    font-size: 25px;
+    text-align-last: center;
+  }
 }
