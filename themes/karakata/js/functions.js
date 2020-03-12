@@ -181,10 +181,13 @@
             let n = $('.wp-block-image').index(this) + 1;
             console.log($('.wp-block-image').index(this));
 
-            if ($('.fullscreen')) {
+            if ($('.gallery-grid').find(`figure:nth-child(${n})`).hasClass('fullscreen')) {
                 $('.fullscreen').removeClass('fullscreen');
             }
-            $('.gallery-grid').find(`figure:nth-child(${n})`).find('img').addClass('fullscreen');
+            else if ($('.fullscreen')) {
+                $('.fullscreen').removeClass('fullscreen');
+                $('.gallery-grid').find(`figure:nth-child(${n})`).addClass('fullscreen');
+            }
         });
 
     });   

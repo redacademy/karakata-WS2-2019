@@ -99,9 +99,10 @@ li {
 //music/gallery
 
 .gallery-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     margin-top: 15vw;
+    flex-direction: row;
+    flex-wrap: wrap;
 
     figure {
         margin: 1vw;
@@ -113,13 +114,12 @@ li {
             height: 100%;
             object-fit: cover;
         }
+    }
 
-        .fullscreen {
-            position: absolute;
-            width: 88vw;
-            height: 88vw;
-            object-fit: cover;
-        }
+    .fullscreen {
+        width: 88vw;
+        height: 88vw;
+        object-fit: cover;
     }
 }
 
