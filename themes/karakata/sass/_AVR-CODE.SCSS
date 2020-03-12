@@ -24,7 +24,6 @@
 .about-content {
   margin-top: 50px;
   padding: 0 20px 0 10px;
-  height: 100vh;
   position: relative;
 }
 
@@ -34,7 +33,6 @@
   grid-template-columns: auto auto;
   grid-template-rows: auto auto auto;
   grid-gap: 10px;
-  border: 1px solid white;
 }
 
 .haha123 {
@@ -67,14 +65,20 @@ p.view-all {
 }
 
 a.back-button {
-  display: flex;
+  display: block;
   border: 3px solid white;
-  border-radius: 25%;
+  border-radius: 35%;
   flex-direction: row;
-  padding: -9px;
   margin-left: 0;
   margin-right: 35px;
   align-self: flex-end;
+  margin-bottom: 0px;
+}
+
+p.view-all {
+  text-align: -webkit-center;
+  margin: 0;
+  padding: 8px 10px 8px 8px;
 }
 
 .meta-data-container {
@@ -86,4 +90,71 @@ a.back-button {
 
 .hidden {
   display: none;
+}
+
+.service-info-box {
+  border: 1px solid grey;
+  border-radius: 10%;
+  width: 445px;
+  height: auto;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  color: black;
+  contain: content;
+}
+
+.event-information-wrap {
+  padding: 5px 45px 0;
+}
+p.event-title-tab {
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.ticket-rotate {
+  -webkit-transition: -webkit-transform;
+  -ms-transition: -ms-transform;
+  transition: transform;
+  color: #86a133;
+  font-size: 16px;
+}
+.ticket-rotate {
+  transform: rotate(140deg);
+  -ms-transform: rotate(140deg);
+  -webkit-transform: rotate(140deg);
+}
+
+i.fas.fa-map-marker-alt {
+  color: #86a133;
+  font-size: 16px;
+}
+
+a.link-more-information {
+  color: black;
+  text-decoration-line: none;
+}
+
+.event-information-btn {
+  text-align-last: end;
+  padding: 7px;
+}
+
+i.fas.fa-angle-double-right {
+  margin-left: 5px;
+  color: #86a133;
+  font-size: 23px;
+}
+
+p.event-ticket-tab {
+  font-size: 24px;
+  font-weight: 700;
+  color: gray;
+}
+
+p.event-address-tab {
+  font-size: 24px;
+  font-weight: 400;
 }
