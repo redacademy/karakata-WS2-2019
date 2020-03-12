@@ -1,4 +1,4 @@
-<div class='main-content-container'>
+<div class='main-content-container songs-main-container'>
 <audio id="audioPlayer" src=""></audio>
 
     <h1 class='intro-title'>

@@ -20,8 +20,8 @@ li {
 .intro-title {
     display: flex;
     justify-content: center;
-    padding: 3rem 0rem 2rem 0rem;
-    font-size: 1.2rem;
+    padding: 15vw 0rem 10vw 0rem;
+    font-size: 6vw;
     color: whitesmoke;
 }
 
@@ -31,6 +31,7 @@ li {
     min-height: 100vh;
     background: $color__theme_magenta;
     background: $color__theme_magenta_gradient;
+    font-size: 5vw;
 }
 
 .inner-nav {
@@ -42,7 +43,7 @@ li {
     justify-content: flex-end;
     background: linear-gradient(90deg,hsla(0,0%,100%,.15),hsla(0,0%,100%,.15) 90%,hsla(0,0%,100%,.4));
     margin-left: 5%;
-    border-radius: 30px 0 0 30px;
+    border-radius: 9.4vw 0 0 9.4vw;
     height: 13vw;
     @include submenu;
     }
@@ -60,7 +61,12 @@ li {
 
     figure {
         width: 100%;
-        margin: 4rem 0rem 4rem 0rem;
+        margin: 20vw 0rem 20vw 0rem;
+
+        iframe {
+            min-width: 100vw;
+            height: 95vw;
+        }
     }
 }
 
@@ -73,27 +79,35 @@ li {
 
     p {
         font-family: $font__main;
+        font-size: 3.5vw;
         color: whitesmoke;
-        margin: 0rem 1.5rem 1rem 1.5rem;
-        line-height: 2rem;
+        margin: 0rem 7.5vw 5vw 7.5vw;
+        line-height: 10vw;
     }
 }
 
 .music-main {
-    background-position: center;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.songs-main-container {
+    padding-bottom: 45vw;
 }
 
 //music/gallery
 
 .gallery-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 3rem;
+    display: flex;
+    margin-top: 15vw;
+    flex-direction: row;
+    flex-wrap: wrap;
 
     figure {
-        margin: .2rem;
-        width: 10rem;
-        height: 10rem;
+        margin: 1vw;
+        width: 43vw;
+        height: 43vw;
 
         img {
             width: 100%;
@@ -101,7 +115,14 @@ li {
             object-fit: cover;
         }
     }
+
+    .fullscreen {
+        width: 88vw;
+        height: 88vw;
+        object-fit: cover;
+    }
 }
+
 
 //music/shows
 
@@ -115,11 +136,15 @@ li {
 
 .media-player {
     display: flex;
+    position: fixed;
     flex-direction: column;
     align-items: center;
     background-color: black;
     width: 100%;
-    height: 25vh;
+    height: 45vw;
+    bottom: 0px;
+    border-top-left-radius: 10vw;
+    border-top-right-radius: 10vw;
 
     .player-title {
         color: white;
@@ -129,9 +154,13 @@ li {
         display:flex;
 
         .controls {
-            margin: 1rem;
-            width: 3rem;
-            height: 3rem;
+            margin: 5vw;
+            width: 15vw;
+            height: 15vw;
+
+            img {
+                width: 100%;
+            }
         }
     }   
 }
@@ -157,12 +186,12 @@ li {
 }
 
 .playicon {
-    margin: 1rem;
+    margin: 5vw;
 
     img {
-        width: 1rem;
-        height: 1rem;
-        margin-right: 2rem;
+        width: 5vw;
+        height: 5vw;
+        margin-right: 10vw;
     }
 }
 
@@ -191,11 +220,11 @@ li {
     color: lightgrey;
 
     span {
-        margin-right: 1rem;
+        margin-right: 5vw;
 
         img {
-            width: 1rem;
-            height: 1rem;
+            width: 4vw;
+            height: 5vw;
         }
     }
 }
