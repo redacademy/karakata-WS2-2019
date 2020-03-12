@@ -190,5 +190,17 @@
             }
         });
 
+        /////////////////FARMING
+
+        $('.more-button').on('click', function() {
+            
+            if ($('.trigger-p').hasClass('hidden')) {
+                $('.hidden').removeClass('hidden');
+            }
+            else {
+                $('.trigger-p').addClass('hidden');
+            }
+        })
+
     });   
 })(jQuery);
