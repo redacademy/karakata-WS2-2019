@@ -15,7 +15,7 @@
 					<?php wp_nav_menu( array( 'menu_id' => 'footer-menu' ) ); ?>
 				</nav>				</div><!-- .site-info -->
 			<h1>stay in touch with us!</h1>
-			<div class='footer-email'><p>Email</p><i class="fa fa-paper-plane" aria-hidden="true"></i></div>
+			<a href="#contact-page"><div class='footer-email'> <p>Email</p><i class="fa fa-paper-plane" aria-hidden="true"></i> </div></a>
 			<div class="footer-socials">
 						<i class="fab fa-instagram"></i>
 						<i class="fab fa-twitter"></i>
