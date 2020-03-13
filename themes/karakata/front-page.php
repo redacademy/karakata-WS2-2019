@@ -16,12 +16,12 @@ get_header(); ?>
 		</div>
 		<main id="main" class="front-page-main" role="main">
 		<ul class="nav-dots">
-			<li><a href="#1">•</a></li>
-			<li><a href="#2">•</a></li>
-			<li><a href="#3">•</a></li>
-			<li><a href="#4">•</a></li>
-			<li><a href="#5">•</a></li>
-			<li><a id="last-section" href="#6">•</a></li>
+			<li><a class='dot-scroll' id='s1' href="#1">•</a></li>
+			<li><a class='dot-scroll' id='s2' href="#2">•</a></li>
+			<li><a class='dot-scroll' id='s3' href="#3">•</a></li>
+			<li><a class='dot-scroll' id='s4' href="#4">•</a></li>
+			<li><a class='dot-scroll' id='s5' href="#5">•</a></li>
+			<li><a class='dot-scroll' id='s6' id="last-section" href="#6">•</a></li>
 		</ul>
 		<a id="arrow-down"><img src=<?php echo get_stylesheet_directory_uri() ."/Icons/Down_arrow.svg";?> alt="down-arrow"></a>
 		<div class="front-container">

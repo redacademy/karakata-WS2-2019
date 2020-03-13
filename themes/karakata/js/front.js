@@ -7,9 +7,9 @@
       var elemBottom = elemTop + $(elem).height();
       return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom) );
       }
-      
       $('#arrow-down').click(function() {    
             console.log(isScrolledIntoView('#1'));
+            
             if(isScrolledIntoView('#1')){
                   window.location.href = "#2";
             } else if(isScrolledIntoView('#2')){
@@ -33,7 +33,22 @@
                   $('#arrow-down').removeClass( "arrow-up"); 
 
             };
+            $('.dot-scroll').html( "•" );
 
+            if(isScrolledIntoView('#1')){
+                  $('#s1').html('<i id="selected-page" class="far fa-dot-circle"></i>');
+            } else if(isScrolledIntoView('#2')){
+                  $('#s2').html('<i id="selected-page" class="far fa-dot-circle"></i>');
+            } else if(isScrolledIntoView('#3')){
+                  $('#s3').html('<i id="selected-page" class="far fa-dot-circle"></i>');
+            } else if(isScrolledIntoView('#4')){
+                  $('#s4').html('<i id="selected-page" class="far fa-dot-circle"></i>');
+            } else if(isScrolledIntoView('#5')){
+                  $('#s5').html('<i id="selected-page" class="far fa-dot-circle"></i>');
+            } else if(isScrolledIntoView('#6')){
+                  console.log(isScrolledIntoView('#6'));
+                  $('#s6').html('<i id="selected-page" class="far fa-dot-circle"></i>');
+            }  
       });
       $('.start-button').click(function () {
             $(".first").css("background-color", "black");
