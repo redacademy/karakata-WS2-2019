@@ -160,9 +160,15 @@ body{
     background-size: 150vw auto;
     background-position: center;
 }
+#3{
+    padding:0;
+    display: flex;
+    flex-direction: column;
+
 .main-carousel{
     width:100vw;
     height: auto;
+    margin-top: 60px;
 }
 .carousel-cell{
     transform: scale(0.9);
@@ -245,19 +251,10 @@ body{
     display:none;
 }
 
-.front-scroll .flickity-prev-next-button.next{
-    right:10%;
-}
-.front-scroll .flickity-prev-next-button.previous{
-    left:10%;
-}
 .front-scroll .flickity-prev-next-button{
-    z-index: 3;
-    color:wheat;
-    background: rgba(255, 255, 255, 0);
-    box-shadow: none;
-    transition: background-color .6s ease;
+    display: none;
 }
+
 #selected-page{
     margin-right: -2px ;
     font-size: 20px;

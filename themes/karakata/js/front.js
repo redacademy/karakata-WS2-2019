@@ -33,30 +33,42 @@
                   $('#arrow-down').removeClass( "arrow-up"); 
 
             };
-            $('.dot-scroll').html( "•" );
-
+            
             if(isScrolledIntoView('#1')){
+                  $('.dot-scroll').html( "•" );
                   $('#s1').html('<i id="selected-page" class="far fa-dot-circle"></i>');
             } else if(isScrolledIntoView('#2')){
+                  $('.dot-scroll').html( "•" );
                   $('#s2').html('<i id="selected-page" class="far fa-dot-circle"></i>');
             } else if(isScrolledIntoView('#3')){
+                  $('.dot-scroll').html( "•" );
                   $('#s3').html('<i id="selected-page" class="far fa-dot-circle"></i>');
             } else if(isScrolledIntoView('#4')){
+                  $('.dot-scroll').html( "•" );
                   $('#s4').html('<i id="selected-page" class="far fa-dot-circle"></i>');
             } else if(isScrolledIntoView('#5')){
+                  $('.dot-scroll').html( "•" );
                   $('#s5').html('<i id="selected-page" class="far fa-dot-circle"></i>');
             } else if(isScrolledIntoView('#6')){
-                  console.log(isScrolledIntoView('#6'));
+                  $('.dot-scroll').html( "•" );
                   $('#s6').html('<i id="selected-page" class="far fa-dot-circle"></i>');
             }  
       });
+      if(!localStorage.getItem("visted")){
       $('.start-button').click(function () {
-            $(".first").css("background-color", "black");
-            $(".first").fadeOut(700);
-            setTimeout(() => {
+                  $(".first").css("background-color", "black");
+                  $(".first").fadeOut(700);
+                  setTimeout(() => {
                   $('.second').addClass( "in-position");
-            }, 1000);
-      })   
+                  }, 1000);
+                  
+            })   
+            localStorage.setItem("visted",true);
+         }else{
+            $(".first").hide();
+            $('.second').hide();
+
+         };
       $(window).click(function() {
             $('.slide-menu').removeClass( "slide-open");
             $('.hamburger').removeClass( "hamburger-open");
