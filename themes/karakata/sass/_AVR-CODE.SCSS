@@ -25,7 +25,8 @@
   width: 100%;
 
   .menu-african-retreat-container {
-    display: flex;
+    padding-right: 6.5vw;
+    padding-top: 4vw;
     align-items: center;
     justify-content: flex-end;
     margin-left: 5%;
@@ -37,8 +38,12 @@
 
 .about-content {
   margin-top: 50px;
-  padding: 0 20px 0 10px;
+  padding: 0 20px 0 20px;
   position: relative;
+
+  p {
+    padding: 5px 29px 5px 29px;
+  }
 }
 
 /////// CLASSES PAGE
@@ -81,7 +86,7 @@ p.view-all {
 a.back-button {
   display: block;
   border: 3px solid white;
-  border-radius: 35%;
+  border-radius: 30%;
   flex-direction: row;
   margin-left: 0;
   margin-right: 35px;
@@ -181,5 +186,22 @@ p.event-address-tab {
   h2 {
     font-size: 25px;
     text-align-last: center;
+    text-transform: uppercase;
   }
+}
+
+.inqurie-wrap {
+  border: 2px solid white;
+  border-radius: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+p.inqurie-text {
+  padding: 10px;
+  margin: 0;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }

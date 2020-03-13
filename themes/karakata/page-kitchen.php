@@ -12,7 +12,6 @@
 
 
 
-
 <div id="primary" class="content-area">
     <main id="main" class="site-main avr-main" role="main" style="background-image: url('<?php echo $featuredimg[0] ?>')">
 
@@ -21,6 +20,9 @@
             <?php get_template_part( 'template-parts/content', 'african-vilage-kitchen' ); ?>
 
         <?php endwhile; // End of the loop. ?>
+
+   
+
 
     </main><!-- #main -->
 </div><!-- #primary -->
