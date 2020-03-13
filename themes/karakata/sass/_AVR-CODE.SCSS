@@ -180,8 +180,10 @@ p.event-address-tab {
 
 .kitchen {
   img {
+    display: block;
     width: 100vw;
     height: 200px;
+    object-fit: cover;
   }
   h2 {
     font-size: 25px;
@@ -190,11 +192,17 @@ p.event-address-tab {
   }
 }
 
+.kitchen {
+  padding: 0;
+}
+
 .inqurie-wrap {
   border: 2px solid white;
-  border-radius: 40%;
+  border-radius: 50px;
+  width: 70%;
   display: flex;
   justify-content: center;
+  margin: 0 auto;
 }
 
 p.inqurie-text {
