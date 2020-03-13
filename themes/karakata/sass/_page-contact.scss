@@ -1,4 +1,7 @@
 
+html{
+    scroll-behavior: smooth;
+}
 .contact-main{
     background-image: linear-gradient(180deg,rgba(0, 0, 0, 0.801),rgba(75, 0, 31, 0.774)), url(sunrise-farm.jpeg);
     min-height: 120vh;
@@ -6,6 +9,9 @@
     width: 100vw;
     padding:40px 30px;
     margin-top: -35px;
+    p{
+        margin:9px;
+    }
 }
 .contact-logo{
     width: 100%;
@@ -50,12 +56,12 @@ input.send-email{
     height: 300px;
 }
 .contact-address{
-
-    width: 50%;
+    padding: 0 10px;
     margin: 20px auto;
     text-align: center;
     color: white;
-    i{
+    i{  
+        color: white;
         padding: 0 10px;
     }
 }

@@ -7,9 +7,9 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary " class="content-area">
 		<main id="main" class="site-main contact-main" role="main">
-            <div class="contact-logo">
+            <div id="contact-page" class="contact-logo">
             <?php echo '<img src='.  get_stylesheet_directory_uri() ."/icons/logo-white.png".' alt="logo white">';
             ?></div>
 			<?php while ( have_posts() ) : the_post(); ?>
