@@ -9,7 +9,7 @@
 			</div><!-- #content -->
 			
 
-			<footer id="colophon" class="site-footer" role="contentinfo">
+			<footer id="colophon" class="site-footer <?php if (!is_page( 'contact' )) {echo 'ftr';}?>" role="contentinfo">
 			<?php if (is_page( 'contact' )) {
 				echo	'<div class="site-info">';
 					echo	'<nav id="footer-navigation" class="footer-navigation" role="navigation">';
