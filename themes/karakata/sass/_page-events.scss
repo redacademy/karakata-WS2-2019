@@ -10,8 +10,10 @@
     align-items: flex-start;
 }
 .events-main{
-    background-image: url(sunrise-farm.jpeg);
+    background-image: url(../../icons/events.png);
     background-size: cover;
+    background-position: center;
+    background-color: rgb(68, 55, 43);
     min-height: 100vh;
     padding: 35px;
     width: 100vw;

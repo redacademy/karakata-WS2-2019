@@ -129,7 +129,7 @@ body{
                 content: '\f185';
                 text-shadow:none;
                 color: rgba(0, 0, 0, 0);
-                background-image: url(christmas-star.png);
+                background-image: url(../../icons/christmas-star.png);
                 background-size: contain;
                 margin:0 5px 0 -15px;
                 
@@ -143,7 +143,7 @@ body{
     transform: scale(1);
   }
 .welcome{
-    background-image:linear-gradient(90deg, rgba(black,.2),rgba(black,.2),rgba(black,.2)), url(home.jpg);
+    background-image:linear-gradient(90deg, rgba(black,.2),rgba(black,.2),rgba(black,.2)), url(../../icons/home.jpg);
     background-size: cover;
     background-position:center;
 }
@@ -156,7 +156,7 @@ body{
       }
 }
 .front-page-main{
-    background-image: url(desktop-bg.JPEG);
+    background-image: url(../../icons/desktop-bg.JPEG);
     background-size: 150vw auto;
     background-position: center;
 }
@@ -260,5 +260,4 @@ body{
     font-size: 20px;
     font-weight: 300;
 
-}
 }
