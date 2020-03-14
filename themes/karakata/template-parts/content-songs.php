@@ -5,7 +5,7 @@
         <?php the_title() ?>
     </h1>
     <div class='inner-nav'> 
-        <div class = 'inner-nav-container'>
+        <div class = 'inner-nav-container song-nav'>
             <?php wp_nav_menu( array( 'menu' => 'music' ) ); ?>
         </div>
     </div>

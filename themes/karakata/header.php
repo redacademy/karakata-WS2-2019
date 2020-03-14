@@ -27,7 +27,7 @@
 					<div class="descktop-nav">
 					<?php if (! is_front_page()) {
 						echo ' <div class="karakata-logo">
-						<img class=" front-logo white-logo" src='.  get_stylesheet_directory_uri() ."/icons/logo-white.png".' alt="logo white"></div> ';
+						<img class=" front-logo white-logo" src='.  get_stylesheet_directory_uri() ."/Icons/logo-white.png".' alt="logo white"></div> ';
 					};?>
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
@@ -39,7 +39,7 @@
 					<div class="close-menu"><a href="#" id='close-menu'><i class="fas fa-caret-left"></i></a></div>
 					<?php
 						echo ' <div class="slide-logo">
-						<img class=" front-logo white-logo" src='.  get_stylesheet_directory_uri() ."/icons/logo-white.png".' alt="logo white"></div> ';
+						<img class=" front-logo white-logo" src='.  get_stylesheet_directory_uri() ."/Icons/logo-white.png".' alt="logo white"></div> ';
 					?>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 					<div class="social-media">

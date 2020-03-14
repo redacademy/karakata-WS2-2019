@@ -47,6 +47,29 @@ li {
     height: 13vw;
     @include submenu;
     }
+
+    .song-nav ul li:nth-child(1){
+        background-color: lightgray;
+        padding: 3vw 5vw;
+    }
+    .about-nav ul li:nth-child(2){
+        background-color: lightgray;
+        padding: 3vw 5vw;
+    }
+    .videos-nav ul li:nth-child(3){
+        background-color: lightgray;
+        padding: 3vw 5vw;
+    }
+    .gallery-nav ul li:nth-child(4){
+        background-color: lightgray;
+        padding: 3vw 5vw;
+    }
+    .shows-nav ul li:nth-child(5){
+        background-color: lightgray;
+        padding: 3vw 5vw;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
 }
 
 .inner-nav-container {
@@ -72,6 +95,15 @@ li {
 
 .menu-music-container {
     width: 90%;
+    height: 100%;
+
+    ul {
+        height: 100%;
+
+        li {
+            margin: auto 0px;
+        }
+    }
 }
 
 .music-content-container {
