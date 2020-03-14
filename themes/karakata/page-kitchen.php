@@ -16,6 +16,7 @@
     <main id="main" class="site-main avr-main" role="main" style="background-image: url('<?php echo $featuredimg[0] ?>')">
 
         <?php while ( have_posts() ) : the_post(); ?>
+  
 
             <?php get_template_part( 'template-parts/content', 'african-vilage-kitchen' ); ?>
 
@@ -29,4 +30,3 @@
 
 
 
-<?php get_footer() ?>

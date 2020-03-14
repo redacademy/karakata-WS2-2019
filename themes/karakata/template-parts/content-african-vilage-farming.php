@@ -1,4 +1,4 @@
-<div class='farming-content-container'>
+<div class='farming-container'>
 
     <h1 class='intro-title'>
         <?php the_title() ?>
