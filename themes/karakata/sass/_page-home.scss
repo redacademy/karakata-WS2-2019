@@ -108,9 +108,8 @@ body{
         padding: 80px;
     }
     .header-image{
-        widows: 100px;
         padding: 12px;
-
+        width:10vw;
 
     }
     p{
@@ -232,6 +231,7 @@ body{
 #arrow-down{
     height: fit-content;
     z-index:3;
+    width: 10%;
     position:fixed;
     font-size: 30px;
     color: white;
