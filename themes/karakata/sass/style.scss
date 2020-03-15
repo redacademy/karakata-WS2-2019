@@ -63,18 +63,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "content";
 @import "media";
 @import "page-templates";
-// media query 
-@mixin tablet {
-    @media screen and (min-width:600px) {
-      @content;
-    }
-  }
-  
-  @mixin desktop {
-    @media screen and (min-width: 700px) {
-      @content;
-    }
-  }
   
 // page CSSs included
 @import "page-events";

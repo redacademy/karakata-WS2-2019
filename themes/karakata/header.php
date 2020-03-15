@@ -19,20 +19,22 @@
 		<div id="page" class="hfeed site">
 			<a class="skip-link screen-reader-text" href="#content"><?php echo esc_html( 'Skip to content' ); ?></a>
 			 <header id="masthead" class="site-header" role="banner">
-			<!--	<div class="site-branding">
-					<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<p class="site-description"><?php bloginfo( 'description' ); ?></p>
-				</div> -->
-				<div class="top-menu">
-					<div class="descktop-nav">
-					<?php if (! is_front_page()) {
-						echo ' <div class="karakata-logo">
-						<img class=" front-logo white-logo" src='.  get_stylesheet_directory_uri() ."/Icons/logo-white.png".' alt="logo white"></div> ';
-					};?>
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-				</nav>
+				<div class="desktop-nav-container">
+					<div class="desktop-nav-logo-container">
+						<img src="<?php echo get_stylesheet_directory_uri() . '/Icons/logo-white.png'?>" >
+					</div>
+					
+					<nav id="site-navigation" class="nav-container" role="navigation">
+						<?php wp_nav_menu( array( 'menu' => 'desktop-menu' ) ); ?>
+					</nav>
+
+					<div class="contact-link-container">
+						<a href="<?php echo get_permalink( get_page_by_path( 'contact' ) );?>">Contact</a>
+					</div>
 				</div>
+				
+				
+				
 				<div class='mobile-nav'>
 					<div href=''class="hamburger"><i class="fas fa-bars"></i></div>
 					<div class="slide-menu">
@@ -49,7 +51,6 @@
 						<i class="fas fa-globe-americas"></i>
 					</div>
 					</div>
-				</div>
 				</div>
 			</header>
 
