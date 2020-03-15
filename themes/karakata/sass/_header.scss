@@ -1,62 +1,15 @@
-@mixin tablet {
-    @media screen and (min-width:600px) {
-      @content;
-    }
-  }
-  
-  @mixin desktop {
-    @media screen and (min-width: 700px) {
-      @content;
-    }
-  }
-.top-menu{
-    @include desktop{
-        display: flex;  
-        position: absolute;
-        top:0;
-        font-size: 15px;
-        width: 100%;
-        justify-content: space-evenly;
-        
-        ul{
-            display: block;
-            margin: 20px auto;
-        }
-        nav{
-            width: fit-content;
 
-            a{
-            padding:0 1.5vw;
-        }}
-    }
-}
 .karakata-logo {
     display: none;
-    @include desktop{
-    display: block;
-    position: absolute;
-    top:0px;
-    left: 0px;
-    width: 100px; 
-    img{
-        margin: 0;
-
-     }  
-    }
-    }
+}
 .mobile-nav{
     color:white;
-
-    @include desktop{
-        display: none;
-
-    }
 }
 .hamburger{
     z-index: 9;
-    font-size: 25px;
+    font-size: 8vw;
     width: fit-content;
-    padding: 20px 20px;
+    padding: 6vw 6vw;
     transform:rotate(0deg);
     transition: transform 1.6s ease-out;
     &:hover{
@@ -86,11 +39,9 @@
         li{
             margin:5%;
             a{
-            
             text-decoration: none;
             } 
         }
-        
     }
 }
 .slide-open{
@@ -99,7 +50,7 @@
 .slide-logo{
     width: 25% ;
     margin:0 auto;
-    margin-bottom: 50px;
+    margin-bottom: 3vw;
     img{
         margin:0;
         width: 100%;
@@ -111,8 +62,8 @@
     width:70vw;
     display: flex;
     justify-content: space-evenly;
-    padding: 50px;
-    margin: 10px auto;
+    padding: 15.5vw;
+    margin: 3vw auto;
 }
 .close-menu{
     width: 100%;
@@ -120,8 +71,8 @@
     justify-content: flex-end;
     i{
         text-decoration: none;
-        font-size: 30px;
-        padding: 0 20px;
+        font-size: 15.5vw;
+        padding: 0 6vw;
         transform: translateY(10px);
     }
 }
