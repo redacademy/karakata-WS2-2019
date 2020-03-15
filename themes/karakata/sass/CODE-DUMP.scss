@@ -448,11 +448,16 @@ a {
 /// header
 
 .mobile-nav {
-    display: none;
+    @include desktop{
+        display: none;
+    }
 }
 
 .desktop-nav-container{
-    display: flex;
+    display: none;
+    @include desktop {
+        display: flex;
+    }
     align-items: center;
 
     .desktop-nav-logo-container {
