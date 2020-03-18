@@ -27,6 +27,14 @@ a {
     padding: 6vw 0 4vw;
     font-size: 4vw;
     color: whitesmoke;
+    
+    @include desktop { 
+        order: 3;
+        position: absolute;
+        top: 15vw;
+        left: 47vw;
+        font-size: 2vw;
+    }
 }
 
 
@@ -45,6 +53,12 @@ a {
 .inner-nav {
     width: 100%;
 
+    @include desktop {
+        width: 33%;
+        order: 1;
+        margin-top: 10vw;
+    }
+
     .inner-nav-container {
     display: flex;
     align-items: center;
@@ -54,34 +68,63 @@ a {
     border-radius: 9.4vw 0 0 9.4vw;
     height: 13vw;
     @include submenu;
+
+    @include desktop {
+        display: flex;
+        justify-content: center;
+        background: linear-gradient(90deg,hsla(0,0%,100%,.15),hsla(0,0%,100%,.15) 90%);
+        border-radius: 9.4vw;
+        margin-left: 0%;
+        height: 4vw;
+
+        a {
+            font-size: 1.5vw;
+        }
+    }
+    
+
     }
 
     .song-nav ul li:nth-child(1){
-        background-color: lightgray;
-        padding: 3vw 5vw;
+        @include nav-focused;
     }
     .about-nav ul li:nth-child(2){
-        background-color: lightgray;
-        padding: 3vw 5vw;
+        @include nav-focused;
     }
     .videos-nav ul li:nth-child(3){
-        background-color: lightgray;
-        padding: 3vw 5vw;
+        @include nav-focused;
     }
     .gallery-nav ul li:nth-child(4){
-        background-color: lightgray;
-        padding: 3vw 5vw;
+        @include nav-focused;
     }
     .shows-nav ul li:nth-child(5){
-        background-color: lightgray;
-        padding: 3vw 5vw;
+        @include nav-focused;
         border-top-right-radius: 0px;
         border-bottom-right-radius: 0px;
     }
 }
 
-.inner-nav-container {
-    display: flex;
+.songs-main-container {
+    padding-bottom: 45vw;
+
+    .music-content-container {
+        
+        figure {
+
+            @include desktop {
+                width: 40vw;
+                margin: 0px;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        ul {
+            margin-top: 7vw;
+        }
+    }
 }
 
 //music/video
@@ -112,10 +155,21 @@ a {
             margin: auto 0px;
         }
     }
+
+    @include desktop {
+        width: 100%;
+    }
 }
 
 .music-content-container {
     max-width: 90%;
+    
+    @include desktop {
+        display: flex;
+        order: 3;
+        margin-top: 5vw;
+        width: 90%;
+     }
 
     p {
         font-family: $font__main;
@@ -130,10 +184,6 @@ a {
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.songs-main-container {
-    padding-bottom: 45vw;
 }
 
 //music/gallery
@@ -250,6 +300,7 @@ a {
     margin: 5vw;
 
     @include desktop {
+        width: 100%;
         margin: 2vw;
     }
 
@@ -257,6 +308,12 @@ a {
         width: 5vw;
         height: 5vw;
         margin-right: 10vw;
+
+        @include desktop { 
+            width: 2vw;
+            height: 2vw;
+            margin-right: 4vw;
+        }
     }
 }
 
@@ -490,8 +547,8 @@ a {
     align-items: center;
 
     .desktop-nav-logo-container {
-        width: 20vw;
-        height: 9vw;
+        width: 15vw;
+        height: 6vw;
         margin-left: 5vw;
 
         img {
@@ -519,8 +576,8 @@ a {
     .contact-link-container {
         border: 1px solid #fff;
         border-radius: 5vw;
-        font-size: 2vw;
-        padding: 1vw 2vw;
+        font-size: 1.5vw;
+        padding: .5vw 2vw;
         margin-right: 5vw;
     }
 }

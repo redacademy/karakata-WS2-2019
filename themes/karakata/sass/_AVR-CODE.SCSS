@@ -8,6 +8,7 @@
 }
 .avr-main {
   .inner-nav {
+    width: 100%;
     -ms-flex-align: center;
     align-items: center;
     background: linear-gradient(
@@ -28,10 +29,6 @@
       padding: 0;
     }
   }
-}
-
-.inner-nav {
-  width: 100%;
 
   .menu-african-retreat-container {
     padding-right: 6.5vw;

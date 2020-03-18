@@ -1,3 +1,10 @@
+@mixin  desktop {
+ 
+    @media screen and (min-width: 1024px) {
+        @content;
+    };	 
+};
+
 // Rem output with px fallback
 @mixin font-size($sizeValue: 1) {
 	font-size: ($sizeValue * 16) * 1px;
@@ -17,6 +24,15 @@
     align-items: center;
 }
 
+@mixin nav-focused {
+	background-color: lightgray;
+	padding: 3vw 5vw;
+
+	@include desktop {
+		padding: 1vw 2vw;
+	}
+}
+
 @mixin submenu {
 
 	ul {
@@ -24,32 +40,37 @@
 		justify-content: space-between;
 		margin: 0px;
 		padding-left: 3.5vw;
+
+		@include desktop {
+			padding-left: 0vw;
+		}
 		
 		li {
 			list-style-type: none;
 			border-radius: 6.5vw;
-
-			&:hover {
-				background-color: rgba($color: white, $alpha: .4);
-			}
 
 			&:last-child {
 				padding-right: 2.5vw;
 				border-radius: 6.5vw;
 			}
 
+			&:first-child {
+				@include desktop {
+					padding-left: 2.5vw;
+				}
+			}
+
 			a {
 				color: white;
 				text-decoration: none;
 				font-size: $font__size_sub_menu;
+
+				@include desktop {
+					font-size: 1.5vw;
+				}
 			}
 		}
 	}
 }
 
-@mixin  desktop {
- 
-    @media screen and (min-width: 1024px) {
-        @content;
-    };	 
-};
+
