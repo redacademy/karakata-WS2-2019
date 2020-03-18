@@ -36,6 +36,10 @@ a {
     background: $color__theme_magenta;
     background: $color__theme_magenta_gradient;
     font-size: 5vw;
+
+    @include desktop {
+        font-size: 2vw;
+    }
 }
 
 .inner-nav {
@@ -182,8 +186,20 @@ a {
     border-top-left-radius: 10vw;
     border-top-right-radius: 10vw;
 
+    @include desktop {
+        height: 8vw;
+        flex-direction: row;
+        border-top-left-radius: 0vw;
+        border-top-right-radius: 0vw;
+    }
+
     .player-title {
         color: white;
+        font-size: 5vw;
+
+        @include desktop {
+            font-size: 2vw;
+        }
     }
 
     .player-controls {
@@ -193,6 +209,12 @@ a {
             margin: 5vw;
             width: 15vw;
             height: 15vw;
+
+            @include desktop {
+                margin: 0vw;
+                width: 3vw;
+                height: unset;
+            }
 
             img {
                 width: 100%;
@@ -205,16 +227,19 @@ a {
     background-image: url(../../Icons/Play.svg);
     background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
 }
 .pause-container {
     background-image: url(../../Icons/Play.svg);
     background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
 }
 .stop-container {
     background-image: url(../../Icons/Pause.svg);
     background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .song-list {
@@ -223,6 +248,10 @@ a {
 
 .playicon {
     margin: 5vw;
+
+    @include desktop {
+        margin: 2vw;
+    }
 
     img {
         width: 5vw;
