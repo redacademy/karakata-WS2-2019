@@ -19,7 +19,6 @@
 
 <div id="primary" class="content-area">
     <main id="main" class="site-main avr-main" role="main" style="background-image: url('<?php echo $featuredimg[0] ?>')">
-         <div class = "about-content-container">
 
         <?php while ( have_posts() ) : the_post(); ?>
         
@@ -28,8 +27,7 @@
 
         <?php endwhile; // End of the loop. ?>
 
-</div>
-
+    
     </main><!-- #main -->
 </div><!-- #primary -->
 

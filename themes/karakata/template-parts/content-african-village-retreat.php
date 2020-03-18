@@ -1,5 +1,5 @@
 
-<div class = "about-content-container">
+<div class='farming-container'>
 
 
     <h1 class='intro-title'>
