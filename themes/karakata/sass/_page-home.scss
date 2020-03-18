@@ -81,7 +81,7 @@ body{
 
 }
 .front-scroll{
-    color:white;
+    color:wheat;
     scroll-snap-align: start;
     box-sizing: border-box;
     padding: 50px;
@@ -118,7 +118,7 @@ body{
                 content: '\f185';
                 text-shadow:none;
                 color: rgba(0, 0, 0, 0);
-                background-image: url(../../icons/christmas-star.png);
+                background-image: url('../../Icons/christmas-star.png');
                 background-size: contain;
                 margin:0 5px 0 -15px;
                 
@@ -132,7 +132,7 @@ body{
     transform: scale(1);
   }
 .welcome{
-    background-image:linear-gradient(90deg, rgba(black,.2),rgba(black,.2),rgba(black,.2)), url(../../icons/home.jpg);
+    background-image:linear-gradient(90deg, rgba(black,.2),rgba(black,.2),rgba(black,.2)), url('../../Icons/home.jpg');
     background-size: cover;
     background-position:center;
 }
@@ -145,7 +145,7 @@ body{
       }
 }
 .front-page-main{
-    background-image: url(../../icons/desktop-bg.JPEG);
+    background-image: url('../../Icons/desktop-bg.JPEG');
     background-size: 150vw auto;
     background-position: center;
 }
@@ -191,7 +191,7 @@ body{
     float: right;
     position:fixed;
     top:40%;
-    color: rgba(255, 255, 255, 0.541);
+    color: rgba(255, 255, 255, 0.822);
     font-size: 30px;
     font-weight: bolder;
     right:10px;
