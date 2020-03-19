@@ -32,7 +32,7 @@ a {
         order: 3;
         position: absolute;
         top: 15vw;
-        left: 47vw;
+        left: 45vw;
         font-size: 2vw;
     }
 }
@@ -54,7 +54,7 @@ a {
     width: 100%;
 
     @include desktop {
-        width: 33%;
+        width: 45%;
         order: 1;
         margin-top: 10vw;
     }
@@ -107,6 +107,10 @@ a {
 .songs-main-container {
     padding-bottom: 45vw;
 
+    @include desktop {
+        padding-bottom: 8vw;
+    }
+
     .music-content-container {
         
         figure {
@@ -127,6 +131,9 @@ a {
     }
 }
 
+.songsList {
+    margin-left: 3vw;
+}
 //music/video
 
 .music-video-main .music-content-container {
@@ -168,7 +175,8 @@ a {
         display: flex;
         order: 3;
         margin-top: 5vw;
-        width: 90%;
+        width: 100%;
+        max-width: 100%;
      }
 
     p {
@@ -294,6 +302,7 @@ a {
 
 .song-list {
     color: white;
+    font-size: 1.3vw;
 }
 
 .playicon {
@@ -569,6 +578,14 @@ a {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
+
+                li a {
+                    font-size: 1vw;
+                }
+            }
+
+            @include desktop {
+                width: 45%;
             }
         }
     }

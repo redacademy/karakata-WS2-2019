@@ -29,7 +29,7 @@
 	padding: 3vw 5vw;
 
 	@include desktop {
-		padding: 1vw 2vw;
+		padding: .5vw 2vw;
 	}
 }
 
@@ -57,6 +57,7 @@
 			&:first-child {
 				@include desktop {
 					padding-left: 2.5vw;
+					
 				}
 			}
 
