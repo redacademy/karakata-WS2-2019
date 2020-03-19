@@ -8,7 +8,7 @@
 
 <!-- <?php echo wp_title(); ?> -->
 
-    <div class = "inner-nav">
+    <div class = "inner-nav about_nav--option">
         <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu' => 'African Retreat' ) ); ?>
     </div>
 

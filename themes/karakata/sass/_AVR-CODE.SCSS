@@ -247,6 +247,7 @@ p.inqurie-text {
 
 .more-button:after {
   background-image: url('../../karakata/Icons/Readmore.svg');
+  position: relative;
 }
 
 .farming-container {
@@ -267,8 +268,14 @@ img.wp-image-245 {
   text-align: center;
 }
 
-p.has-text-align-center {
-  font-size: 15px;
+.kitchen_nav--option {
+  p {
+    padding: 0px 20px 0px 20px;
+  }
+}
+
+.farming-main p {
+  font-size: 19px;
   font-weight: 300;
   line-height: 1.5;
 }
@@ -302,4 +309,24 @@ p.trigger-p {
   text-align: -webkit-center;
   font-size: 15px;
   font-weight: 300;
+}
+//// Sub-menu Bar
+.farming-container {
+  .about_nav--option ul li:nth-child(1) {
+    @include nav-focused;
+  }
+  .classes_nav--option ul li:nth-child(2) {
+    @include nav-focused;
+  }
+  .kitchen_nav--option ul li:nth-child(3) {
+    @include nav-focused;
+  }
+  .farming_nav--option ul li:nth-child(4) {
+    @include nav-focused;
+  }
+  ul li:nth-child(5) {
+    @include nav-focused;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
 }
