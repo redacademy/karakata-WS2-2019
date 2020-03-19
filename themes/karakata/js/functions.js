@@ -8,6 +8,18 @@
             position: 0,
             songURL: [],
             songTitle: [],
+            songLength: {
+                minutes: [],
+                seconds: [],
+            },
+
+            displayCurrentSong: function() {
+                // console.log(playlist.songLength.minutes[0])
+                $('.minutes').html(playlist.songLength.minutes[this.position])
+                $('.seconds').html(playlist.songLength.seconds[this.position])
+                // $('seconds').this.songLength[0];
+
+            },
 
             nextSongPos: function() {
                 this.position++;
@@ -54,6 +66,7 @@
                     $('.pause-container').addClass('stop-container');
                     $('.stop-container').removeClass('pause-container');
                     this.listPlaying();
+                    this.displayCurrentSong();
             },
 
             pauseSong: function() {
@@ -91,6 +104,7 @@
 
                     this.listStopped();
                     this.listPlaying();
+                    this.displayCurrentSong();
             },
 
             prevSong: function() {
@@ -110,9 +124,51 @@
 
                     this.listStopped();
                     this.listPlaying();
+                    this.displayCurrentSong();
             }
         };
-            
+
+        //get song duration
+        // let addZero = function (num) {
+        //     if (num > 10) {
+
+        //     }
+        // }
+
+
+        let songDuration = function (id) {
+
+            $.ajax({
+                method: 'GET',
+                url: functionVars.karakata_url + `wp/v2/media/${id}` ,
+                success: function (data) {
+                    let songLengthConversion = (data.media_details.length/60);
+                    let minutes = Math.floor(songLengthConversion);
+                    let slc3 = (songLengthConversion % 1);
+                    let seconds = Math.ceil((Math.round(slc3 * 100) /100) * 60);
+                    if (minutes < 10) {
+                        let num = ('0' + minutes).slice(-2)
+                        playlist.songLength.minutes.push( [num] );
+                    }
+                    else {
+                        playlist.songLength.minutes.push( [minutes] );
+                    }
+                    
+                    if (seconds < 10) {
+                        let num = ('0' + seconds).slice(-2)
+
+                        playlist.songLength.seconds.push( [num] );                    }
+                    else {
+                        playlist.songLength.seconds.push( [seconds] );                    }
+
+                },
+    
+                beforeSend: function(xhr) {
+                    xhr.setRequestHeader('X-WP-Nonce', functionVars.karakata_nonce);
+                    }
+            });
+        }
+        
         // get playlist from server
 
         $.ajax({
@@ -122,13 +178,19 @@
                 data.forEach((song) => {
                     playlist.songURL.push( song.acf.song.url )
                     playlist.songTitle.push( song.acf.song.title )
+                    songDuration( song.acf.song.id )
                 })
+                console.log(playlist.songLength.minutes, playlist.songLength.seconds)
+                
             },
 
             beforeSend: function(xhr) {
                 xhr.setRequestHeader('X-WP-Nonce', functionVars.karakata_nonce);
                 }
         });
+
+
+        playlist.displayCurrentSong();
 
         // play
 
@@ -177,9 +239,7 @@
         /////////////////GALLERY
 
         $('.wp-block-image').on('click', function () {
-            console.log('you freaking clicked it my dude!');
             let n = $('.wp-block-image').index(this) + 1;
-            console.log($('.wp-block-image').index(this));
 
             if ($('.gallery-grid').find(`figure:nth-child(${n})`).hasClass('fullscreen')) {
                 $('.fullscreen').removeClass('fullscreen');
@@ -201,6 +261,23 @@
                 $('.trigger-p').addClass('hidden');
             }
         })
+
+        ////////////////more media-player shinanigans desktop-mode engaged
+
+        //progress bar
+
+        $('.progress-bar').on('click', function() {
+            $('.progress')
+        })
+
+        // time left/total song time
+
+        // $('.playtime')
+
+
+        //volume-control
+
+        // $('.volume-control')
 
     });   
 })(jQuery);

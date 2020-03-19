@@ -4,6 +4,7 @@
     <h1 class='intro-title'>
         <?php the_title() ?>
     </h1>
+
     <div class='inner-nav'> 
         <div class = 'inner-nav-container song-nav'>
             <?php wp_nav_menu( array( 'menu' => 'music' ) ); ?>
@@ -44,6 +45,7 @@
 
 <div class = "media-player">
     <h3 class = "player-title">Karakata Media Player<?php ?></h3>
+    <div class = "download-song"><a>test</a></div>
     <div class = "player-controls">
         <div class = "prev-container controls">
             <a class = "prev">
@@ -60,4 +62,7 @@
             </a>
         </div>
     </div>
+    <div class = "progress-bar"><div class = "progress"></div></div>
+    <div class = "playtime"><span class = "">00</span>:<span class = "">00</span>/<span class = "minutes">00</span>:<span class = "seconds">00</span></div>
+    <div class = "volume-control"><a>test</a></div>
 </div>
