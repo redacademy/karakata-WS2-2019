@@ -67,6 +67,8 @@
          }else{
             $(".first").hide();
             $('.second').hide();
+            $('#karakata-logo').removeClass( "karakata-logo");
+
 
          };
       $(window).click(function() {

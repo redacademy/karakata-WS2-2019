@@ -1,7 +1,11 @@
 //global
 
 header {
-    height: 0vh;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    z-index: 6;
+    
 }
 
 p, h1, h2, h3, h4, a, span {

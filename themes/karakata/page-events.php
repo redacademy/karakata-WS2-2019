@@ -13,7 +13,7 @@
 <div id="primary" class="content-area event-content">
 	<main id="main" class="site-main events-main" role="main" >
 		
-		
+    <?php the_title( '<h1 class="events-title">', '</h1>' ); ?>	
     <?php while ( have_posts() ) : the_post(); ?>
         <h1 class='events-heading'><?php the_content(); ?></h1>
     <?php get_template_part( 'template-parts/content', 'events' ); ?>

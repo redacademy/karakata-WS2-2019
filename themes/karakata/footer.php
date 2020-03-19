@@ -12,7 +12,7 @@
 				echo '<footer id="colophon" class="site-footer" role="contentinfo">';
 					echo '<div class="site-info">';
 						echo '<nav id="footer-navigation" class="footer-navigation" role="navigation">';
-								wp_nav_menu( array( 'menu' => 'footer-menu' ) );
+						wp_nav_menu( array( 'menu' => 'footer_menu' ) );
 						echo '</nav>';				
 					echo '</div>';
 					echo '<h1>stay in touch with us!</h1>';

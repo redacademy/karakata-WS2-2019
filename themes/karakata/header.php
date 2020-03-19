@@ -21,7 +21,9 @@
 			 <header id="masthead" class="site-header" role="banner">
 				<div class="desktop-nav-container">
 					<div class="desktop-nav-logo-container">
-						<img src="<?php echo get_stylesheet_directory_uri() . '/Icons/logo-white.png'?>" >
+						<img id="karakata-logo" class="<?php if (is_front_page()) {
+							echo "karakata-logo";
+						}?>" src="<?php echo get_stylesheet_directory_uri() . '/Icons/logo-white.png'?>" >
 					</div>
 					
 					<nav id="site-navigation" class="nav-container" role="navigation">

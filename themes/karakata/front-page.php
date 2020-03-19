@@ -53,7 +53,7 @@ get_header(); ?>
 					echo '<h1 class="home-headings" href="#">'.$value.'</h1>';
 				}
 				elseif($label==="home_section_content" ){
-					echo '<p>'.$value.'</p>';
+					echo '<p class="scroll-content">'.$value.'</p>';
 				}
 			
 			
@@ -68,9 +68,8 @@ get_header(); ?>
 				if ($label==="home_section_image" ) {
 					
 					foreach($value as $image){
-						echo '<div >';
-						echo '<img src="'.$image['society_purposes']['url'].'">';
-						echo '</div>';
+						echo '<img class="header-image" src="'.$value[0]['society_purposes']['url'].'">';
+
 						
 					}
 				
@@ -80,7 +79,7 @@ get_header(); ?>
 					echo '<h1 class="home-headings">'.$value.'</h1>';
 				}
 				elseif($label==="home_section_content" ){
-					echo '<p>'.$value.'</p>';
+					echo '<p class="scroll-content">'.$value.'</p>';
 				}
 			
 			
@@ -88,7 +87,7 @@ get_header(); ?>
 		}
 		echo '</div>';
 		//------------------------------------------		
-		echo '<div id="3" class="front-scroll">';
+		echo '<div id="3" class="front-scroll front-parcel">';
 		foreach( $sections[2] as $label => $value ){
 			
 			if($value){
@@ -113,7 +112,7 @@ get_header(); ?>
 					echo '<h1 class="home-headings">'.$value.'</h1>';
 				}
 				elseif($label==="home_section_content" ){
-					echo '<p>'.$value.'</p>';
+					echo '<p class="scroll-content">'.$value.'</p>';
 				}
 			
 			
@@ -136,7 +135,7 @@ get_header(); ?>
 						echo '<h1 class="home-headings">'.$value.'</h1>';
 					}
 					elseif($label==="home_section_content" ){
-						echo '<p>'.$value.'</p>';
+						echo '<p class="scroll-content">'.$value.'</p>';
 					}
 				
 				
