@@ -21,6 +21,10 @@
     height: 13vw;
     @include submenu;
 
+    @include desktop {
+      display: none;
+    }
+
     p {
       color: white;
     }
@@ -48,8 +52,21 @@
   position: relative;
   padding-bottom: 50px;
 
+  @include desktop {
+    padding: 0 120px;
+    line-height: 1;
+    font-size: 16px;
+    margin-top: 0px;
+  }
+
   p {
     padding: 5px 29px 5px 29px;
+    font-size: 15px;
+    font-weight: 300;
+
+    @include desktop {
+      padding: 0;
+    }
   }
 }
 
@@ -66,7 +83,10 @@
   top: 0;
   left: 0;
 }
-
+img.wp-image-232 {
+  width: auto;
+  height: auto;
+}
 .service-icon {
   border: 1px solid white;
   width: 43vw;
@@ -226,18 +246,7 @@ p.inqurie-text {
 }
 
 .more-button:after {
-  content: '\f103';
-  font-family: FontAwesome;
-  font-weight: unset;
-  color: white;
-  font-size: 17px;
-  font-style: normal;
-  margin: 0 0 0 10px;
-  text-decoration: none;
-}
-
-p.trigger-p {
-  text-align: -webkit-center;
+  background-image: url('../../karakata/Icons/Readmore.svg');
 }
 
 .farming-container {
@@ -256,4 +265,41 @@ img.wp-image-245 {
 
 .wp-block-button.reserve-button.is-style-outline {
   text-align: center;
+}
+
+p.has-text-align-center {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.farming-content-container {
+  h2 {
+    text-transform: uppercase;
+  }
+}
+
+a.wp-block-button__link.has-text-color {
+  border: none;
+}
+
+.about_content--wrap {
+  @include desktop {
+    background-color: hsla(0, 0%, 100%, 0.5);
+    border-radius: 80px;
+    padding: 20px;
+    color: rgba(36, 36, 23, 0.9);
+  }
+
+  @include desktop {
+    p {
+      display: initial;
+      line-height: 27px;
+    }
+  }
+}
+p.trigger-p {
+  text-align: -webkit-center;
+  font-size: 15px;
+  font-weight: 300;
 }

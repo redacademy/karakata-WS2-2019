@@ -13,7 +13,9 @@
     </div>
 
         <div class="about-content">
-	        <?php the_content(); ?>
+            <div class = "about_content--wrap">
+            <?php the_content(); ?>
+            </div>
 	    </div><!-- .entry-content -->
 
 

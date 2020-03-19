@@ -1,7 +1,7 @@
 
    <div class='farming-container'>
 
-    <h1 class='intro-title'>
+   <h1 class='intro-title'>
         <?php the_title() ?>
     </h1>
 
@@ -142,8 +142,9 @@
 
         
 
-        
+
                 <?php the_content(); ?>
+            </div>
                 
             </div><!-- .entry-content -->
 

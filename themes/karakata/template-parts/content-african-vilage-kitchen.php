@@ -9,13 +9,13 @@
         <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu' => 'African Retreat' ) ); ?>
     </div>
 
-        <div class="about-content kitchen">
+    <div class='farming-content-container'>
 	        <?php the_content(); ?>
 	    </div><!-- .entry-content -->
 
-        <div class = " inqurie-wrap">
+        <a class = " inqurie-wrap" href="https://karakata.van.cp.academy.red/contact">
             <p class = "inqurie-text"> Inqurie Here </p>
-        </div>
+        </a>
 
 
 </div> <!-- farming-container -->
