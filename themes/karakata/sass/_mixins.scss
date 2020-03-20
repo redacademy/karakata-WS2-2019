@@ -57,6 +57,10 @@
 			&:last-child {
 				padding-right: 2.5vw;
 				border-radius: 6.5vw;
+
+				@include desktop {
+					border-radius: 9.4vw;
+				}
 			}
 
 			&:first-child {

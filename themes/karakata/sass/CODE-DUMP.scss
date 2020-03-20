@@ -105,6 +105,11 @@ a {
         @include nav-focused;
         border-top-right-radius: 0px;
         border-bottom-right-radius: 0px;
+
+        @include desktop {
+            border-top-right-radius: 9.4vw;
+            border-bottom-right-radius: 9.4vw;
+        }
     }
 }
 
@@ -303,6 +308,7 @@ a {
         left: 0;
         margin: 0;
         padding: 1vw;
+        z-index: 1000;
 
         img {
             object-fit: contain;
@@ -316,6 +322,17 @@ a {
 .music-shows-main {
     h2 {
         display: none;
+    }
+
+    .intro-title {
+        @include desktop {
+            display: none;
+        }
+    }
+
+    .music-event-content-container {
+        order: 2;
+        margin-top: 3vw;
     }
 }
 
@@ -482,6 +499,7 @@ a {
         display: flex;
         justify-content: center;
         width: 100%;
+        flex-wrap: wrap;
     }
 }
 
@@ -550,6 +568,7 @@ a {
         @include desktop {
             font-size: 2vw;
             margin-left: 3vw;
+            margin-top: .5vw;
         }
     }
 }
@@ -558,7 +577,7 @@ a {
     display: grid;
     grid-template-rows: 1fr 1fr;
     height: 80vw;
-    margin: 9vw 0rem;
+    margin: 9vw 1.5vw;
     border-radius: 5vw;
     background-color: white;
     overflow: hidden;
@@ -566,6 +585,7 @@ a {
     @include desktop {
         height: 27vw;
         width: 28vw;
+        margin: 1.5vw 1.5vw;
     }
 
     .event-img-container {
@@ -574,7 +594,7 @@ a {
         background-size: cover;
 
         .event-price-container {
-            display: flex;
+            display: none;
             flex-direction: column;
             width: 15vw;
             padding: 1vw;
