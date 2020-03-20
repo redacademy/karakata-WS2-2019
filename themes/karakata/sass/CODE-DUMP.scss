@@ -25,6 +25,14 @@ a {
     text-decoration: none;
 }
 
+.desktop-hidden {
+    display: none;
+
+    @include desktop {
+        display: inline-block;
+    }
+}
+
 .intro-title {
     display: flex;
     justify-content: center;
@@ -35,7 +43,7 @@ a {
     @include desktop { 
         order: 3;
         position: absolute;
-        top: 15vw;
+        top: 12vw;
         left: 45vw;
         font-size: 2vw;
     }
@@ -60,7 +68,7 @@ a {
     @include desktop {
         width: 45%;
         order: 1;
-        margin-top: 10vw;
+        margin-top: 6vw;
     }
 
     .inner-nav-container {
@@ -322,6 +330,10 @@ a {
 .music-shows-main {
     h2 {
         display: none;
+
+        @include desktop {
+            display: inline-block;
+        }
     }
 
     .intro-title {
@@ -331,8 +343,26 @@ a {
     }
 
     .music-event-content-container {
-        order: 2;
         margin-top: 3vw;
+        @include desktop {
+            order: 3;
+            margin-top: 2vw;
+        }
+    }
+}
+
+.desktop-intro {
+    @include desktop {
+        order: 2;
+        font-size: 3vw;
+        width: 80%;
+        text-align: center;
+        font-size: 1.5vw;
+        color: whitesmoke;
+
+        h2 {
+            margin-bottom: 0px;
+        }
     }
 }
 
@@ -425,7 +455,7 @@ a {
     @include desktop {
         display: flex;
         width: 100%;
-        margin: 2vw;
+        margin: 1vw;
     }
 
     img {

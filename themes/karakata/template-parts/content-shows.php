@@ -4,6 +4,9 @@
     <h1 class='intro-title'>
         <?php the_title() ?>
     </h1>
+    <div class = 'desktop-intro desktop-hidden'>
+        <?php the_content() ?>
+    </div>
     <div class='inner-nav'> 
         <div class = 'inner-nav-container shows-nav'>
             <?php wp_nav_menu( array( 'menu' => 'music' ) ); ?>
