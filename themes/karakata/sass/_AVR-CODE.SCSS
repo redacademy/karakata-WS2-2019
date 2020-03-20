@@ -8,41 +8,41 @@
 }
 .avr-main {
   .inner-nav {
-    width: 100%;
+    width: 95%;
     -ms-flex-align: center;
     align-items: center;
-    background: linear-gradient(
-      90deg,
-      hsla(0, 0%, 100%, 0.15),
-      hsla(0, 0%, 100%, 0.15) 90%,
-      hsla(0, 0%, 100%, 0.4)
-    );
+    // background: linear-gradient(
+    //   90deg,
+    //   hsla(0, 0%, 100%, 0.15),
+    //   hsla(0, 0%, 100%, 0.15) 90%,
+    //   hsla(0, 0%, 100%, 0.4)
+    // );
     border-radius: 30px;
     height: 13vw;
-    @include submenu;
+    @include submenu-avr;
+    .inner-nav-container {
+      margin: 0;
+      border-radius: 9.4vw;
+    }
 
     @include desktop {
-      display: none;
+      width: 45%;
+      order: 1;
+      margin-top: 10vw;
     }
 
     p {
       color: white;
     }
     ul {
-      margin: 0 30px;
+      align-items: center;
+      height: 100%;
+      // margin: 0 10px;
+      // margin-right: 10px;
+      // margin-left: 10px;
+
       padding: 0;
     }
-  }
-
-  .menu-african-retreat-container {
-    padding-right: 6.5vw;
-    padding-top: 4vw;
-    align-items: center;
-    justify-content: flex-end;
-    margin-left: 5%;
-    border-radius: 9.4vw 0 0 9.4vw;
-    height: 13vw;
-    @include submenu;
   }
 }
 
@@ -90,7 +90,7 @@ img.wp-image-232 {
 .service-icon {
   border: 1px solid white;
   width: 43vw;
-  height: 34vh;
+  height: 36vw;
   border-radius: 17%;
   text-align: center;
   padding: 10px;
@@ -113,7 +113,7 @@ p.view-all {
 a.back-button {
   display: block;
   border: 3px solid white;
-  border-radius: 30%;
+  border-radius: 50px;
   flex-direction: row;
   margin-left: 0;
   margin-right: 35px;
@@ -181,6 +181,7 @@ i.fas.fa-map-marker-alt {
 a.link-more-information {
   color: black;
   text-decoration-line: none;
+  font-size: 21px;
 }
 
 .event-information-btn {
@@ -252,9 +253,6 @@ p.inqurie-text {
 
 .farming-container {
   padding-bottom: 50px;
-  .menu-african-retreat-container {
-    padding-top: 3vw;
-  }
 }
 
 // for kitchen first picture
@@ -306,27 +304,44 @@ a.wp-block-button__link.has-text-color {
   }
 }
 p.trigger-p {
-  text-align: -webkit-center;
-  font-size: 15px;
+  font-size: 19px;
   font-weight: 300;
+  line-height: 1.5;
 }
 //// Sub-menu Bar
 .farming-container {
   .about_nav--option ul li:nth-child(1) {
-    @include nav-focused;
+    @include nav-focused-avr;
   }
   .classes_nav--option ul li:nth-child(2) {
-    @include nav-focused;
+    @include nav-focused-avr;
   }
   .kitchen_nav--option ul li:nth-child(3) {
-    @include nav-focused;
+    @include nav-focused-avr;
   }
   .farming_nav--option ul li:nth-child(4) {
-    @include nav-focused;
+    @include nav-focused-avr;
   }
-  ul li:nth-child(5) {
-    @include nav-focused;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
+  // ul li:nth-child(5) {
+  //   @include nav-focused;
+
+  @include desktop {
+    border-top-right-radius: 9.4vw;
+    border-bottom-right-radius: 9.4vw;
   }
+  // }
+}
+
+.text-kitchen {
+  p {
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 1.5;
+    padding: 0 20px 0 20px;
+  }
+}
+
+.menu-african-retreat-container {
+  width: 100%;
+  height: 100%;
 }
