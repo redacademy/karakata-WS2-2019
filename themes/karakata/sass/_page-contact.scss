@@ -40,10 +40,20 @@ html{
         background-color: rgba(255, 255, 255, 0);
         box-shadow: none;
     }
+    textarea{
+        color: white;
+        font-weight: lighter;
+        width:100%;
+        border: 2px solid white;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0);
+        box-shadow: none;        
+    }
     
 }
 input.send-email{
-    margin-left: 50%;
+    margin: 30px 0;
+    margin-left: 51%;
     transform: translateX(-50%);
     padding:12px 35px;
     border: 1px white solid;
