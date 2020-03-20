@@ -5,7 +5,7 @@
       var docViewBottom = docViewTop + $(window).height();
       var elemTop = $(elem).offset().top;
       var elemBottom = elemTop + $(elem).height();
-      return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom) );
+      return ((elemBottom >= docViewTop) && (elemTop < docViewBottom) );
       }
       $('#arrow-down').click(function() {    
             console.log(isScrolledIntoView('#1'));
