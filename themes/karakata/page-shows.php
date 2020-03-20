@@ -13,6 +13,10 @@
 			<?php endwhile; // End of the loop. ?>
 
 		</main><!-- #main -->
+<<<<<<< Updated upstream
 	</div><!-- #primary -->
 
 	<?php get_footer(); ?>
+=======
+	</div><!-- #primary -->
+>>>>>>> Stashed changes
