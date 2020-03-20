@@ -20,7 +20,7 @@
         </div>
     </div>
 
-    <div class='music-content-container'>
+    <div class='music-content-container about-us-container'>
         <?php the_content() ?>
     </div>
     <?php } ?>

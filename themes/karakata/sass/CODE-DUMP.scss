@@ -140,17 +140,42 @@ a {
 }
 //music/video
 
-.music-video-main .music-content-container {
-    @include flex-c;
-    max-width: 100%;
+.music-video-main {
 
-    figure {
-        width: 100%;
-        margin: 20vw 0rem 20vw 0rem;
+    .intro-title {
+        @include desktop {
+            display: none;
+        }
+    }
 
-        iframe {
-            min-width: 100vw;
-            height: 95vw;
+    .music-content-container {
+        @include flex-c;
+        max-width: 100%;
+
+        @include desktop {
+            margin-top: 3vw;
+        }
+
+        figure {
+            width: 100%;
+            margin: 20vw 0rem 20vw 0rem;
+
+            @include desktop {
+                width: 100%;
+                max-width: 85%;
+                margin: 0px;
+            }
+
+            iframe {
+                min-width: 100vw;
+                height: 95vw;
+
+                @include desktop {
+                    min-width: unset;
+                    height: 33vw;
+                    width: 100%;
+                }
+            }
         }
     }
 }
@@ -189,6 +214,11 @@ a {
         color: whitesmoke;
         margin: 0rem 7.5vw 5vw 7.5vw;
         line-height: 10vw;
+
+        @include desktop {
+            font-size: 1.3vw;
+            line-height: 2.5vw;
+        }
     }
 }
 
@@ -198,7 +228,45 @@ a {
     background-size: cover;
 }
 
+///about
+
+.about-us-container {
+    @include desktop {
+        display: grid;
+        grid-template-columns: 1fr 1.65fr;
+
+        figure {
+            margin: 0px;
+            grid-column: 1;
+            grid-row: 1;
+            
+            img {
+                width: 100%;
+            }
+        }
+
+        p {
+            grid-row: 1;
+            grid-column: 2;
+
+            &:first-of-type {
+                margin-top: 9vw;
+            }
+
+            &:last-of-type {
+                margin-top: 31vw;
+            }
+        }
+    }
+}
+
 //music/gallery
+
+.gallery-main-content-container .intro-title {
+    @include desktop {
+        display: none;
+    }
+}
 
 .gallery-grid {
     display: flex;
@@ -206,10 +274,19 @@ a {
     flex-direction: row;
     flex-wrap: wrap;
 
+    @include desktop {
+        margin-top: 0vw;
+    }
+
     figure {
         margin: 1vw;
         width: 43vw;
         height: 43vw;
+
+        @include desktop {
+            width: 30%;
+            height: 20vw;
+        }
 
         img {
             width: 100%;
@@ -219,9 +296,17 @@ a {
     }
 
     .fullscreen {
-        width: 88vw;
-        height: 88vw;
-        object-fit: cover;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 1vw;
+
+        img {
+            object-fit: contain;
+        }
     }
 }
 
@@ -391,11 +476,26 @@ a {
 
 .music-event-content-container {
     width: 90%;
+
+    @include desktop {
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
 }
 
 .event-content-container {
     display: grid;
     grid-template-rows: 2fr 1fr;
+
+    @include desktop {
+        grid-template-rows: 2fr 1.3fr;
+    }
+}
+
+.event-content-info-container {
+    padding-top: 1vw;
 }
 
 .event-content-info {
@@ -404,7 +504,14 @@ a {
 
     .info {
         margin: 4vw 0;
-        font-size: 5vw;    
+        font-size: 5vw;
+
+        @include desktop {
+            margin: 0px;
+            margin-top: .7vw;
+            margin-bottom: .5vw;
+            font-size: 1.5vw;
+        }
     }
 }
 
@@ -414,9 +521,18 @@ a {
     span {
         margin-right: 5vw;
 
+        @include desktop {
+            margin-right: 1vw;
+        }
+
         img {
             width: 4vw;
             height: 5vw;
+
+            @include desktop {
+                width: 1.3vw;
+                height: 2vw;            
+            }
         }
     }
 }
@@ -430,6 +546,11 @@ a {
         font-size: 7vw;
         text-align: center;
         color: $color__text_orange;
+
+        @include desktop {
+            font-size: 2vw;
+            margin-left: 3vw;
+        }
     }
 }
 
@@ -441,6 +562,11 @@ a {
     border-radius: 5vw;
     background-color: white;
     overflow: hidden;
+
+    @include desktop {
+        height: 27vw;
+        width: 28vw;
+    }
 
     .event-img-container {
         background-position: center;
@@ -472,6 +598,12 @@ a {
     height: 9vw;
     margin: 0 auto;
     font-size: 4vw;
+
+    @include desktop {
+        width: 80%;
+        height: 4vw;
+        font-size: 1vw;
+    }
 }
 
 //farming page
@@ -486,6 +618,11 @@ a {
 
 .farming-content-container {
     max-width: 90%;
+
+    figure {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 
@@ -592,9 +729,10 @@ a {
 
 .farming-main {
     .reserve-button {
+        display: flex;
         width: 80%;
         margin: 0px auto;
-        padding: 0px;
+        padding: 2vw;
         border: 1px solid white;
         border-radius: 10vw;
         
@@ -663,7 +801,7 @@ a {
     .contact-link-container {
         border: 1px solid #fff;
         border-radius: 5vw;
-        font-size: 1.5vw;
+        font-size: 1.2vw;
         padding: .5vw 2vw;
         margin-right: 5vw;
     }

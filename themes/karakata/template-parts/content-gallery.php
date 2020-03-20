@@ -1,4 +1,4 @@
-<div class='main-content-container'>
+<div class='main-content-container gallery-main-content-container'>
 
     <h1 class='intro-title'>
         <?php the_title() ?>
