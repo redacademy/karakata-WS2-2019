@@ -13,11 +13,20 @@
                 seconds: [],
             },
 
+            test: function() {
+                
+                    // console.log(song, pos)
+                    console.log(`this is broken: ${playlist.songLength.minutes[this.position]}`)
+                    console.log(playlist.songLength.minutes)
+                    console.log(playlist.songLength.minutes.length)
+                    // $(song).html(`${playlist.songLength.minutes[this.position]}:${playlist.songLength.seconds[this.position]}`);
+                
+            },
+
             displayCurrentSong: function() {
-                // console.log(playlist.songLength.minutes[0])
+                console.log(`this is not: ${playlist.songLength.minutes[this.position]}`)
                 $('.minutes').html(playlist.songLength.minutes[this.position])
                 $('.seconds').html(playlist.songLength.seconds[this.position])
-                // $('seconds').this.songLength[0];
 
             },
 
@@ -67,6 +76,7 @@
                     $('.stop-container').removeClass('pause-container');
                     this.listPlaying();
                     this.displayCurrentSong();
+                    this.test();
             },
 
             pauseSong: function() {
@@ -127,14 +137,9 @@
                     this.displayCurrentSong();
             }
         };
+        
 
         //get song duration
-        // let addZero = function (num) {
-        //     if (num > 10) {
-
-        //     }
-        // }
-
 
         let songDuration = function (id) {
 
@@ -148,18 +153,18 @@
                     let seconds = Math.ceil((Math.round(slc3 * 100) /100) * 60);
                     if (minutes < 10) {
                         let num = ('0' + minutes).slice(-2)
-                        playlist.songLength.minutes.push( [num] );
+                        playlist.songLength.minutes.push( num );
                     }
                     else {
-                        playlist.songLength.minutes.push( [minutes] );
+                        playlist.songLength.minutes.push( minutes );
                     }
                     
                     if (seconds < 10) {
                         let num = ('0' + seconds).slice(-2)
 
-                        playlist.songLength.seconds.push( [num] );                    }
+                        playlist.songLength.seconds.push( num );                    }
                     else {
-                        playlist.songLength.seconds.push( [seconds] );                    }
+                        playlist.songLength.seconds.push( seconds );                    }
 
                 },
     
@@ -183,6 +188,10 @@
                 console.log(playlist.songLength.minutes, playlist.songLength.seconds)
                 
             },
+            complete: function() {
+                console.log(playlist.songLength.minutes)
+                console.log(playlist.songLength.minutes.length)
+            },
 
             beforeSend: function(xhr) {
                 xhr.setRequestHeader('X-WP-Nonce', functionVars.karakata_nonce);
@@ -190,7 +199,16 @@
         });
 
 
-        playlist.displayCurrentSong();
+        /// add song length to each song
+        // let pos = 0;
+
+        // $('.song-length').each(function(pos, song) {
+        //     console.log(song, pos)
+            console.log(playlist.songLength.minutes)
+            console.log(playlist.songLength.minutes.length)
+        //     $(song).html(`${playlist.songLength.minutes[0]}:${playlist.songLength.seconds[0]}`);
+        //     // pos++
+        // })
 
         // play
 
@@ -236,6 +254,10 @@
             playlist.playSong();
         });
 
+        /// add song length to each song
+
+
+
         /////////////////GALLERY
 
         $('.wp-block-image').on('click', function () {
@@ -278,6 +300,7 @@
         //volume-control
 
         // $('.volume-control')
+
 
     });   
 })(jQuery);

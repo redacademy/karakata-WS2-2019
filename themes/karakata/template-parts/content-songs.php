@@ -29,7 +29,7 @@
         
                 $the_query->the_post();
                 
-                echo '<li class= "song-list playicon"><span><img src="' . get_template_directory_uri() . '/Icons/Play.svg' . '"></span>' . get_field('song')['title'] . '</li>';
+                echo '<li class= "song-list playicon"><span><img src="' . get_template_directory_uri() . '/Icons/Play.svg' . '"></span>' . get_field('song')['title'] . '<span class = "song-length"></span></li>';
             }
             echo '</ul>';
         } else {
