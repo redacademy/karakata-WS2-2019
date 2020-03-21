@@ -38,14 +38,13 @@ get_header(); ?>
   <label for="email">Email Address *</label>
   
   <input  type="text" name="email" maxlength="80" size="30">
-  <label for="telephone">Telephone Number</label>
 
-  <input  type="text" name="telephone" maxlength="30" size="30">
   <label for="comments">Message *</label>
   
   <textarea class="message" name="comments" maxlength="1000" cols="25" rows="6"></textarea> <td colspan="2" style="text-align:center">
   <input class="send-email" type="submit" value="Submit">  
 </form>
+<div  class="mail-result">
 <?php
 if(isset($_POST['email'])) {
     
@@ -66,7 +65,6 @@ if(isset($_POST['email'])) {
     if(!isset($_POST['first_name']) ||
     !isset($_POST['last_name']) ||
     !isset($_POST['email']) ||
-    !isset($_POST['telephone']) ||
     !isset($_POST['comments'])) {
         died('We are sorry, but there appears to be a problem with the form you submitted.');       
     }
@@ -76,7 +74,6 @@ if(isset($_POST['email'])) {
     $first_name = $_POST['first_name']; // required
     $last_name = $_POST['last_name']; // required
     $email_from = $_POST['email']; // required
-    $telephone = $_POST['telephone']; // not required
     $comments = $_POST['comments']; // required
     
     $error_message = "";
@@ -117,14 +114,13 @@ if(isset($_POST['email'])) {
     $email_message .= "First Name: ".clean_string($first_name)."\n";
     $email_message .= "Last Name: ".clean_string($last_name)."\n";
     $email_message .= "Email: ".clean_string($email_from)."\n";
-    $email_message .= "Telephone: ".clean_string($telephone)."\n";
     $email_message .= "Comments: ".clean_string($comments)."\n";
  
     // create email headers
     $headers = 'From: '.$email_from."\r\n".
     'Reply-To: '.$email_from."\r\n" .
     'X-Mailer: PHP/' . phpversion();
-    @mail($email_to, $email_subject, $email_message, $headers);  
+    mail($email_to, $email_subject, $email_message, $headers);  
     ?>
  
  <!-- include your own success html here -->
@@ -135,7 +131,8 @@ if(isset($_POST['email'])) {
  
 }
 ?>
-            </div>
+ </div>
+  </div>
             <div class="contact-ad">
             <h1>come with us.</h1>
             <iframe class="contact-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2610.3065162993516!2d-122.31389488431577!3d49.13780447931589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548433f95a74b659%3A0x10f4057ff8cf5483!2s7487%20Birch%20St%2C%20Mission%2C%20BC%20V2V%203P9!5e0!3m2!1sen!2sca!4v1583891038771!5m2!1sen!2sca" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>

@@ -1,7 +1,8 @@
-footer.ftr{
-    display:none;
-    position: absolute;
-    visibility: hidden;
+footer.site-footer{
+    @include desktop{
+            display: none;
+    }
+    
 }
 footer{
     padding: 25px;
