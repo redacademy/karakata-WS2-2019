@@ -109,6 +109,7 @@ input.send-email{
     @include desktop{
         color: rgba(0, 0, 0, 0.466);
     border: 2px rgba(0, 0, 0, 0.466) solid;
+    padding:12px 60px ;
 
     }
     &:hover{
@@ -132,5 +133,15 @@ input.send-email{
     i.fas.fa-map-marker-alt{  
         color: white;
         padding: 0 10px;
+    }
+}
+.mail-result{
+    font-weight: lighter;
+    font-size: 13px;
+    color: rgb(255, 49, 49);
+    .submited{
+        color: rgb(102, 255, 102);
+        visibility: hidden;
+        transition: visibility 4s ease;
     }
 }
