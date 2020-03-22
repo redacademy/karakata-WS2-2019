@@ -90,14 +90,14 @@ body{
     background-repeat: space;
         @include desktop{
         background-image: url('../../Icons/desktop-bg.JPEG');
-        background-size: 150vw auto;
+        background-size: 130vw auto;
         background-position: center;
-        background-repeat: repeat;
+        background-repeat: unset;;
 
     }
 }
 .front-scroll{
-    color:wheat;
+    color:white;
     scroll-snap-align: start;
     box-sizing: border-box;
     padding: 50px;
@@ -158,7 +158,8 @@ body{
                 content: '\f185';
                 text-shadow:none;
                 color: rgba(0, 0, 0, 0);
-                background-image: url('../../Icons/christmas-star.png');
+                filter: saturate(0);
+                background-image: url('../../Icons/star.png');
                 background-size: contain;
                 margin:0 5px 0 -15px;
                 
@@ -179,7 +180,7 @@ body{
     transform: scale(1);
   }
 .welcome{
-    background-image:linear-gradient(90deg, rgba(black,.2),rgba(black,.2),rgba(black,.2)), url('../../Icons/home.jpg');
+    background-image:linear-gradient(180deg, rgba(black,.9),rgba(black,.2),rgba(black,.2),rgba(black,.2),rgba(black,.2),rgba(black,.2)), url('../../Icons/home.jpg');
     background-size: cover;
     background-position:center;
     display: flex;
@@ -187,7 +188,8 @@ body{
     justify-content: center;
     @include desktop{
         max-height: 100vh;
-        padding: 0;
+        padding: 60px;
+        padding-top:100px;
         text-align: center;
         .home-headings{
             margin:0 auto;
