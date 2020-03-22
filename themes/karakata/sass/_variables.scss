@@ -30,15 +30,18 @@ $color__theme_magenta_gradient: linear-gradient(
 $color__theme_green: rgb(139, 141, 133);
 $color__text_black: #303030;
 $color__text_grey: #828782;
-$color_theme_green_gradient: linear-gradient(0deg, rgba(46, 150, 15, 0.299), #86a133 79%);
-$color__text_orange: #DD7E52;
+$color_theme_green_gradient: linear-gradient(
+  0deg,
+  rgba(46, 130, 11, 0.299),
+  #86a133 90%
+);
+$color__text_orange: #dd7e52;
 
 // Typography
 
 $font__main: Poppins, sans-serif;
-$font__secondary: optima, sans-serif;
-$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-$font__pre: "Courier 10 Pitch", Courier, monospace;
+$font__code: Monaco, Consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace;
+$font__pre: 'Courier 10 Pitch', Courier, monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
 
