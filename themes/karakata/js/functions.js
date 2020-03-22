@@ -16,15 +16,16 @@
             test: function() {
                 
                     // console.log(song, pos)
-                    console.log(`this is broken: ${playlist.songLength.minutes[this.position]}`)
+                    // console.log(`this is broken: ${playlist.songLength.minutes[this.position]}`)
                     console.log(playlist.songLength.minutes)
                     console.log(playlist.songLength.minutes.length)
+                    console.log(`this is the minutes test: ${playlist.songLength.minutes[0]}`)
+                    console.log(`this is the seconds test: ${playlist.songLength.minutes[0]}`)
                     // $(song).html(`${playlist.songLength.minutes[this.position]}:${playlist.songLength.seconds[this.position]}`);
                 
             },
 
             displayCurrentSong: function() {
-                console.log(`this is not: ${playlist.songLength.minutes[this.position]}`)
                 $('.minutes').html(playlist.songLength.minutes[this.position])
                 $('.seconds').html(playlist.songLength.seconds[this.position])
 
@@ -184,13 +185,9 @@
                     playlist.songURL.push( song.acf.song.url )
                     playlist.songTitle.push( song.acf.song.title )
                     songDuration( song.acf.song.id )
-                })
-                console.log(playlist.songLength.minutes, playlist.songLength.seconds)
-                
+                })  
             },
             complete: function() {
-                console.log(playlist.songLength.minutes)
-                console.log(playlist.songLength.minutes.length)
             },
 
             beforeSend: function(xhr) {
@@ -198,17 +195,22 @@
                 }
         });
 
+        
+        playlist.test();
 
         /// add song length to each song
         // let pos = 0;
-
-        // $('.song-length').each(function(pos, song) {
-        //     console.log(song, pos)
-            console.log(playlist.songLength.minutes)
-            console.log(playlist.songLength.minutes.length)
-        //     $(song).html(`${playlist.songLength.minutes[0]}:${playlist.songLength.seconds[0]}`);
-        //     // pos++
-        // })
+        $( window ).load(function() {
+            
+            $('.song-length').each(function(pos, song) {
+                console.log(song, pos)
+                console.log(playlist.songLength.minutes)
+                console.log(playlist.songLength.minutes.length)
+                
+                $(song).html(`${playlist.songLength.minutes[0]}:${playlist.songLength.seconds[0]}`);
+                // pos++
+            })
+        });
 
         // play
 
