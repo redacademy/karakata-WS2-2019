@@ -267,6 +267,10 @@ body{
     @include desktop{
         right:30px;
     }
+    #selected-page{
+        font-size: 30px;
+        transform: translatex(5px);
+    }
     a{
         text-decoration: none;
         padding: 0;
