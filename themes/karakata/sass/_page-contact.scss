@@ -132,7 +132,7 @@ input.send-email{
     width: fit-content;
     color: white;
     @include desktop{
-        color: rgba(0, 0, 0, 0.466);
+        color: rgb(0, 0, 0);
     border: 2px rgba(0, 0, 0, 0.466) solid;
     padding:12px 60px ;
 
@@ -163,7 +163,10 @@ input.send-email{
     }
 }
 .mail-result{
-    font-weight: lighter;
+    padding:30px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-weight: 100;
     font-size: 13px;
     color: rgb(255, 49, 49);
     .submited{
