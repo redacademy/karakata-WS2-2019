@@ -4,6 +4,16 @@
 
   .intro-title {
     margin: 0;
+
+    @include desktop {
+      display: none;
+    }
+  }
+}
+
+.intro-title {
+  @include desktop {
+    display: none;
   }
 }
 .avr-main {
@@ -11,24 +21,32 @@
     width: 95%;
     -ms-flex-align: center;
     align-items: center;
-    // background: linear-gradient(
-    //   90deg,
-    //   hsla(0, 0%, 100%, 0.15),
-    //   hsla(0, 0%, 100%, 0.15) 90%,
-    //   hsla(0, 0%, 100%, 0.4)
-    // );
+    order: 0;
+
     border-radius: 30px;
     height: 13vw;
     @include submenu-avr;
+
+    @include desktop {
+      text-align: -webkit-center;
+      margin-bottom: 50px;
+      margin-top: 0;
+    }
     .inner-nav-container {
       margin: 0;
       border-radius: 9.4vw;
-    }
+      background: linear-gradient(
+        90deg,
+        hsla(0, 0%, 100%, 0.15),
+        hsla(0, 0%, 100%, 0.15) 100%,
+        hsla(0, 0%, 100%, 0.4)
+      );
 
-    @include desktop {
-      width: 45%;
-      order: 1;
-      margin-top: 10vw;
+      @include desktop {
+        width: 45%;
+        order: 0;
+        margin-top: 10vw;
+      }
     }
 
     p {
@@ -40,7 +58,7 @@
       // margin: 0 10px;
       // margin-right: 10px;
       // margin-left: 10px;
-
+      // padding: 0 15px 0 15px;
       padding: 0;
     }
   }
@@ -110,6 +128,19 @@ p.view-all {
   text-align: -webkit-center;
 }
 
+.wp-block-image img {
+  width: 100vw;
+  height: auto;
+
+  @include desktop {
+    display: none;
+  }
+}
+
+img.wp-image-232 {
+  width: auto;
+  height: auto;
+}
 a.back-button {
   display: block;
   border: 3px solid white;
@@ -228,6 +259,12 @@ p.event-address-tab {
   padding: 0;
 }
 
+.farm-icon-container {
+  @include desktop {
+    display: none;
+  }
+}
+
 .inqurie-wrap {
   border: 2px solid white;
   border-radius: 50px;
@@ -235,6 +272,10 @@ p.event-address-tab {
   display: flex;
   justify-content: center;
   margin: 0 auto;
+
+  @include desktop {
+    display: none;
+  }
 }
 
 p.inqurie-text {
@@ -252,7 +293,14 @@ p.inqurie-text {
 }
 
 .farming-container {
-  padding-bottom: 50px;
+  .inner-nav-container {
+    background: linear-gradient(
+      90deg,
+      hsla(0, 0%, 100%, 0.15),
+      hsla(0, 0%, 100%, 0.15) 100%,
+      hsla(0, 0%, 75%, 0.4)
+    );
+  }
 }
 
 // for kitchen first picture
@@ -264,8 +312,17 @@ img.wp-image-245 {
 
 .wp-block-button.reserve-button.is-style-outline {
   text-align: center;
+
+  @include desktop {
+    display: none;
+  }
 }
 
+.is-style-outline {
+  @include desktop {
+    display: none;
+  }
+}
 .kitchen_nav--option {
   p {
     padding: 0px 20px 0px 20px;
@@ -276,8 +333,16 @@ img.wp-image-245 {
   font-size: 19px;
   font-weight: 300;
   line-height: 1.5;
-}
 
+  @include desktop {
+    margin: 0;
+  }
+}
+.wp-block-group.farm-img-container {
+  @include desktop {
+    display: none;
+  }
+}
 .farming-content-container {
   h2 {
     text-transform: uppercase;
@@ -288,10 +353,16 @@ a.wp-block-button__link.has-text-color {
   border: none;
 }
 
+.has-text-align-center {
+  @include desktop {
+    font-size: 25px;
+    display: flex;
+  }
+}
 .about_content--wrap {
   @include desktop {
     background-color: hsla(0, 0%, 100%, 0.5);
-    border-radius: 80px;
+    border-radius: 30px;
     padding: 20px;
     color: rgba(36, 36, 23, 0.9);
   }
@@ -326,8 +397,6 @@ p.trigger-p {
   //   @include nav-focused;
 
   @include desktop {
-    border-top-right-radius: 9.4vw;
-    border-bottom-right-radius: 9.4vw;
   }
   // }
 }
@@ -344,4 +413,19 @@ p.trigger-p {
 .menu-african-retreat-container {
   width: 100%;
   height: 100%;
+}
+
+.farming__content {
+  @include desktop {
+    background-color: hsla(0, 0%, 100%, 0.5);
+    border-radius: 30px;
+    padding: 20px;
+    color: rgba(36, 36, 23, 0.9);
+  }
+}
+
+.wp-block-image {
+  @include desktop {
+    display: none;
+  }
 }

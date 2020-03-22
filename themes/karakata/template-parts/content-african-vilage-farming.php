@@ -13,7 +13,7 @@
 </div>
 
     <div class='farming-content-container'>
-        <?php echo the_content(); ?>
+        <div class = "farming__content"><?php echo the_content(); ?></div>
 
     </div>
 </div>
