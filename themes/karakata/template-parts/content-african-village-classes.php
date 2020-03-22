@@ -5,9 +5,12 @@
         <?php the_title() ?>
     </h1>
 
-        <div class = "inner-nav classes_nav--option">
+    <div class = "inner-nav">
+    <div class = 'inner-nav-container classes_nav--option'>
+            
             <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu' => 'African Retreat' ) ); ?>
         </div>
+</div>
 
             <div class="about-content">
                 <div class = "services-provided">

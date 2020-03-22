@@ -30,7 +30,7 @@
 						<?php wp_nav_menu( array( 'menu' => 'desktop-menu' ) ); ?>
 					</nav>
 
-					<div class="contact-link-container">
+					<div class="contact-link-container <?php if(is_page("contact")){echo 'desktop-contact';}?>">
 						<a href="<?php echo get_permalink( get_page_by_path( 'contact' ) );?>">Contact</a>
 					</div>
 				</div>

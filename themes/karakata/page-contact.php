@@ -29,17 +29,17 @@ get_header(); ?>
             </div>
     <div class="contact-form">
             <form name="contactform" method="post" action="">
-                <label for="first_name">First Name *</label>
+                <label for="first_name">First Name </label>
                 
                 <input  type="text" name="first_name" maxlength="50" size="30">
-  <label for="last_name">Last Name *</label>
+  <label for="last_name">Last Name </label>
   
   <input  type="text" name="last_name" maxlength="50" size="30">
-  <label for="email">Email Address *</label>
+  <label for="email">Email Address </label>
   
   <input  type="text" name="email" maxlength="80" size="30">
 
-  <label for="comments">Message *</label>
+  <label for="comments">Message </label>
   
   <textarea class="message" name="comments" maxlength="1000" cols="25" rows="6"></textarea> <td colspan="2" style="text-align:center">
   <input class="send-email" type="submit" value="Submit">  
@@ -125,7 +125,7 @@ if(isset($_POST['email'])) {
  
  <!-- include your own success html here -->
  
- <p class="submited">Thank you for contacting us. We will be in touch with you very soon.</p>
+ < class="submited">Thank you for contacting us. We will be in touch with you very soon.</>
  
  <?php
  
