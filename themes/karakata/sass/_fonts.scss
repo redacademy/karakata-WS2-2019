@@ -22,6 +22,15 @@
   font-weight: 600;
   font-style: normal;
 }
+@font-face {
+  font-family: 'number';
+  font-style: normal;
+  src: url("../../fonts/Poppins-ExtraBold.eot");
+  src: url("../../fonts/Poppins-ExtraBold.eot?#iefix") format("embedded-opentype"),
+    url("../../fonts/Poppins-ExtraBold.woff2") format("woff2"), url("../../fonts/Poppins-ExtraBold.woff") format("woff"),
+    url("../../fonts/Poppins-ExtraBold.ttf") format("truetype");
+      unicode-range: U+30-39;
+}
 
 @font-face {
   font-family: "Poppins";
