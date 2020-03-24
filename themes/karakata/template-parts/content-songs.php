@@ -25,11 +25,14 @@
         
         if ( $the_query->have_posts() ) {
             echo '<ul class="songsList">';
+
             while ( $the_query->have_posts() ) {
-        
-                $the_query->the_post();
                 
-                echo '<li class= "song-list playicon"><span><img src="' . get_template_directory_uri() . '/Icons/Play.svg' . '"></span>' . get_field('song')['title'] . '<span class = "song-length"></span></li>';
+                $the_query->the_post();
+
+                $file = get_field('song')['id'];
+                
+                echo '<li class= "song-list playicon"><span class = "song-icon"><img src="' . get_template_directory_uri() . '/Icons/Play.svg' . '"></span><span class = "song-title">' . get_field('song')['title'] . '</span><span class = "song-length">' . wp_get_attachment_metadata($file)['length_formatted'] . '</span></li>';
             }
             echo '</ul>';
         } else {
