@@ -900,3 +900,9 @@ a {
         margin-right: 5vw;
     }
 }
+
+.main-carousel {
+    &:focus {
+        outline: none;
+    }
+}
