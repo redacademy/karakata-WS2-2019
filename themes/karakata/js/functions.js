@@ -195,22 +195,20 @@
                 }
         });
 
-        
-        playlist.test();
-
+    
         /// add song length to each song
         // let pos = 0;
-        $( window ).load(function() {
+        // $( window ).load(function() {
             
-            $('.song-length').each(function(pos, song) {
-                console.log(song, pos)
-                console.log(playlist.songLength.minutes)
-                console.log(playlist.songLength.minutes.length)
+        //     $('.song-length').each(function(pos, song) {
+        //         console.log(song, pos)
+        //         console.log(playlist.songLength.minutes)
+        //         console.log(playlist.songLength.minutes.length)
                 
-                $(song).html(`${playlist.songLength.minutes[0]}:${playlist.songLength.seconds[0]}`);
-                // pos++
-            })
-        });
+        //         $(song).html(`${playlist.songLength.minutes[0]}:${playlist.songLength.seconds[0]}`);
+        //         // pos++
+        //     })
+        // });
 
         // play
 
