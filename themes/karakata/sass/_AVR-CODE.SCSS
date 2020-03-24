@@ -11,6 +11,12 @@
   }
 }
 
+.wp-image-229 {
+  @include desktop {
+    display: none;
+  }
+}
+
 .intro-title {
   @include desktop {
     display: none;
@@ -35,12 +41,7 @@
     .inner-nav-container {
       margin: 0;
       border-radius: 9.4vw;
-      background: linear-gradient(
-        90deg,
-        hsla(0, 0%, 100%, 0.15),
-        hsla(0, 0%, 100%, 0.15) 100%,
-        hsla(0, 0%, 100%, 0.4)
-      );
+      background: linear-gradient(90deg, hsla(0, 0%, 100%, 0.15), hsla(0, 0%, 100%, 0.15) 100%, hsla(0, 0%, 100%, 0.4));
 
       @include desktop {
         width: 45%;
@@ -75,6 +76,7 @@
     line-height: 1;
     font-size: 16px;
     margin-top: 0px;
+    display: flex;
   }
 
   p {
@@ -100,15 +102,33 @@
   }
 }
 
+.service-icon-desktop {
+  @include desktop {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+  }
+}
+
 .haha123 {
   position: absolute;
   top: 0;
   left: 0;
 }
-img.wp-image-232 {
+
+//////
+.kitchen_first_picture {
   width: auto;
   height: auto;
+  @include desktop {
+    display: none;
+  }
 }
+.service-icon:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
 .service-icon {
   border: 1px solid white;
   width: 43vw;
@@ -133,39 +153,73 @@ p.section-tag {
   padding: 15px;
 }
 
-p.view-all {
-  text-align: -webkit-center;
-}
-.avr-main {
-  .wp-block-image img {
-    width: 100vw;
-    height: auto;
+// on click services-provided {
+/* grid-template-columns: auto auto auto; */
+/* display: flex;
+    flex-flow: wrap;
+    justify-content: center; */
 
-    @include desktop {
-      display: none;
-    }
+/// For kichen pictures to stretch (targetting individually)
+img.wp-image-33 {
+  width: 100vw;
+
+  @include desktop {
+    display: none;
   }
 }
 
-img.wp-image-232 {
-  width: auto;
-  height: auto;
+img.wp-image-210 {
+  width: 100vw;
+
+  @include desktop {
+    display: none;
+  }
 }
+
+img.wp-image-211 {
+  width: 100vw;
+  @include desktop {
+    display: none;
+  }
+}
+img.wp-image-251 {
+  width: 100vw;
+  @include desktop {
+    display: none;
+  }
+}
+
+img.wp-image-269 {
+  display: none;
+  @include desktop {
+    display: block;
+    width: 250px;
+    height: 250px;
+  }
+}
+///
 a.back-button {
   display: block;
   border: 3px solid white;
   border-radius: 50px;
   flex-direction: row;
   margin-left: 0;
-  margin-right: 35px;
   align-self: flex-end;
   margin-bottom: 0px;
+}
+
+.back-button:hover {
+  cursor: pointer;
 }
 
 p.view-all {
   text-align: -webkit-center;
   margin: 0;
   padding: 8px 10px 8px 8px;
+
+  @include desktop {
+    width: 18vw;
+  }
 }
 
 .meta-data-container {
@@ -194,7 +248,7 @@ p.view-all {
 
   @include desktop {
     border-radius: 50px;
-    width: 1000px;
+    width: 56vw;
   }
 }
 
@@ -293,6 +347,12 @@ p.event-address-tab {
   }
 }
 
+.farming-content-container {
+  @include desktop {
+    max-width: 69%;
+  }
+}
+
 p.inqurie-text {
   padding: 8px;
   margin: 0;
@@ -302,45 +362,20 @@ p.inqurie-text {
   letter-spacing: 0.5px;
 }
 
+.more-button {
+  @include desktop {
+    display: none;
+  }
+}
+
 .more-button:after {
-  background-image: url('../../karakata/Icons/Readmore.svg');
+  background-image: url("../../karakata/Icons/Readmore.svg");
   position: relative;
 }
 
 .farming-container {
   .inner-nav-container {
-    background: linear-gradient(
-      90deg,
-      hsla(0, 0%, 100%, 0.15),
-      hsla(0, 0%, 100%, 0.15) 100%,
-      hsla(0, 0%, 75%, 0.4)
-    );
-  }
-}
-
-// for kitchen first picture
-
-img.wp-image-245 {
-  width: auto;
-  height: auto;
-}
-
-.wp-block-button.reserve-button.is-style-outline {
-  text-align: center;
-
-  @include desktop {
-    display: none;
-  }
-}
-
-.is-style-outline {
-  @include desktop {
-    display: none;
-  }
-}
-.kitchen_nav--option {
-  p {
-    padding: 0px 20px 0px 20px;
+    background: linear-gradient(90deg, hsla(0, 0%, 100%, 0.15), hsla(0, 0%, 100%, 0.15) 100%, hsla(0, 0%, 75%, 0.4));
   }
 }
 
@@ -351,6 +386,27 @@ img.wp-image-245 {
 
   @include desktop {
     margin: 0;
+  }
+}
+
+.reserve-button {
+  @include desktop {
+    display: none;
+  }
+}
+// kitchen style
+.kara_kata_title--desktop {
+  display: none;
+  @include desktop {
+    display: inline;
+    font-size: 21px;
+  }
+}
+
+.kitchen_desktop_paragraph {
+  display: none;
+  @include desktop {
+    display: inline;
   }
 }
 .wp-block-group.farm-img-container {
@@ -408,12 +464,9 @@ p.trigger-p {
   .farming_nav--option ul li:nth-child(4) {
     @include nav-focused-avr;
   }
-  // ul li:nth-child(5) {
-  //   @include nav-focused;
 
   @include desktop {
   }
-  // }
 }
 
 .text-kitchen {
@@ -422,6 +475,11 @@ p.trigger-p {
     font-weight: 300;
     line-height: 1.5;
     padding: 0 20px 0 20px;
+
+    @include desktop {
+      font-size: 14px;
+      text-align: inherit;
+    }
   }
 }
 
@@ -438,10 +496,16 @@ p.trigger-p {
     color: rgba(36, 36, 23, 0.9);
   }
 }
-.avr-main {
-  .wp-block-image {
-    @include desktop {
-      display: none;
-    }
+
+.farming_first_picture {
+  height: auto;
+  width: auto;
+}
+/// about page
+
+h2.about_title_afr {
+  display: none;
+  @include desktop {
+    display: block;
   }
 }

@@ -14,11 +14,13 @@
 
             <div class="about-content">
                 <div class = "services-provided">
-        
+
+
                 <a class = "music-service service-icon" data-section="music">      
                 <img src="<?php echo get_template_directory_uri(); ?>/Icons/Music_White.svg" scale="0">
                     <p class = "section-tag">Music</p>    
                 </a>
+                    
 
                 <a class = "drums-service service-icon" data-section="drums">
                     <img src="<?php echo get_template_directory_uri(); ?>/Icons/Drums_White.svg" scale="0">

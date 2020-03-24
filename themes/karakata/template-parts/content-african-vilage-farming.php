@@ -13,7 +13,11 @@
 </div>
 
     <div class='farming-content-container'>
-        <div class = "farming__content"><?php echo the_content(); ?></div>
+        <div class = "farming__content">
+
+        <!-- insert img for desktop here -->
+        <?php echo the_content(); ?>
+        </div>
 
     </div>
 </div>
