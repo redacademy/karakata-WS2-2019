@@ -144,6 +144,7 @@ body{
 
     }
     p{
+        font-weight: 200;
         text-align:center;
         @include desktop{
             margin-bottom:12px ;
@@ -199,12 +200,18 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 90px;
+    font-size: 1em;
+    font-weight: 200;
+    .home-headings{
+        position: unset;
+        font-size: 2em;
+        font-weight: 600;
+    }
     @include desktop{
+        padding-top:200px;
         background-image:linear-gradient(180deg, rgba(black,.9),rgba(black,.2),rgba(black,.2),rgba(black,.2),rgba(black,.2),rgba(black,.2)), url('../../Icons/home.jpg');
-
         max-height: 100vh;
-        padding: 60px;
-        padding-top:100px;
         text-align: center;
         .home-headings{
             margin:0 auto;
