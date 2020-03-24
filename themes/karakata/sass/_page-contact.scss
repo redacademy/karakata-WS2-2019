@@ -56,7 +56,7 @@ html{
 .message{
     height:100px;
 }
-.contact-form{
+#contact-form{
     width:100%;
     padding: 30px 9px;
     display: flex;
@@ -64,17 +64,24 @@ html{
     color: white;
     height: fit-content;
     font-weight: bold;
+    #wpforms-272{
+        margin: 0;
+    }
+    .wpforms-field{
+        padding:0;
+    }
     input{
+        font-size: 12px;
         color: white;
-        margin:12px 0 ;
+        margin:20px 0 ;
         font-weight: lighter;
-        width:100%;
+        max-width:100%;
         border: 2px solid white;
         border-radius: 5px;
-        background-color: rgba(255, 255, 255, 0);
+        background: none;
         box-shadow: none;
         &:focus {  
-            color: #fff; 
+            color: #ffffff; 
             @include desktop{
                 color: unset;
             }
@@ -90,6 +97,28 @@ html{
         background-color: rgba(255, 255, 255, 0);
         box-shadow: none;        
     }
+    #wpforms-submit-272{
+        margin: 30px 0 ;
+        margin-left: 51%;
+        background: none;
+        font-weight: 300;
+        transform: translateX(-50%);
+        padding:12px 35px;
+        border: 2px white solid;
+        border-radius: 50px;
+        width: fit-content;
+        color: white;
+        @include desktop{
+            color: rgb(0, 0, 0);
+        border: 2px rgba(0, 0, 0, 0.466) solid;
+        padding:12px 60px ;
+    
+        }
+        &:hover{
+            box-shadow: none;
+    
+        }
+    }
     label{
 
         font-size: 12px;
@@ -98,6 +127,7 @@ html{
             color: rgba(0, 0, 0, 0.767);
         }
     }
+
     @include desktop{
         grid-column: 1/  2;
         grid-row: 1/2;
@@ -125,27 +155,7 @@ html{
     }
     
 }
-input.send-email{
-    margin: 30px 0 0;
-    margin-left: 51%;
-    font-weight: 300;
-    transform: translateX(-50%);
-    padding:12px 35px;
-    border: 2px white solid;
-    border-radius: 50px;
-    width: fit-content;
-    color: white;
-    @include desktop{
-        color: rgb(0, 0, 0);
-    border: 2px rgba(0, 0, 0, 0.466) solid;
-    padding:12px 60px ;
 
-    }
-    &:hover{
-        box-shadow: none;
-
-    }
-}
 .contact-ad{
     font-size: 12px;
     @include desktop{

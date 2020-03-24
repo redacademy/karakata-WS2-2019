@@ -16,7 +16,7 @@
 						echo '</nav>';				
 					echo '</div>';
 					echo '<h1>stay in touch with us!</h1>';
-					echo '<a href="#contact-page"><div class="footer-email"> <p>Email</p><i class="fa fa-paper-plane" aria-hidden="true"></i> </div></a>';
+					echo '<div class="footer-email"><form><input  type="text" placeholder="email" name="email"> <button><i class="fa fa-paper-plane" aria-hidden="true"></i><button></form></div>';
 					echo '<div class="footer-socials">';
 						echo '<i class="fab fa-instagram"></i>';
 						echo '<i class="fab fa-twitter"></i>';

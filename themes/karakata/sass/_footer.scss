@@ -45,16 +45,31 @@ footer{
     padding: 3px 10px;
     transition: all .3s ease-in-out;
     height: fit-content;
-    p{  
+    input{  
         margin:0;
+        border: 0;
+        background: none;
         display: inline-block;
+        color: inherit;
+        width: 60vw;
+        &:focus{
+            color: inherit;
+            outline: none;
+        }
     }
-    i{
+    button{
+        background: none;
+        box-shadow: none;
+        text-shadow: none;
+        border: none;
         position: absolute;
         right:10px;
         top:50%;
         transform: translateY(-50%);
         color:inherit;
+        i{
+            color: inherit;
+        }
     }
     &:hover{
         background-color: rgba(255, 255, 255, 0.767);
