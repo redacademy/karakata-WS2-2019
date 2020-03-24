@@ -3,7 +3,7 @@
     $(document).ready(function() {
     
     /////////////Media Player
-    let test2;
+    let engageTimer;
 
         let playlist = {
             position: 0,
@@ -20,13 +20,27 @@
                 elapsedUnformatted: 0,
             },
 
-            test: function () {
-                $('#audioPlayer')[0].currentTime = 30;
+            progressSet: function () {
+                $('.progress').attr('max', this.songLength.total[this.position])
+            },
+
+            progressUpdate: function () {
+                $('.progress').attr('value', this.songLength.elapsedUnformatted)
+            },
+
+            progressPush: function () {
+                this.songLength.elapsedUnformatted = $('.progress').attr('value')
+            },
+
+            progressWidth: function () {
+                let pWidth = ($('.progress').attr('value') / this.songLength.total[this.position])*100;
+                console.log($('.progress').attr('value'), this.songLength.total[this.position], pWidth)
+                $('.progress-overlay').css('width', `${pWidth}%`);
             },
 
             count: function() {
 
-                    const test = function () { 
+                    const countInner = function () { 
 
                     if (playlist.songLength.elapsedSeconds <= 58) {
                         playlist.songLength.elapsedSeconds++;
@@ -36,26 +50,37 @@
                         playlist.songLength.elapsedMinutes++;
                     }
                     playlist.songLength.elapsedUnformatted++
+                    $('.progress').attr('value', playlist.songLength.elapsedUnformatted)
                     playlist.formatted();
+                    playlist.progressWidth();
                     $('.formatted-minutes').html(playlist.songLength.emFormatted);
                     $('.formatted-seconds').html(playlist.songLength.esFormatted);
                     if (playlist.songLength.total[playlist.position] <= playlist.songLength.elapsedUnformatted) {
-                        clearInterval(test2)
+                        clearInterval(engageTimer)
                     }
                     console.log(playlist.songLength.elapsedUnformatted)
                 }
-                test2 = setInterval(test, 1000);
+                engageTimer = setInterval(countInner, 1000);
 
             },
 
             countReset: function () {
-                clearInterval(test2)
+                clearInterval(engageTimer)
                 this.songLength.elapsedMinutes = 0;
                 this.songLength.elapsedSeconds = 0;
                 this.songLength.elapsedUnformatted = 0;
                 playlist.formatted();
                 $('.formatted-minutes').html(playlist.songLength.emFormatted);
                 $('.formatted-seconds').html(playlist.songLength.esFormatted);
+            },
+
+            conversion: function () {
+                let songLengthConversion = (this.songLength.elapsedUnformatted/60);
+                let minutes = Math.floor(songLengthConversion);
+                let slc3 = (songLengthConversion % 1);
+                let seconds = Math.ceil((Math.round(slc3 * 100) /100) * 60);
+                this.songLength.elapsedMinutes =  minutes
+                this.songLength.elapsedSeconds = seconds
             },
 
             formatted: function() {
@@ -129,23 +154,24 @@
 
             playSong: function() {
                 //plays the currently selected song
-
+                clearInterval(engageTimer)
                 $('#audioPlayer')[0].src = this.songURL[this.position];
                 $('.player-title').html(this.songTitle[this.position]);
                 $('#audioPlayer')[0].load();
+                this.countReset();
+                this.progressSet();
+                this.progressWidth();
                 $('#audioPlayer')[0].play();
+                this.count();
                 this.changePlayIcon()
                 this.listPlaying();
                 this.displayCurrentSong();
-                clearInterval(test2)
-                this.countReset();
-                this.count();
             },
 
             pauseSong: function() {
                 //pauses the song
                 $('#audioPlayer')[0].pause();
-                clearInterval(test2)
+                clearInterval(engageTimer)
                 $('.stop-container').addClass('pause-container');
                 $('.pause-container').removeClass('stop-container');
 
@@ -155,7 +181,7 @@
             resumeSong: function() {
                 //resumes the song 
                 $('#audioPlayer')[0].play();
-                clearInterval(test2)
+                clearInterval(engageTimer)
                 this.count();
                 $('.pause-container').addClass('stop-container');
                 $('.stop-container').removeClass('pause-container');
@@ -167,15 +193,16 @@
                 //selects and plays next song on the playlist
 
                 $('#audioPlayer')[0].pause();
-                this.changePlayIcon()
+                this.changePlayIcon();
                 this.nextSongPos();
                 $('#audioPlayer')[0].src = this.songURL[this.position];
                 $('.player-title').html(this.songTitle[this.position]);
                 $('#audioPlayer')[0].load();
-                this.countReset()
+                this.countReset();
+                this.progressSet();
+                this.progressWidth();
                 $('#audioPlayer')[0].play();
                 this.count();
-
                 this.listStopped();
                 this.listPlaying();
                 this.displayCurrentSong();
@@ -185,15 +212,16 @@
                 //selects and plays previous song on the playlist
 
                 $('#audioPlayer')[0].pause();                   
-                this.changePlayIcon()
+                this.changePlayIcon();
                 this.prevSongPos();
                 $('#audioPlayer')[0].src = this.songURL[this.position];
                 $('.player-title').html(this.songTitle[this.position]);
                 $('#audioPlayer')[0].load();
-                this.countReset()
+                this.countReset();
+                this.progressSet();
+                this.progressWidth();
                 $('#audioPlayer')[0].play();
                 this.count();
-
                 this.listStopped();
                 this.listPlaying();
                 this.displayCurrentSong();
@@ -339,17 +367,23 @@
         //     $('.progress')
         // })
         $('.download-song').on('click', function () {
-            console.log('pre-press')
-            playlist.test()
-            console.log('post-press')
+            // console.log('pre-press')
+            // playlist.test()
+            // console.log('post-press')
         })
 
         $('.progress').on('input', function () {
-            let scrollingWidth = this.value - 1;
             $('.download-song').html(this.value);
-            $('.progress-overlay').css('width', `${scrollingWidth}%`);
-        })
+            playlist.songLength.elapsedUnformatted = this.value;
+            playlist.progressWidth();
+            playlist.conversion();
+            playlist.formatted();
+            $('#audioPlayer')[0].currentTime = playlist.songLength.elapsedUnformatted;
+    })
 
+        // test: function () {
+        //     $('#audioPlayer')[0].currentTime = 30;
+        // },
         //volume-control
 
         // $('.volume-control')

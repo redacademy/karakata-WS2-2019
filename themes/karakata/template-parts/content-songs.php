@@ -66,7 +66,7 @@
         </div>
     </div>
     <div class = "progress-bar">
-        <input type="range" min="1" max="100" value="0" class="progress">
+        <input type="range" min="1" max="0" value="0" class="progress">
         <div class = "progress-overlay"></div>
     </div>
     <div class = "playtime"><span class = "formatted-minutes">00</span>:<span class = "formatted-seconds">00</span>/<span class = "minutes">00</span>:<span class = "seconds">00</span></div>
