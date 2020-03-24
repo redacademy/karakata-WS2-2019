@@ -520,6 +520,7 @@ a {
 
     @include desktop {
         display: inline-block;
+        position: relative;
         overflow: hidden;
         background-color: darkgray;
         margin-left: 2vw;
@@ -530,12 +531,38 @@ a {
 
     .progress {
         @include desktop {
-            background-color: lightgray;
+            -webkit-appearance: none;
+            background-color: darkgray;
             height: .99vw;
-            width: .5%;
+            width: 100%;
         }
     }
 }
+
+.progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 5px;
+    height: 25px;
+    background: #fff;
+    cursor: pointer;
+  }
+  
+  .progress::-moz-range-thumb {
+    width: 5px;
+    height: 25px;
+    background: #fff;
+    cursor: pointer;
+  }
+
+  .progress-overlay {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      height: 100%;
+      width: 1%;
+      background-color: purple;
+  }
 
 .playtime {
     display: none;
@@ -900,6 +927,8 @@ a {
         margin-right: 5vw;
     }
 }
+
+//fixes the flickety outline problem
 
 .main-carousel {
     &:focus {
