@@ -23,6 +23,10 @@
   }
 }
 .avr-main {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   .inner-nav {
     width: 95%;
     -ms-flex-align: center;
@@ -132,6 +136,7 @@ p.section-tag {
     display: none;
   }
 }
+
 .service-icon:hover {
   cursor: pointer;
   opacity: 0.6;
@@ -345,6 +350,20 @@ p.desktop_text_kitchen {
   }
 }
 
+.wp-block-group .farming_desktop_barley_img {
+  display: none;
+  @include desktop {
+    display: flex;
+  }
+}
+
+.desktop_farming_para_second {
+  display: none;
+  @include desktop {
+    display: block;
+  }
+}
+
 .farming-content-container {
   @include desktop {
     max-width: 69%;
@@ -397,7 +416,6 @@ p.inqurie-text {
   @include desktop {
     display: flex;
     padding: 20px;
-    width: 600px;
   }
 }
 .reserve-button {
@@ -461,6 +479,9 @@ a.wp-block-button__link.has-text-color {
     color: rgba(36, 36, 23, 0.9);
   }
 
+  .text-kitchen .wp-block-group {
+    margin-bottom: 40px;
+  }
   @include desktop {
     p {
       display: initial;
@@ -472,6 +493,15 @@ p.trigger-p {
   font-size: 19px;
   font-weight: 300;
   line-height: 1.5;
+  margin: 20px 40px;
+}
+
+.desktop_farming_third_para {
+  display: none;
+
+  @include desktop {
+    display: block;
+  }
 }
 //// Sub-menu Bar
 .farming-container {
@@ -638,11 +668,11 @@ p.trigger-p {
     display: none;
   }
 }
-
-.farming_first_picture {
-  height: auto;
-  width: auto;
+.farming_desktop_container {
+  text-align: -webkit-center;
+  margin: 0 40px 0 40px;
 }
+
 /// about page
 
 h2.about_title_afr {
