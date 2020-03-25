@@ -9,11 +9,21 @@
 					echo '</div>';
 					echo '<h1>stay in touch with us!</h1>';
 					//echo '<div class="footer-email"><form><input  type="text" placeholder="email" name="email"> <button><i class="fa fa-paper-plane" aria-hidden="true"></i><button></form></div>';
-					echo '<div class="footer-socials">';
-						echo '<a href=""><i class="fab fa-instagram"></i></a>';
-						echo '<a href="http://www.twitter.com/Toyinirawo"><i class="fab fa-twitter"></i></a>';
-						echo '<a href="https://www.facebook.com/KaraKataAfrobeatGroupCanada"><i class="fab fa-facebook-f"></i></a>';
-						echo '<a href="https://www.youtube.com/channel/UCdIJwVgGy3N1yrbYCXgEfpw"><i class="fas fa-globe-americas"></i></a>';
+					echo '<div class="footer-socials">';?>
+ <!-- you can change you social media links here!-------------------------------------------------------------------------------------------------- -->
+
+
+
+
+<!-- instagram --><a href="">    																	<i class="fab fa-instagram"></i></a>
+<!-- twitter --><a href="http://www.twitter.com/Toyinirawo">									<i class="fab fa-twitter"></i></a>
+<!-- facebook --><a href="https://www.facebook.com/KaraKataAfrobeatGroupCanada">					<i class="fab fa-facebook-f"></i></a>
+<!-- youtube --><a href="https://www.youtube.com/channel/UCdIJwVgGy3N1yrbYCXgEfpw">				<i class="fas fa-globe-americas"></i></a>';
+
+				
+						
+<!-- ---------------------------------------------------------------------------------------------------------------- -->
+						<?php
 					echo '</div>';
 			}
 			else {

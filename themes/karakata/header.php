@@ -40,10 +40,19 @@
 					?>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 					<div class="social-media">
-					 	<a href=""><i class="fab fa-instagram"></i></a>
-						<a href="http://www.twitter.com/Toyinirawo"><i class="fab fa-twitter"></i></a>
-						<a href="https://www.facebook.com/KaraKataAfrobeatGroupCanada"><i class="fab fa-facebook-f"></i></a>
-						<a href="https://www.youtube.com/channel/UCdIJwVgGy3N1yrbYCXgEfpw"><i class="fas fa-globe-americas"></i></a>
+<!-- you can change you social media links here!-------------------------------------------------------------------------------------------------- -->
+
+
+
+
+<!-- instagram --><a href="">																<i class="fab fa-instagram"></i></a>
+<!-- instagram --><a href="http://www.twitter.com/Toyinirawo">								<i class="fab fa-twitter"></i></a>
+<!-- instagram --><a href="https://www.facebook.com/KaraKataAfrobeatGroupCanada">			<i class="fab fa-facebook-f"></i></a>
+<!-- instagram --><a href="https://www.youtube.com/channel/UCdIJwVgGy3N1yrbYCXgEfpw">		<i class="fas fa-globe-americas"></i></a>
+
+
+<!-- ---------------------------------------------------------------------------------------------------------------- -->
+
 									</div>
 					</div>
 				</div>
