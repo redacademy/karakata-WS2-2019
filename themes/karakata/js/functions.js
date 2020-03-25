@@ -263,25 +263,31 @@
         }
         
         // get playlist from server
+        console.log(window.location.pathname)
 
-        $.ajax({
-            method: 'GET',
-            url: functionVars.karakata_url + 'acf/v3/beats' ,
-            success: function (data) {
-                data.forEach((song) => {
-                    playlist.songURL.push( song.acf.song.url )
-                    playlist.songTitle.push( song.acf.song.title )
-                    songDuration( song.acf.song.id )
-                })  
-            },
-            complete: function() {
-            },
+        if (window.location.pathname === '/karakata/music/songs/') {
 
-            beforeSend: function(xhr) {
-                xhr.setRequestHeader('X-WP-Nonce', functionVars.karakata_nonce);
-                }
-        });
+            $.ajax({
+                method: 'GET',
+                url: functionVars.karakata_url + 'acf/v3/beats' ,
+                success: function (data) {
+                    data.forEach((song) => {
+                        playlist.songURL.push( song.acf.song.url )
+                        playlist.songTitle.push( song.acf.song.title )
+                        songDuration( song.acf.song.id )
+                    })  
+                },
+                complete: function() {
+                },
 
+                beforeSend: function(xhr) {
+                    xhr.setRequestHeader('X-WP-Nonce', functionVars.karakata_nonce);
+                    }
+            });
+        } 
+        else {
+            console.log('not the right page')
+        } 
         // play
 
         $('.player-controls').on('click', '.play-container', function () {
