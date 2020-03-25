@@ -42,6 +42,8 @@ ol {
 
 ul {
   list-style: disc;
+  margin: 0px;
+  padding: 0px;
 }
 
 ol {
@@ -70,4 +72,16 @@ img {
 table {
   margin: 0 0 $base__space-unit;
   width: 100%;
+}
+
+p, h1, h2, h3, h4, a, span {
+  font-family: $font__main;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }

@@ -1,3 +1,4 @@
+<!-- generates background image which is applied to main -->
 <?php $featuredimg = wp_get_attachment_image_src( get_post_thumbnail_id($page->ID), 'full' )?>
 
 

@@ -21,20 +21,24 @@
             },
 
             volumeupdate: function () {
+                //updates volume bar position based on selected volume
                 let vWidth = $('.volume').attr('value')
                 $('.volume-overlay').css('width', `${vWidth}%`);
             },
 
             progressSet: function () {
+                //sets the progress bars max value to the song length in total seconds
                 $('.progress').attr('max', this.songLength.total[this.position])
             },
 
             progressWidth: function () {
+                //adjusts the progress bar overylay width to match the time elapsed
                 let pWidth = ($('.progress').attr('value') / this.songLength.total[this.position])*100;
                 $('.progress-overlay').css('width', `${pWidth}%`);
             },
 
             count: function() {
+                // counts up on the progress timer to show what time your at in the song
 
                     const countInner = function () { 
 
@@ -61,6 +65,7 @@
             },
 
             countReset: function () {
+                //resets the progress timer to 00:00
                 clearInterval(engageTimer)
                 this.songLength.elapsedMinutes = 0;
                 this.songLength.elapsedSeconds = 0;
@@ -71,6 +76,7 @@
             },
 
             conversion: function () {
+                //converts the time from XXXseconds to XX:XX ie minutes:seconds
                 let t1 = (this.songLength.elapsedUnformatted/60);
                 let t2 = Math.floor(t1);
                 let t3 = (t1 % 1);
@@ -80,7 +86,7 @@
             },
 
             formatted: function() {
-                //seconds
+                //formats the time so that it always has 2 numbers ie adds a 0 before single numbers 12:03 or 01:06 
                 if (playlist.songLength.elapsedSeconds <= 9) {
                     let format = ('0' + playlist.songLength.elapsedSeconds).slice(-2);
                     playlist.songLength.esFormatted = format;
@@ -100,11 +106,13 @@
             },
 
             displayCurrentSong: function() {
+                //displays the current song in the media player
                 $('.minutes').html(playlist.songLength.minutes[this.position]);
                 $('.seconds').html(playlist.songLength.seconds[this.position]);
             },
 
             nextSongPos: function() {
+                //changes the position var to change which song is loaded
                 this.position++;
                 if (this.position > this.songURL.length - 1) {
                     this.position = 0;
@@ -112,6 +120,7 @@
             },
 
             prevSongPos: function() {
+                //changes the position var to change which song is loaded
                 if (this.position === 0) {
                     this.position = this.songURL.length - 1;
                 }
@@ -138,6 +147,7 @@
             },
 
             changePlayIcon: function () {
+                //changes the play/pause icon
                 if ($('.controls').hasClass('pause-container')) {
                     $('.pause-container').addClass('stop-container');
                     $('.stop-container').removeClass('pause-container');
@@ -358,14 +368,11 @@
             }
         })
 
-        ////////////////more media-player shinanigans desktop-mode engaged
+        ////////////////media-player desktop-mode
 
-        $('.download-song').on('click', function () {
-            // $('#audioPlayer')[0].volume = .3;
-        })
+        //progress bar
 
         $('.progress').on('input', function () {
-            $('.download-song').html(this.value);
             playlist.songLength.elapsedUnformatted = this.value;
             playlist.progressWidth();
             playlist.conversion();
@@ -376,15 +383,13 @@
             }
         })
 
+        // volume control
+
         $('.volume').on('input', function () {
             let vset = ($('.volume').attr('value')/100)
 
             playlist.volumeupdate()
             $('#audioPlayer')[0].volume = vset;
         })
-
-        
-
-
     });   
 })(jQuery);

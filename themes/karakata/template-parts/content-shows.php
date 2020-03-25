@@ -15,28 +15,32 @@
 
     <div class='music-event-content-container'>
         
-        <?php $args =  array(
-            'post_type' => 'event_post_type',
-            'meta_key'			=> 'event_date',
-            'orderby'			=> 'meta_value',
-            'order'				=> 'ASC',
-            'tax_query' => array(
-                array(
-                    'taxonomy' => 'show',
-                    'field'    => 'slug',
-                    'terms'    => 'event',
-                    'operator' => 'NOT EXISTS'
+        <?php 
+        
+            $args =  array(
+                'post_type' => 'event_post_type',
+                'meta_key'			=> 'event_date',
+                'orderby'			=> 'meta_value',
+                'order'				=> 'ASC',
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => 'show',
+                        'field'    => 'slug',
+                        'terms'    => 'event',
+                        'operator' => 'NOT EXISTS'
+                    ),
                 ),
-            ),
-        ); 
+            ); 
         ?>
-            <?php
+
+        <?php
 
             $the_query = new WP_Query( $args );
             
             if ( $the_query->have_posts() ) {
             
                 while ( $the_query->have_posts() ) {
+                    
                     $the_query->the_post();
                     $featured = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
 
@@ -65,12 +69,11 @@
                     echo '</div>';
                 }
             } 
-            else {
-                // no posts found
-            }
+
             wp_reset_postdata();
-            
-            ?>
+        
+        ?>
+
     </div>
 </div>
 

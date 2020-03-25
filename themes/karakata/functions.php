@@ -110,17 +110,5 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
 
 
-// CUSTOM ADMIN LOGIN HEADER LOGO
-
-
-
-function my_custom_login_logo() {
-    echo '<style type="text/css">
-	h1 a {background-image:url(http://localhost/karakata/wp-content/themes/2020/01/logo-black.png) !important; margin:0 auto;}
-	</style>';
-}
-add_filter( 'login_head', 'my_custom_login_logo' );
-
-
 
 

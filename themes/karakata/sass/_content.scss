@@ -47,3 +47,123 @@
 .bypostauthor {
 	display: block;
 }
+
+.desktop-hidden {
+    display: none;
+
+    @include desktop {
+        display: inline-block;
+    }
+}
+
+.intro-title {
+    display: flex;
+    justify-content: center;
+    padding: 6vw 0 4vw;
+    font-size: 4vw;
+    color: whitesmoke;
+    
+    @include desktop { 
+        order: 3;
+        position: absolute;
+        top: 12vw;
+        left: 45vw;
+        font-size: 2vw;
+    }
+}
+
+
+.main-content-container {
+    @include flex-c;
+    min-height: 100vh;
+    background: $color__theme_magenta;
+    background: $color__theme_magenta_gradient;
+    font-size: 5vw;
+
+    @include desktop {
+        font-size: 2vw;
+        background: linear-gradient(0deg,rgba(138,40,63,.699317),#8a283f 88%);
+    }
+}
+
+.inner-nav {
+    width: 100%;
+
+    @include desktop {
+        width: 45%;
+        order: 1;
+        margin-top: 6vw;
+    }
+
+    .inner-nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background: linear-gradient(90deg,hsla(0,0%,100%,.15),hsla(0,0%,100%,.15) 90%,hsla(0,0%,100%,.4));
+    margin-left: 5%;
+    border-radius: 9.4vw 0 0 9.4vw;
+    height: 13vw;
+    @include submenu;
+
+    @include desktop {
+        display: flex;
+        justify-content: center;
+        background: linear-gradient(90deg,hsla(0,0%,100%,.15),hsla(0,0%,100%,.15) 90%);
+        border-radius: 9.4vw;
+        margin-left: 0%;
+        height: 4vw;
+
+        a {
+            font-size: 1.5vw;
+        }
+    }
+    
+
+    }
+
+    .song-nav {
+        .menu-music-container {
+            width: 100%;
+
+            .menu {
+                padding-left: 0vw;
+
+                li:first-child {
+                    padding: 3vw 8vw;
+
+                    @include desktop {
+                        padding: 1vw 2vw;
+                    }
+                }
+            }
+        }
+        ul li:nth-child(1){
+            @include nav-focused;
+        }
+    }
+    .about-nav ul li:nth-child(2){
+        @include nav-focused;
+    }
+    .videos-nav ul li:nth-child(3){
+        @include nav-focused;
+    }
+    .gallery-nav ul li:nth-child(4){
+        @include nav-focused;
+    }
+    .shows-nav ul li:nth-child(5){
+        @include nav-focused;
+
+        @include desktop {
+            border-top-right-radius: 9.4vw;
+            border-bottom-right-radius: 9.4vw;
+        }
+    }
+}
+
+//fixes the flickety outline problem
+
+.main-carousel {
+    &:focus {
+        outline: none;
+    }
+}

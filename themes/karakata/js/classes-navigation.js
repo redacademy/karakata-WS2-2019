@@ -24,27 +24,26 @@
   });
 
   let classesPull = function (val) {
-
+    // used to generate the classes pages ticket content based in which category is selected
     $.ajax({
         method: 'GET',
         url: functionVars.karakata_url + 'acf/v3/services_post_type' ,
         success: function (data) {
-
-            data.forEach((song) => {
-              if(song.acf.category === val) {
-                $('.event-title-tab').text(song.acf.title_upper);
-                $('.event-address-tab').text(song.acf.address);
-                $('.event-ticket-tab').text(song.acf.ticket_price);
-                $('.event-text-tab').text(song.acf.text);
-              }
-            })  
+          data.forEach((song) => {
+            if(song.acf.category === val) {
+              $('.event-title-tab').text(song.acf.title_upper);
+              $('.event-address-tab').text(song.acf.address);
+              $('.event-ticket-tab').text(song.acf.ticket_price);
+              $('.event-text-tab').text(song.acf.text);
+            }
+          })  
         },
         complete: function() {
         },
 
         beforeSend: function(xhr) {
             xhr.setRequestHeader('X-WP-Nonce', functionVars.karakata_nonce);
-            }
+        }
     });
 };
 
