@@ -41,7 +41,12 @@
     .inner-nav-container {
       margin: 0;
       border-radius: 9.4vw;
-      background: linear-gradient(90deg, hsla(0, 0%, 100%, 0.15), hsla(0, 0%, 100%, 0.15) 100%, hsla(0, 0%, 100%, 0.4));
+      background: linear-gradient(
+        90deg,
+        hsla(0, 0%, 100%, 0.15),
+        hsla(0, 0%, 100%, 0.15) 100%,
+        hsla(0, 0%, 100%, 0.4)
+      );
 
       @include desktop {
         width: 45%;
@@ -135,9 +140,12 @@
   height: 36vw;
   border-radius: 17%;
   text-align: center;
-  padding: 10px;
   background-color: rgba(white, 0.5);
   padding: 20px;
+  margin: 5px;
+  display: flex;
+  place-content: center;
+  flex-direction: column;
 
   @include desktop {
     width: 19vw;
@@ -145,19 +153,9 @@
   }
 
   p {
-    margin: 0;
+    margin-top: 20px;
   }
 }
-
-p.section-tag {
-  padding: 15px;
-}
-
-// on click services-provided {
-/* grid-template-columns: auto auto auto; */
-/* display: flex;
-    flex-flow: wrap;
-    justify-content: center; */
 
 /// For kichen pictures to stretch (targetting individually)
 img.wp-image-33 {
@@ -369,13 +367,18 @@ p.inqurie-text {
 }
 
 .more-button:after {
-  background-image: url("../../karakata/Icons/Readmore.svg");
+  background-image: url('../../karakata/Icons/Readmore.svg');
   position: relative;
 }
 
 .farming-container {
   .inner-nav-container {
-    background: linear-gradient(90deg, hsla(0, 0%, 100%, 0.15), hsla(0, 0%, 100%, 0.15) 100%, hsla(0, 0%, 75%, 0.4));
+    background: linear-gradient(
+      90deg,
+      hsla(0, 0%, 100%, 0.15),
+      hsla(0, 0%, 100%, 0.15) 100%,
+      hsla(0, 0%, 75%, 0.4)
+    );
   }
 }
 
@@ -386,6 +389,8 @@ p.inqurie-text {
 
   @include desktop {
     margin: 0;
+    font-size: 14px;
+    width: 500px;
   }
 }
 
@@ -414,9 +419,11 @@ p.inqurie-text {
     display: none;
   }
 }
+
 .farming-content-container {
   h2 {
     text-transform: uppercase;
+    font-size: 21px;
   }
 }
 
@@ -490,10 +497,17 @@ p.trigger-p {
 
 .farming__content {
   @include desktop {
+    display: flex;
     background-color: hsla(0, 0%, 100%, 0.5);
     border-radius: 30px;
     padding: 20px;
     color: rgba(36, 36, 23, 0.9);
+  }
+}
+
+.wp-block-button.farming_res_btn.reserve-button.is-style-outline {
+  @include desktop {
+    display: none;
   }
 }
 
