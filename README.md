@@ -43,7 +43,7 @@ KARAKATA is the website created to educate you about the african culture.Kara-Ka
 ## contributers
 
 - Ermia Afsharian [github](https://github.com/ermia-afshaian)
-- Sorrel -?- [github](https://github.com/Sorrelljs)
+- Sorrell Sohota -?- [github](https://github.com/Sorrelljs)
 - Phillip Chadwick [github](https://github.com/smeggins)
 ## License
 
