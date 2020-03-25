@@ -45,10 +45,9 @@
 }
 .events-main{
     background-image: url('../../Icons/events_BG.png');
-    background-size: 300vh;
-    background-position-y:-27vh;
+    background-size: cover;
+    background-position-y:top;
     background-position-x:center;
-    background-attachment: fixed;
     filter:saturate(1.3);
     background-color: rgb(68, 55, 43);
     min-height: 100vh;
@@ -59,8 +58,6 @@
     padding-bottom: 90px;
     @include desktop{
     background-image: url('../../Icons/events_BG.png'); 
-        background-size: 200vh;
-        background-position-y:-22vh;
         margin-top: -80px;
         padding-bottom:0px;
         padding-top:150px ;
