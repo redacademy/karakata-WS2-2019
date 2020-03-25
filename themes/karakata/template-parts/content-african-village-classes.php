@@ -68,13 +68,13 @@
 
             <div class="service-info-box hidden music-test" data-section="music">
                 <div class = "event-information-wrap">
-                    <p class = "event-title-tab"><?php the_field( 'title_upper', 189 ); ?></p>
-                    <p class = "event-address-tab"><i class="fas fa-map-marker-alt"></i> <?php the_field( 'address', 189 ); ?></p>
-                    <p class = "event-ticket-tab"><i class="fas fa-ticket-alt ticket-rotate"></i> <?php the_field( 'ticket_price', 189  ); ?> </p>
-                    <p class = "event-text-tab"><?php the_field( 'text', 189 ); ?></p>
+                    <p class = "event-title-tab"></p>
+                    <p class = "event-address-tab"></p>
+                    <p class = "event-ticket-tab"></p>
+                    <p class = "event-text-tab"></p>
 
                     <div class = "event-information-btn">
-                        <a class = "link-more-information" href = "<?php the_field( 'button_link', 189 ); ?>" blank = "">Find out</a>
+                        <a class = "link-more-information" href = "<?php echo get_home_url() ?>" blank = "">Find out</a>
                             <i class="fas fa-angle-double-right"></i>
                     </div>
                 </div>
@@ -85,12 +85,12 @@
 
             <div class="service-info-box hidden drums-test" data-section="drums">
                 <div class = "event-information-wrap">
-                <p class = "event-title-tab"><?php the_field( 'title_upper', 192 ); ?></p>
-                    <p class = "event-address-tab"><i class="fas fa-map-marker-alt"></i> <?php the_field( 'address', 192 ); ?></p>
-                    <p class = "event-ticket-tab"><i class="fas fa-ticket-alt ticket-rotate"></i> <?php the_field( 'ticket_price', 192 ); ?> </p>
-                    <p class = "event-text-tab"><?php the_field( 'text', 192 ); ?></p>
+                <p class = "event-title-tab"></p>
+                    <p class = "event-address-tab"></p>
+                    <p class = "event-ticket-tab"></p>
+                    <p class = "event-text-tab"></p>
                     <div class = "event-information-btn">
-                        <a class = "link-more-information" href = "<?php the_field( 'button_link', 192 ); ?>" blank = "">Find out</a>
+                        <a class = "link-more-information" href = "<?php echo get_home_url() ?>" blank = "">Find out</a>
                             <i class="fas fa-angle-double-right"></i>
                     </div>
                 </div>
@@ -99,12 +99,12 @@
 
             <div class="service-info-box hidden yoga-test" data-section="yoga">
                 <div class = "event-information-wrap">
-                <p class = "event-title-tab"><?php the_field( 'title_upper', 188 ); ?></p>
-                    <p class = "event-address-tab"><i class="fas fa-map-marker-alt"></i> <?php the_field( 'address', 188 ); ?></p>
-                    <p class = "event-ticket-tab"><i class="fas fa-ticket-alt ticket-rotate"></i> <?php the_field( 'ticket_price', 188 ); ?> </p>
-                    <p class = "event-text-tab"><?php the_field( 'text', 188 ); ?></p>
+                <p class = "event-title-tab"></p>
+                    <p class = "event-address-tab"></p>
+                    <p class = "event-ticket-tab"></p>
+                    <p class = "event-text-tab"></p>
                     <div class = "event-information-btn">
-                        <a class = "link-more-information" href = "<?php the_field( 'button_link', 188 ); ?>" blank = "">Find out</a>
+                        <a class = "link-more-information" href = "<?php echo get_home_url() ?>" blank = "">Find out</a>
                             <i class="fas fa-angle-double-right"></i>
                     </div>
                 </div>
@@ -114,12 +114,12 @@
 
             <div class="service-info-box hidden meditation-test" data-section="meditation">
                 <div class = "event-information-wrap">
-                    <p class = "event-title-tab"><?php the_field( 'title_upper', 187 ); ?></p>
-                    <p class = "event-address-tab"><i class="fas fa-map-marker-alt"></i> <?php the_field( 'address', 187 ); ?></p>
-                    <p class = "event-ticket-tab"><i class="fas fa-ticket-alt ticket-rotate"></i> <?php the_field( 'ticket_price', 187 ); ?> </p>
-                    <p class = "event-text-tab"><?php the_field( 'text', 187 ); ?></p>
+                    <p class = "event-title-tab"></p>
+                    <p class = "event-address-tab"></p>
+                    <p class = "event-ticket-tab"></p>
+                    <p class = "event-text-tab"></p>
                     <div class = "event-information-btn">
-                        <a class = "link-more-information" href = "<?php the_field( 'button_link', 187 ); ?>" blank = "">Find out</a>
+                        <a class = "link-more-information" href = "<?php echo get_home_url() ?>" blank = "">Find out</a>
                             <i class="fas fa-angle-double-right"></i>
                     </div>
                 </div>
@@ -127,12 +127,12 @@
 
             <div class="service-info-box hidden cook-test" data-section="cook">
                 <div class = "event-information-wrap">
-                    <p class = "event-title-tab"><?php the_field( 'title_upper', 186 ); ?></p>
-                    <p class = "event-address-tab"><i class="fas fa-map-marker-alt"></i> <?php the_field( 'address', 186 ); ?></p>
-                    <p class = "event-ticket-tab"><i class="fas fa-ticket-alt ticket-rotate"></i> <?php the_field( 'ticket_price', 186 ); ?> </p>
-                    <p class = "event-text-tab"><?php the_field( 'text', 186 ); ?></p>
+                    <p class = "event-title-tab"></p>
+                    <p class = "event-address-tab"></p>
+                    <p class = "event-ticket-tab"></p>
+                    <p class = "event-text-tab"></p>
                     <div class = "event-information-btn">
-                        <a class = "link-more-information" href = "<?php the_field( 'button_link', 186 ); ?>" blank = "">Find out</a>
+                        <a class = "link-more-information" href = "<?php echo get_home_url() ?>" blank = "">Find out</a>
                             <i class="fas fa-angle-double-right"></i>
                     </div>
                 </div>
@@ -141,12 +141,12 @@
 
             <div class="service-info-box hidden contact-test" data-section="contact">
                 <div class = "event-information-wrap">
-                    <p class = "event-title-tab"><?php the_field( 'title_upper', 185 ); ?></p>
-                    <p class = "event-address-tab"><i class="fas fa-map-marker-alt"></i> <?php the_field( 'address', 185 ); ?></p>
-                    <p class = "event-ticket-tab"><i class="fas fa-ticket-alt ticket-rotate"></i> <?php the_field( 'ticket_price', 185 ); ?> </p>
-                    <p class = "event-text-tab"><?php the_field( 'text', 185 ); ?></p>
+                    <p class = "event-title-tab"></p>
+                    <p class = "event-address-tab"></p>
+                    <p class = "event-ticket-tab"></p>
+                    <p class = "event-text-tab"></p>
                     <div class = "event-information-btn">
-                        <a class = "link-more-information" href = "<?php the_field( 'button_link', 185 ); ?>" blank = "">Find out</a>
+                        <a class = "link-more-information" href = "<?php echo get_home_url() ?>" blank = "">Find out</a>
                             <i class="fas fa-angle-double-right"></i>
                     </div>
                     

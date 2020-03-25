@@ -263,7 +263,6 @@
         }
         
         // get playlist from server
-        console.log(window.location.pathname)
 
         if (window.location.pathname === '/karakata/music/songs/') {
 
@@ -284,10 +283,7 @@
                     xhr.setRequestHeader('X-WP-Nonce', functionVars.karakata_nonce);
                     }
             });
-        } 
-        else {
-            console.log('not the right page')
-        } 
+        }
         // play
 
         $('.player-controls').on('click', '.play-container', function () {
