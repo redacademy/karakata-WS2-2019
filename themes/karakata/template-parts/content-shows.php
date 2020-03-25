@@ -17,6 +17,9 @@
         
         <?php $args =  array(
             'post_type' => 'event_post_type',
+            'meta_key'			=> 'event_date',
+            'orderby'			=> 'meta_value',
+            'order'				=> 'ASC',
             'tax_query' => array(
                 array(
                     'taxonomy' => 'show',

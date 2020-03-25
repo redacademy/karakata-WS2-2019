@@ -31,7 +31,6 @@
 
             progressWidth: function () {
                 let pWidth = ($('.progress').attr('value') / this.songLength.total[this.position])*100;
-                console.log($('.progress').attr('value'), this.songLength.total[this.position], pWidth)
                 $('.progress-overlay').css('width', `${pWidth}%`);
             },
 
@@ -56,7 +55,6 @@
                         clearInterval(engageTimer)
                         playlist.nextSong();
                     }
-                    console.log(playlist.songLength.elapsedUnformatted)
                 }
                 engageTimer = setInterval(countInner, 1000);
 
@@ -164,7 +162,6 @@
                 this.changePlayIcon()
                 this.listPlaying();
                 this.displayCurrentSong();
-                console.log(playlist)
             },
 
             pauseSong: function() {
@@ -237,7 +234,6 @@
                 url: functionVars.karakata_url + `wp/v2/media/${id}`,
                 async: false,
                 success: function (data) {
-                    console.log(data, data.media_details.length)
                     playlist.songLength.total.push( data.media_details.length );
                     let songLengthConversion = (data.media_details.length/60);
                     let minutes = Math.floor(songLengthConversion);
@@ -279,7 +275,6 @@
                 })  
             },
             complete: function() {
-                console.log(playlist)
             },
 
             beforeSend: function(xhr) {
@@ -364,9 +359,7 @@
         ////////////////more media-player shinanigans desktop-mode engaged
 
         $('.download-song').on('click', function () {
-            console.log('pre-press')
-            $('#audioPlayer')[0].volume = .3;
-            console.log('post-press')
+            // $('#audioPlayer')[0].volume = .3;
         })
 
         $('.progress').on('input', function () {

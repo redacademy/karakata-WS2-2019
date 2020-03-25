@@ -59,6 +59,7 @@ a {
 
     @include desktop {
         font-size: 2vw;
+        background: linear-gradient(0deg,rgba(138,40,63,.699317),#8a283f 88%);
     }
 }
 
@@ -699,7 +700,7 @@ a {
 }
 
 .event-address {
-    color: lightgrey;
+    color: darkgrey;
 
     span {
         margin-right: 5vw;
@@ -731,7 +732,7 @@ a {
         color: $color__text_orange;
 
         @include desktop {
-            font-size: 2vw;
+            font-size: 1.8vw;
             margin-left: 3vw;
             margin-top: .5vw;
         }
