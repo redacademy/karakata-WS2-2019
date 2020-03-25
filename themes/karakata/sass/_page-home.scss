@@ -9,7 +9,19 @@ body{
     -ms-user-select: none;
     user-select: none;
 }
-
+.front-page-main{
+    font-family: "Poppins";
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity ;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100vh;
+    @include desktop{
+    scroll-snap-type: y mandatory ;
+        
+    }
+    
+}
 .karakata{
     position: absolute;
     display: flex;
@@ -82,15 +94,7 @@ body{
     }
     
 }
-.front-page-main{
-    font-family: "Poppins";
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    height: 100vh;
-    
-}
+
 .front-container{
     background-image: url('../../Icons/mobile-bg.JPEG');
     background-size: 120vw auto;

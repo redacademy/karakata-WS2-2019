@@ -41,6 +41,48 @@
 							<a href="../contact/" class='find-out'>Find out</a>
 						</div></div>
 					<?php
+                }while ( $the_query->have_posts() ) {
+                    $the_query->the_post();
+                    $featured = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+					?>
+					<div class="event">
+						<div class="event-image"><?php echo get_the_post_thumbnail(); ?></div>
+						<div class="event-info">
+							<div class="date"><?php echo get_field('event_date');?></div>
+							<div class="price"><?php echo get_field('price');?></div>
+							<h2 class='event-title'><?php the_title();?></h2>
+							<p class='event-address'><i class="fas fa-map-marker-alt"></i><?php echo get_field('event_address');?></p>
+							<a href="../contact/" class='find-out'>Find out</a>
+						</div></div>
+					<?php
+                }while ( $the_query->have_posts() ) {
+                    $the_query->the_post();
+                    $featured = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+					?>
+					<div class="event">
+						<div class="event-image"><?php echo get_the_post_thumbnail(); ?></div>
+						<div class="event-info">
+							<div class="date"><?php echo get_field('event_date');?></div>
+							<div class="price"><?php echo get_field('price');?></div>
+							<h2 class='event-title'><?php the_title();?></h2>
+							<p class='event-address'><i class="fas fa-map-marker-alt"></i><?php echo get_field('event_address');?></p>
+							<a href="../contact/" class='find-out'>Find out</a>
+						</div></div>
+					<?php
+                }while ( $the_query->have_posts() ) {
+                    $the_query->the_post();
+                    $featured = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+					?>
+					<div class="event">
+						<div class="event-image"><?php echo get_the_post_thumbnail(); ?></div>
+						<div class="event-info">
+							<div class="date"><?php echo get_field('event_date');?></div>
+							<div class="price"><?php echo get_field('price');?></div>
+							<h2 class='event-title'><?php the_title();?></h2>
+							<p class='event-address'><i class="fas fa-map-marker-alt"></i><?php echo get_field('event_address');?></p>
+							<a href="../contact/" class='find-out'>Find out</a>
+						</div></div>
+					<?php
                 }
             } 
             else {

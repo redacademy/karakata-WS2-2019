@@ -63,7 +63,6 @@ html{
     flex-direction: column;
     color: white;
     height: fit-content;
-    font-weight: bold;
     #wpforms-272{
         margin: 0;
     }
@@ -101,7 +100,8 @@ html{
         margin: 30px 0 ;
         margin-left: 51%;
         background: none;
-        font-weight: 300;
+        font-size: 12px;
+        font-weight: 500;
         transform: translateX(-50%);
         padding:12px 35px;
         border: 2px white solid;
@@ -109,6 +109,7 @@ html{
         width: fit-content;
         color: white;
         @include desktop{
+            
             color: rgb(0, 0, 0);
         border: 2px rgba(0, 0, 0, 0.466) solid;
         padding:12px 60px ;
@@ -119,25 +120,32 @@ html{
     
         }
     }
+    
     label{
 
         font-size: 12px;
-        font-weight: normal;
+        font-weight: 500;
+        span{
+            display: none;
+        }
         @include desktop{
-            color: rgba(0, 0, 0, 0.767);
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.541);
         }
     }
 
     @include desktop{
         grid-column: 1/  2;
         grid-row: 1/2;
-        padding: 100px 60px 0;
+        padding: 10vw 60px 3vw;
         margin: 30px 60px;
+        min-height: 40vw;
         width: unset;
         border-radius:50px ;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.952);
         color: rgba(0, 0, 0, 0.466);
         input{
+            font-size: 20px;
             margin-top:0px;
             margin-bottom: 30px;
             border: none;
@@ -146,11 +154,22 @@ html{
  
         }
         textarea{
+            font-size: 20px;
             margin:0;
             color: rgba(0, 0, 0, 0.466);
             height: 50px;
             border-bottom: 1px solid rgba(0, 0, 0, 0.466);
          
+        }
+        label{
+            font-size: calc(.5rem + .5vw);
+        }
+        .wpforms-error{
+            margin:15px 0;
+            color: red;
+        }
+        .mailcheck-suggestion{
+            color: rgba(0, 0, 0, 0.815);
         }
     }
     
