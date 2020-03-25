@@ -42,9 +42,9 @@ KARAKATA is the website created to educate you about the african culture.Kara-Ka
 * how to  work with worpress plugins and use them in backend coding;
 ## contributers
 
--Ermia Afsharian [github](https://github.com/ermia-afshaian)
--Sorrel -?- [github](https://github.com/Sorrelljs)
--Phillip Chadwick [github](https://github.com/smeggins)
+- Ermia Afsharian [github](https://github.com/ermia-afshaian)
+- Sorrel -?- [github](https://github.com/Sorrelljs)
+- Phillip Chadwick [github](https://github.com/smeggins)
 ## License
 
 The code is available under the [MIT license](LICENSE.txt).#karakata
