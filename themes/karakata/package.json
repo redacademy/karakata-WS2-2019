@@ -1,8 +1,8 @@
 {
   "name": "karakata",
   "version": "1.0.0",
-  "description": "a website",
-  "author": "Phillip Chadwick",
+  "description": "Karakata is a portal to the african village retreats many events and functions",
+  "author": "Phillip Chadwick, Sorrell Sohota, Ermia Afsharian",
   "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.26.0",
