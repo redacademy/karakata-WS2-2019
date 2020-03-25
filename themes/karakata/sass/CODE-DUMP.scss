@@ -129,8 +129,6 @@ a {
     }
     .shows-nav ul li:nth-child(5){
         @include nav-focused;
-        border-top-right-radius: 0px;
-        border-bottom-right-radius: 0px;
 
         @include desktop {
             border-top-right-radius: 9.4vw;
@@ -367,6 +365,22 @@ a {
             margin-top: 2vw;
         }
     }
+
+    .inner-nav, .menu {
+        transform: rotate(180deg);
+
+        @include desktop {
+            // transform: rotate(180deg);
+        }
+    }
+
+    .menu-music-container {
+        width: 100%;
+
+        @include desktop {
+            // width: 100%;
+        }
+    }
 }
 
 .desktop-intro {
@@ -400,7 +414,7 @@ a {
 
     @include desktop {
         display: grid;
-        grid-template-columns: 17% 4% 16% 39% 8% 11%;
+        grid-template-columns: 17% 16% 43% 8% 11%;
         justify-content: center;
         height: 8vw;
         border-top-left-radius: 0vw;
@@ -465,15 +479,6 @@ a {
     .volume-container {
         @include desktop {
             align-items: center;
-        }
-    }
-
-    .download-song {
-        display: none;
-    
-        @include desktop {
-            display: inline-block;
-            margin: 0px;
         }
     }
 }
@@ -727,7 +732,8 @@ a {
     width: 80%;
 
     .event-date {
-        font-size: 7vw;
+        font-size: 6vw;
+        margin-left: 4vw;
         text-align: center;
         color: $color__text_orange;
 

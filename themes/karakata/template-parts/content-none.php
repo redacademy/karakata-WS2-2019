@@ -1,12 +1,3 @@
-<?php
-/**
- * Template part for displaying a message that posts cannot be found.
- *
- * @package RED_Starter_Theme
- */
-
-?>
-
 <section class="no-results not-found">
 	<header class="page-header">
 		<h1 class="page-title"><?php esc_html( 'Nothing Found' ); ?></h1>

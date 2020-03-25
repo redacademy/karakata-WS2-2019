@@ -1,13 +1,4 @@
-<?php
-/**
- * The classes branch page of about.
- *
- * @package RED_Starter_Theme
- */
-?>
-
-
- <?php $featuredimg = wp_get_attachment_image_src( get_post_thumbnail_id($page->ID), 'full' )?>
+<?php $featuredimg = wp_get_attachment_image_src( get_post_thumbnail_id($page->ID), 'full' )?>
 
 
 

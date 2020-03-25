@@ -48,7 +48,6 @@
 
 <div class = "media-player">
     <h3 class = "player-title mp">Karakata Media Player<?php ?></h3>
-    <div class = "download-song mp"><a>test</a></div>
     <div class = "player-controls mp">
         <div class = "prev-container controls">
             <a class = "prev">

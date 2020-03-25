@@ -1,11 +1,4 @@
-<?php
-/**
- * The main template file.
- *
- * @package RED_Starter_Theme
- */
-
-get_header(); ?>
+<?php get_header(); ?>
 	<div id="primary" class="content-area">
 		<div class="karakata first">
 		<img class=" front-logo black-logo" src=<?php echo get_stylesheet_directory_uri() ."/Icons/logo-black.png";?> alt="logo black">
