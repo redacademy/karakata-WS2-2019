@@ -84,14 +84,17 @@
     display: flex;
   }
 
-  p {
-    padding: 5px 29px 5px 29px;
-    font-size: 15px;
-    font-weight: 300;
+  // @include desktop {
+  //   padding: 0;
+  // }
+}
 
-    @include desktop {
-      padding: 0;
-    }
+p.section-tag {
+  margin: 0;
+  font-size: 22px;
+
+  @include desktop {
+    margin: 1rem;
   }
 }
 
@@ -110,7 +113,7 @@
 .service-icon-desktop {
   @include desktop {
     display: flex;
-    flex-flow: wrap;
+    flex-flow: column;
     justify-content: center;
   }
 }
@@ -151,20 +154,9 @@
     width: 19vw;
     height: 13vw;
   }
-
-  p {
-    margin-top: 20px;
-  }
 }
 
 /// For kichen pictures to stretch (targetting individually)
-img.wp-image-33 {
-  width: 100vw;
-
-  @include desktop {
-    display: none;
-  }
-}
 
 img.wp-image-210 {
   width: 100vw;
@@ -191,8 +183,8 @@ img.wp-image-269 {
   display: none;
   @include desktop {
     display: block;
-    width: 250px;
-    height: 250px;
+    width: auto;
+    height: auto;
   }
 }
 ///
@@ -234,7 +226,7 @@ p.view-all {
 .service-info-box {
   border: 1px solid grey;
   border-radius: 10%;
-  width: 445px;
+  width: 90vw;
   height: auto;
   flex-direction: column;
   margin: 0 auto;
@@ -302,6 +294,14 @@ p.event-ticket-tab {
 p.event-address-tab {
   font-size: 24px;
   font-weight: 400;
+}
+
+p.desktop_text_kitchen {
+  display: none;
+
+  @include desktop {
+    display: block;
+  }
 }
 
 .kitchen {
@@ -390,10 +390,16 @@ p.inqurie-text {
   @include desktop {
     margin: 0;
     font-size: 14px;
-    width: 500px;
   }
 }
 
+.wp-block-group.farming_desktop_container {
+  @include desktop {
+    display: flex;
+    padding: 20px;
+    width: 600px;
+  }
+}
 .reserve-button {
   @include desktop {
     display: none;
@@ -405,6 +411,16 @@ p.inqurie-text {
   @include desktop {
     display: inline;
     font-size: 21px;
+  }
+}
+
+.wp-block-group.group_desktop_kitchen {
+  @include desktop {
+    background-color: hsla(0, 0%, 100%, 0.5);
+    border-radius: 30px;
+    padding: 20px;
+    color: rgba(36, 36, 23, 0.9);
+    padding: 20px 60px 20px 60px;
   }
 }
 
@@ -476,7 +492,119 @@ p.trigger-p {
   }
 }
 
+.class_icon_container {
+  img {
+    width: 35%;
+  }
+}
+
+#farming_1st .wp-block-group__inner-container {
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: hsla(0, 0%, 100%, 0.5);
+    border-radius: 30px;
+    color: rgba(36, 36, 23, 0.9);
+    padding: 60px;
+  }
+
+  figure {
+    @include desktop {
+      height: 15vw;
+      width: 20vw;
+      margin: 0px;
+    }
+
+    img {
+      @include desktop {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+        border-radius: 30px;
+      }
+    }
+  }
+}
+
+#farming_second .wp-block-group__inner-container {
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: hsla(0, 0%, 100%, 0.5);
+    border-radius: 30px;
+    color: rgba(36, 36, 23, 0.9);
+    padding: 60px;
+  }
+
+  figure {
+    @include desktop {
+      height: 15vw;
+      width: 20vw;
+      margin: 0px;
+    }
+    img {
+      @include desktop {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+        border-radius: 30px;
+      }
+    }
+  }
+}
+
+.kitchen_stretch_image {
+  margin: 0;
+
+  img {
+    width: 100vw;
+  }
+}
+.wp-block-image.is-resized {
+  display: none;
+  @include desktop {
+    display: flex;
+  }
+}
+#farming_third .wp-block-group__inner-container {
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: hsla(0, 0%, 100%, 0.5);
+    border-radius: 30px;
+    color: rgba(36, 36, 23, 0.9);
+    padding: 60px;
+  }
+  figure {
+    @include desktop {
+      height: 15vw;
+      width: 20vw;
+      margin: 0px;
+    }
+
+    img {
+      @include desktop {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+        border-radius: 30px;
+      }
+    }
+  }
+}
 .text-kitchen {
+  @include desktop {
+    padding: 0px 100px 0 100px;
+  }
+
+  .kitchen_stretch_image {
+    @include desktop {
+      margin: 0;
+    }
+  }
   p {
     font-size: 19px;
     font-weight: 300;
