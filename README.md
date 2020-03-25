@@ -4,7 +4,7 @@
 
 KARAKATA is the website created to educate you about the african culture.Kara-Kata Afrobeat Society of Canada is a multicultural/multiethnic group comprising African,Caucasian and asian musicians and artistic dancers/ performers. The purpose is to create a vibrant and sustainable musical and dance culture informed by the Afrobeat tradition.
 
-![karakata-image]()
+![karakata-image](karakata.png)
 
 ## Installation Instructions
 
@@ -47,4 +47,4 @@ KARAKATA is the website created to educate you about the african culture.Kara-Ka
 -Phillip Chadwick [github](https://github.com/smeggins)
 ## License
 
-The code is available under the [MIT license](LICENSE.txt).# karakata
+The code is available under the [MIT license](LICENSE.txt).#karakata
