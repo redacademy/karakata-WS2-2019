@@ -163,22 +163,27 @@ p.section-tag {
 
 /// For kichen pictures to stretch (targetting individually)
 
-img.wp-image-210 {
-  width: 100vw;
+// img.wp-image-210 {
+//   width: 100vw;
 
-  @include desktop {
-    display: none;
-  }
-}
+//   @include desktop {
+//     display: none;
+//   }
+// }
 
-img.wp-image-211 {
-  width: 100vw;
-  @include desktop {
-    display: none;
-  }
-}
-img.wp-image-251 {
-  width: 100vw;
+// img.wp-image-211 {
+//   width: 100vw;
+//   @include desktop {
+//     display: none;
+//   }
+// }
+// img.wp-image-251 {
+//   width: 100vw;
+//   @include desktop {
+//     display: none;
+//   }
+// }
+.text-kitchen .kitchen_truck_hide {
   @include desktop {
     display: none;
   }
@@ -438,7 +443,7 @@ p.inqurie-text {
     border-radius: 30px;
     padding: 20px;
     color: rgba(36, 36, 23, 0.9);
-    padding: 20px 60px 20px 60px;
+    padding: 10px 60px;
   }
 }
 
@@ -452,6 +457,20 @@ p.inqurie-text {
   @include desktop {
     display: none;
   }
+}
+
+.text-kitchen .wp-block-group {
+  margin-bottom: 40px;
+}
+
+.text-kitchen .mobile_title_only {
+  @include desktop {
+    display: none;
+  }
+}
+
+.kitchen_titles.mobile_title_only {
+  text-align: center;
 }
 
 .farming-content-container {
@@ -479,9 +498,6 @@ a.wp-block-button__link.has-text-color {
     color: rgba(36, 36, 23, 0.9);
   }
 
-  .text-kitchen .wp-block-group {
-    margin-bottom: 40px;
-  }
   @include desktop {
     p {
       display: initial;

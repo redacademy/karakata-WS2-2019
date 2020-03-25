@@ -4304,10 +4304,6 @@ a.wp-block-button__link.has-text-color {
   }
 }
 
-.about_content--wrap .text-kitchen .wp-block-group {
-  margin-bottom: 40px;
-}
-
 @media screen and (min-width: 1024px) {
   .about_content--wrap p {
     display: initial;
