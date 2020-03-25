@@ -163,26 +163,6 @@ p.section-tag {
 
 /// For kichen pictures to stretch (targetting individually)
 
-// img.wp-image-210 {
-//   width: 100vw;
-
-//   @include desktop {
-//     display: none;
-//   }
-// }
-
-// img.wp-image-211 {
-//   width: 100vw;
-//   @include desktop {
-//     display: none;
-//   }
-// }
-// img.wp-image-251 {
-//   width: 100vw;
-//   @include desktop {
-//     display: none;
-//   }
-// }
 .text-kitchen .kitchen_truck_hide {
   @include desktop {
     display: none;
@@ -641,6 +621,11 @@ p.trigger-p {
     }
   }
 }
+
+.text-kitchen .kitchen_desktop_only {
+  display: none;
+}
+
 .text-kitchen {
   @include desktop {
     padding: 0px 100px 0 100px;
