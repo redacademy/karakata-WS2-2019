@@ -398,8 +398,10 @@ a {
     border-top-right-radius: 10vw;
 
     @include desktop {
+        display: grid;
+        grid-template-columns: 17% 4% 16% 39% 8% 11%;
+        justify-content: center;
         height: 8vw;
-        flex-direction: row;
         border-top-left-radius: 0vw;
         border-top-right-radius: 0vw;
     }
@@ -411,8 +413,7 @@ a {
 
         @include desktop {
             font-size: 1.3vw;
-            margin-left: 6vw;
-            margin-top: 2vw;
+            margin: 0px;
         }
     }
 
@@ -421,8 +422,19 @@ a {
         margin-top: 3vw;
 
         @include desktop {
-            margin-left: 5vw;
-            margin-top: 0vw;
+            margin: 0px;
+
+            a {
+                width: 100%;
+            }
+        }
+
+        .play-container {
+            @include desktop {
+                width: 5vw;
+                margin: .5vw;
+                height: 5vw;
+            }
         }
 
         .controls {
@@ -434,8 +446,9 @@ a {
 
             @include desktop {
                 margin: 0vw;
-                width: 3vw;
+                width: 4vw;
                 height: unset;
+                justify-content: center;
             }
 
             a {
@@ -446,7 +459,22 @@ a {
                 width: 100%;
             }
         }
-    }   
+    }
+    
+    .volume-container {
+        @include desktop {
+            align-items: center;
+        }
+    }
+
+    .download-song {
+        display: none;
+    
+        @include desktop {
+            display: inline-block;
+            margin: 0px;
+        }
+    }
 }
 
 .play-container {
@@ -506,15 +534,6 @@ a {
     }
 }
 
-.download-song {
-    display: none;
-
-    @include desktop {
-        display: inline-block;
-        margin-left: 3vw;
-    }
-}
-
 .progress-bar {
     display: none;
 
@@ -523,9 +542,9 @@ a {
         position: relative;
         overflow: hidden;
         background-color: darkgray;
-        margin-left: 2vw;
+        margin: 0px;
         border-radius: 10vw;
-        width: 45%;
+        width: 100%;
         height: .5vw;
     }
 
@@ -542,27 +561,22 @@ a {
 .progress::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 5px;
+    width: 10px;
     height: 25px;
     background: #fff;
     cursor: pointer;
   }
   
   .progress::-moz-range-thumb {
-    width: 5px;
+    width: 10px;
     height: 25px;
     background: #fff;
     cursor: pointer;
   }
 
   .progress-overlay {
-      position: absolute;
-      pointer-events: none;
-      left: 0px;
-      top: 0px;
-      height: 100%;
-      width: 1%;
-      background-color: purple;
+    @include media-overlay;
+    width: 1%;
   }
 
 .playtime {
@@ -570,7 +584,8 @@ a {
 
     @include desktop {
         display: inline-block;
-        margin: 0vw 1vw;
+        margin: 0px;
+        color: lightgrey;
     }
 }
 
@@ -578,9 +593,53 @@ a {
     display: none;
 
     @include desktop {
-        display: inline-block;
+        display: flex;
+        align-items: center;
+        width: 5vw;
+        margin: 0px;
     }
 }
+
+.volume-icon-container {
+    @include desktop {
+        display: flex;
+        margin-right: 1vw;
+    }
+}
+
+.volume {
+    @include desktop {
+        -webkit-appearance: none;
+        background-color: darkgray;
+        height: .99vw;
+        width: 100%;
+    }
+}
+
+.volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 25px;
+    background: #fff;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+    cursor: pointer;
+  }
+  
+  .volume::-moz-range-thumb {
+    width: 10px;
+    height: 25px;
+    background: #fff;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+    cursor: pointer;
+  }
+
+  .volume-overlay {
+      @include media-overlay;
+      width: 100%;
+  }
 
 .song-length {
     display: none;
@@ -588,6 +647,11 @@ a {
     @include desktop {
         display: inline-block;
     }
+}
+
+.mp {
+    display: flex;
+    justify-content: center;
 }
 
 // shows

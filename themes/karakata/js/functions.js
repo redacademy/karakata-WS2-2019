@@ -20,16 +20,13 @@
                 elapsedUnformatted: 0,
             },
 
+            volumeupdate: function () {
+                let vWidth = $('.volume').attr('value')
+                $('.volume-overlay').css('width', `${vWidth}%`);
+            },
+
             progressSet: function () {
                 $('.progress').attr('max', this.songLength.total[this.position])
-            },
-
-            progressUpdate: function () {
-                $('.progress').attr('value', this.songLength.elapsedUnformatted)
-            },
-
-            progressPush: function () {
-                this.songLength.elapsedUnformatted = $('.progress').attr('value')
             },
 
             progressWidth: function () {
@@ -57,6 +54,7 @@
                     $('.formatted-seconds').html(playlist.songLength.esFormatted);
                     if (playlist.songLength.total[playlist.position] <= playlist.songLength.elapsedUnformatted) {
                         clearInterval(engageTimer)
+                        playlist.nextSong();
                     }
                     console.log(playlist.songLength.elapsedUnformatted)
                 }
@@ -75,12 +73,12 @@
             },
 
             conversion: function () {
-                let songLengthConversion = (this.songLength.elapsedUnformatted/60);
-                let minutes = Math.floor(songLengthConversion);
-                let slc3 = (songLengthConversion % 1);
-                let seconds = Math.ceil((Math.round(slc3 * 100) /100) * 60);
-                this.songLength.elapsedMinutes =  minutes
-                this.songLength.elapsedSeconds = seconds
+                let t1 = (this.songLength.elapsedUnformatted/60);
+                let t2 = Math.floor(t1);
+                let t3 = (t1 % 1);
+                let t4 = Math.ceil((Math.round(t3 * 100) /100) * 60);
+                this.songLength.elapsedMinutes =  t2
+                this.songLength.elapsedSeconds = t4
             },
 
             formatted: function() {
@@ -161,17 +159,18 @@
                 this.countReset();
                 this.progressSet();
                 this.progressWidth();
-                $('#audioPlayer')[0].play();
                 this.count();
+                $('#audioPlayer')[0].play();
                 this.changePlayIcon()
                 this.listPlaying();
                 this.displayCurrentSong();
+                console.log(playlist)
             },
 
             pauseSong: function() {
                 //pauses the song
-                $('#audioPlayer')[0].pause();
                 clearInterval(engageTimer)
+                $('#audioPlayer')[0].pause();
                 $('.stop-container').addClass('pause-container');
                 $('.pause-container').removeClass('stop-container');
 
@@ -180,9 +179,9 @@
 
             resumeSong: function() {
                 //resumes the song 
-                $('#audioPlayer')[0].play();
                 clearInterval(engageTimer)
                 this.count();
+                $('#audioPlayer')[0].play();
                 $('.pause-container').addClass('stop-container');
                 $('.stop-container').removeClass('pause-container');
 
@@ -201,8 +200,8 @@
                 this.countReset();
                 this.progressSet();
                 this.progressWidth();
-                $('#audioPlayer')[0].play();
                 this.count();
+                $('#audioPlayer')[0].play();
                 this.listStopped();
                 this.listPlaying();
                 this.displayCurrentSong();
@@ -220,8 +219,8 @@
                 this.countReset();
                 this.progressSet();
                 this.progressWidth();
-                $('#audioPlayer')[0].play();
                 this.count();
+                $('#audioPlayer')[0].play();
                 this.listStopped();
                 this.listPlaying();
                 this.displayCurrentSong();
@@ -235,8 +234,10 @@
 
             $.ajax({
                 method: 'GET',
-                url: functionVars.karakata_url + `wp/v2/media/${id}` ,
+                url: functionVars.karakata_url + `wp/v2/media/${id}`,
+                async: false,
                 success: function (data) {
+                    console.log(data, data.media_details.length)
                     playlist.songLength.total.push( data.media_details.length );
                     let songLengthConversion = (data.media_details.length/60);
                     let minutes = Math.floor(songLengthConversion);
@@ -278,6 +279,7 @@
                 })  
             },
             complete: function() {
+                console.log(playlist)
             },
 
             beforeSend: function(xhr) {
@@ -361,15 +363,10 @@
 
         ////////////////more media-player shinanigans desktop-mode engaged
 
-        //progress bar
-
-        // $('.progress-bar').on('click', function() {
-        //     $('.progress')
-        // })
         $('.download-song').on('click', function () {
-            // console.log('pre-press')
-            // playlist.test()
-            // console.log('post-press')
+            console.log('pre-press')
+            $('#audioPlayer')[0].volume = .3;
+            console.log('post-press')
         })
 
         $('.progress').on('input', function () {
@@ -379,14 +376,17 @@
             playlist.conversion();
             playlist.formatted();
             $('#audioPlayer')[0].currentTime = playlist.songLength.elapsedUnformatted;
-    })
+            if ($('#audioPlayer')[0].paused === true) {
+                playlist.resumeSong();
+            }
+        })
 
-        // test: function () {
-        //     $('#audioPlayer')[0].currentTime = 30;
-        // },
-        //volume-control
+        $('.volume').on('input', function () {
+            let vset = ($('.volume').attr('value')/100)
 
-        // $('.volume-control')
+            playlist.volumeupdate()
+            $('#audioPlayer')[0].volume = vset;
+        })
 
         
 
