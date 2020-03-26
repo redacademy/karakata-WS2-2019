@@ -24,8 +24,11 @@
   background-size: cover;
   .inner-nav {
     width: 95%;
+<<<<<<< Updated upstream
     display: flex;
     justify-content: center;
+=======
+>>>>>>> Stashed changes
     align-items: center;
     order: 0;
     border-radius: 30px;
@@ -57,10 +60,7 @@
     ul {
       align-items: center;
       height: 100%;
-      // margin: 0 10px;
-      // margin-right: 10px;
-      // margin-left: 10px;
-      // padding: 0 15px 0 15px;
+
       padding: 0;
     }
   }
@@ -77,9 +77,6 @@
     font-size: 16px;
     margin-top: 0px;
   }
-  // @include desktop {
-  //   padding: 0;
-  // }
 }
 p.section-tag {
   margin: 0;
@@ -114,7 +111,7 @@ p.section-tag {
 
 .about-content .trigger-sp2 {
   @include desktop {
-    justify-content: flex-start;  
+    justify-content: flex-start;
   }
 }
 
@@ -123,7 +120,6 @@ p.section-tag {
     display: flex;
     flex-flow: column;
     justify-content: center;
-    
   }
 }
 
@@ -170,7 +166,6 @@ img.wp-image-269 {
     height: auto;
   }
 }
-///
 a.back-button {
   display: block;
   border: 3px solid white;
@@ -196,7 +191,7 @@ p.view-all {
   border: 1px solid white;
   color: purple;
   background: red;
-  margin: 2rem;
+  margin: 2 rem;
 }
 .hidden {
   display: none;
@@ -210,7 +205,7 @@ p.view-all {
   width: 90vw;
   height: auto;
   flex-direction: column;
-  margin: 8vw auto;
+  margin: 5vw auto;
   align-items: center;
   justify-content: center;
   background: white;
@@ -225,21 +220,24 @@ p.view-all {
   padding: 1.5vw 11vw 0;
 
   @include desktop {
-    padding: .75vw 3.5vw 0;
+    padding: 0.75vw 3.5vw 0;
   }
 
   p {
     margin: 0px;
+    @include desktop {
+      font-size: 1.5vw;
+    }
   }
 }
 p.event-title-tab {
   font-weight: 500;
   // font-size: 30px;
-  font-size: 8vw;
+  font-size: 7vw;
   margin: 3vw 0vw;
 
   @include desktop {
-    font-size: 4vw;
+    font-size: 2.5vw;
     margin: 1.5vw 0vw;
   }
 }
@@ -262,15 +260,15 @@ i.fas.fa-map-marker-alt {
 a.link-more-information {
   color: black;
   text-decoration-line: none;
-  font-size: 5vw;
+  font-size: 4vw;
 
   @include desktop {
-    font-size: 2.5vw;
+    font-size: 1.5vw;
   }
 }
 .event-information-btn {
   text-align-last: end;
-  padding: 7px;
+  padding: 10px;
 }
 i.fas.fa-angle-double-right {
   margin-left: 5px;
@@ -283,7 +281,7 @@ p.event-ticket-tab {
   font-size: 6vw;
 
   @include desktop {
-    font-size: 3vw;
+    font-size: 2vw;
   }
 }
 
@@ -325,8 +323,9 @@ p.event-text-tab {
   margin: 3vw 0vw;
 
   @include desktop {
-    font-size: 2vw;
-    margin: 1.5vw 0vw;
+    font-size: 1vw;
+    margin: 1.5vw 0;
+    line-height: 1.5;
   }
 }
 p.desktop_text_kitchen {
