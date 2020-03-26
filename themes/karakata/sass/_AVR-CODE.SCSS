@@ -184,11 +184,10 @@ p.view-all {
 .hidden {
   display: none;
 }
-
-.hide {
+<<<<<<< Updated upstream .hide {
   display: none;
 }
-.service-info-box {
+=======>>>>>>>Stashed changes .service-info-box {
   border: 1px solid grey;
   border-radius: 10%;
   width: 90vw;
@@ -588,15 +587,6 @@ p.trigger-p {
       text-align: inherit;
     }
   }
-}
-
-.first_button_farming a.wp-block-button__link:after {
-  content: url('../../Icons/Readmore.svg');
-  background-size: cover;
-  padding: 0;
-  filter: brightness(2.5);
-  transform: deg;
-  margin: 6px;
 }
 .menu-african-retreat-container {
   width: 100%;
