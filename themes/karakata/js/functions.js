@@ -280,7 +280,10 @@
 
     // get playlist from server
 
-    if (window.location.pathname === '/karakata/music/songs/') {
+    if (
+      window.location.pathname === '/music/songs/' ||
+      window.location.pathname === '/karakata/music/songs/'
+    ) {
       $.ajax({
         method: 'GET',
         url: functionVars.karakata_url + 'acf/v3/beats',

@@ -2261,6 +2261,10 @@ body {
   display: none;
 }
 
+.flickity-viewport {
+  height: 27vw;
+}
+
 .flickity-viewport:focus {
   outline: 0;
 }
@@ -2281,7 +2285,7 @@ body {
 
 @media screen and (min-width: 1024px) {
   .songs-main-container {
-    padding-bottom: 8vw;
+    padding-bottom: 3vw;
   }
 }
 
@@ -2484,12 +2488,12 @@ body {
   }
 }
 
-.progress-bar {
+.media-player .progress-bar {
   display: none;
 }
 
 @media screen and (min-width: 1024px) {
-  .progress-bar {
+  .media-player .progress-bar {
     display: inline-block;
     position: relative;
     overflow: hidden;
@@ -2502,7 +2506,7 @@ body {
 }
 
 @media screen and (min-width: 1024px) {
-  .progress-bar .progress {
+  .media-player .progress-bar .progress {
     -webkit-appearance: none;
     background-color: darkgray;
     height: .99vw;
@@ -3708,8 +3712,8 @@ footer i {
 
 .avr-main .inner-nav {
   width: 95%;
-  -ms-flex-align: center;
   -webkit-box-align: center;
+      -ms-flex-align: center;
           align-items: center;
   -webkit-box-ordinal-group: 1;
       -ms-flex-order: 0;
@@ -4544,6 +4548,17 @@ p.trigger-p {
     font-size: 14px;
     text-align: inherit;
   }
+}
+
+.first_button_farming a.wp-block-button__link:after {
+  content: url("../../Icons/Readmore.svg");
+  background-size: cover;
+  padding: 0;
+  -webkit-filter: brightness(2.5);
+          filter: brightness(2.5);
+  -webkit-transform: deg;
+          transform: deg;
+  margin: 6px;
 }
 
 .menu-african-retreat-container {

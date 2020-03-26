@@ -24,7 +24,8 @@
   background-size: cover;
   .inner-nav {
     width: 95%;
-    -ms-flex-align: center;
+    // display: flex;
+    // justify-content: center;
     align-items: center;
     order: 0;
     border-radius: 30px;
@@ -587,6 +588,15 @@ p.trigger-p {
       text-align: inherit;
     }
   }
+}
+
+.first_button_farming a.wp-block-button__link:after {
+  content: url('../../Icons/Readmore.svg');
+  background-size: cover;
+  padding: 0;
+  filter: brightness(2.5);
+  transform: deg;
+  margin: 6px;
 }
 .menu-african-retreat-container {
   width: 100%;
