@@ -1,22 +1,18 @@
 .about-content-container {
   background: $color_theme_green_gradient;
   color: WHITESMOKE; /// for text color
-
   .intro-title {
     margin: 0;
-
     @include desktop {
       display: none;
     }
   }
 }
-
 .wp-image-229 {
   @include desktop {
     display: none;
   }
 }
-
 .intro-title {
   @include desktop {
     display: none;
@@ -26,17 +22,14 @@
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
-
   .inner-nav {
     width: 95%;
     -ms-flex-align: center;
     align-items: center;
     order: 0;
-
     border-radius: 30px;
     height: 13vw;
     @include submenu-avr;
-
     @include desktop {
       text-align: -webkit-center;
       margin-bottom: 50px;
@@ -51,14 +44,12 @@
         hsla(0, 0%, 100%, 0.15) 100%,
         hsla(0, 0%, 100%, 0.4)
       );
-
       @include desktop {
         width: 45%;
         order: 0;
         margin-top: 10vw;
       }
     }
-
     p {
       color: white;
     }
@@ -73,13 +64,11 @@
     }
   }
 }
-
 .about-content {
   margin-top: 50px;
   padding: 0 20px 0 20px;
   position: relative;
   padding-bottom: 50px;
-
   @include desktop {
     padding: 0 120px;
     line-height: 1;
@@ -87,33 +76,27 @@
     margin-top: 0px;
     display: flex;
   }
-
   // @include desktop {
   //   padding: 0;
   // }
 }
-
 p.section-tag {
   margin: 0;
   font-size: 22px;
-
   @include desktop {
     margin: 1rem;
   }
 }
-
 /////// CLASSES PAGE
 .services-provided {
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto auto;
   grid-gap: 10px;
-
   @include desktop {
     grid-template-columns: auto auto auto;
   }
 }
-
 .service-icon-desktop {
   @include desktop {
     display: flex;
@@ -121,13 +104,11 @@ p.section-tag {
     justify-content: center;
   }
 }
-
 .haha123 {
   position: absolute;
   top: 0;
   left: 0;
 }
-
 //////
 .kitchen_first_picture {
   width: auto;
@@ -136,12 +117,10 @@ p.section-tag {
     display: none;
   }
 }
-
 .service-icon:hover {
   cursor: pointer;
   opacity: 0.6;
 }
-
 .service-icon {
   border: 1px solid white;
   width: 43vw;
@@ -154,21 +133,17 @@ p.section-tag {
   display: flex;
   place-content: center;
   flex-direction: column;
-
   @include desktop {
     width: 19vw;
     height: 13vw;
   }
 }
-
 /// For kichen pictures to stretch (targetting individually)
-
 .text-kitchen .kitchen_truck_hide {
   @include desktop {
     display: none;
   }
 }
-
 img.wp-image-269 {
   display: none;
   @include desktop {
@@ -187,32 +162,31 @@ a.back-button {
   align-self: flex-end;
   margin-bottom: 0px;
 }
-
 .back-button:hover {
   cursor: pointer;
 }
-
 p.view-all {
   text-align: -webkit-center;
+  text-align: center;
   margin: 0;
   padding: 8px 10px 8px 8px;
-
   @include desktop {
-    width: 18vw;
+    width: 20vw;
   }
 }
-
 .meta-data-container {
   border: 1px solid white;
   color: purple;
   background: red;
   margin: 2rem;
 }
-
 .hidden {
   display: none;
 }
 
+.hide {
+  display: none;
+}
 .service-info-box {
   border: 1px solid grey;
   border-radius: 10%;
@@ -225,13 +199,11 @@ p.view-all {
   background: white;
   color: black;
   contain: content;
-
   @include desktop {
     border-radius: 50px;
     width: 56vw;
   }
 }
-
 .event-information-wrap {
   padding: 5px 45px 0;
 }
@@ -239,7 +211,6 @@ p.event-title-tab {
   font-weight: 500;
   font-size: 30px;
 }
-
 .ticket-rotate {
   -webkit-transition: -webkit-transform;
   -ms-transition: -ms-transform;
@@ -252,48 +223,39 @@ p.event-title-tab {
   -ms-transform: rotate(140deg);
   -webkit-transform: rotate(140deg);
 }
-
 i.fas.fa-map-marker-alt {
   color: #86a133;
   font-size: 16px;
 }
-
 a.link-more-information {
   color: black;
   text-decoration-line: none;
   font-size: 21px;
 }
-
 .event-information-btn {
   text-align-last: end;
   padding: 7px;
 }
-
 i.fas.fa-angle-double-right {
   margin-left: 5px;
   color: #86a133;
   font-size: 23px;
 }
-
 p.event-ticket-tab {
   font-size: 24px;
   font-weight: 700;
   color: gray;
 }
-
 p.event-address-tab {
   font-size: 24px;
   font-weight: 400;
 }
-
 p.desktop_text_kitchen {
   display: none;
-
   @include desktop {
     display: block;
   }
 }
-
 .kitchen {
   img {
     display: block;
@@ -305,23 +267,19 @@ p.desktop_text_kitchen {
     font-size: 25px;
     text-align-last: center;
     text-transform: uppercase;
-
     .wp-block-gallery {
       display: block;
     }
   }
 }
-
 .kitchen {
   padding: 0;
 }
-
 .farm-icon-container {
   @include desktop {
     display: none;
   }
 }
-
 .inqurie-wrap {
   border: 2px solid white;
   border-radius: 50px;
@@ -329,32 +287,27 @@ p.desktop_text_kitchen {
   display: flex;
   justify-content: center;
   margin: 0 auto;
-
   @include desktop {
     display: none;
   }
 }
-
 .wp-block-group .farming_desktop_barley_img {
   display: none;
   @include desktop {
     display: flex;
   }
 }
-
 .desktop_farming_para_second {
   display: none;
   @include desktop {
     display: block;
   }
 }
-
 .farming-content-container {
   @include desktop {
     max-width: 69%;
   }
 }
-
 p.inqurie-text {
   padding: 8px;
   margin: 0;
@@ -363,18 +316,15 @@ p.inqurie-text {
   font-weight: 500;
   letter-spacing: 0.5px;
 }
-
 .more-button {
   @include desktop {
     display: none;
   }
 }
-
 .more-button:after {
   background-image: url('../../karakata/Icons/Readmore.svg');
   position: relative;
 }
-
 .farming-container {
   .inner-nav-container {
     background: linear-gradient(
@@ -385,18 +335,15 @@ p.inqurie-text {
     );
   }
 }
-
 .farming-main p {
   font-size: 19px;
   font-weight: 300;
   line-height: 1.5;
-
   @include desktop {
     margin: 0;
     font-size: 14px;
   }
 }
-
 .wp-block-group.farming_desktop_container {
   @include desktop {
     display: flex;
@@ -416,7 +363,6 @@ p.inqurie-text {
     font-size: 21px;
   }
 }
-
 .wp-block-group.group_desktop_kitchen {
   @include desktop {
     background-color: hsla(0, 0%, 100%, 0.5);
@@ -426,7 +372,6 @@ p.inqurie-text {
     padding: 10px 60px;
   }
 }
-
 .kitchen_desktop_paragraph {
   display: none;
   @include desktop {
@@ -438,32 +383,26 @@ p.inqurie-text {
     display: none;
   }
 }
-
 .text-kitchen .wp-block-group {
   margin-bottom: 40px;
 }
-
 .text-kitchen .mobile_title_only {
   @include desktop {
     display: none;
   }
 }
-
 .kitchen_titles.mobile_title_only {
   text-align: center;
 }
-
 .farming-content-container {
   h2 {
     text-transform: uppercase;
     font-size: 21px;
   }
 }
-
 a.wp-block-button__link.has-text-color {
   border: none;
 }
-
 .has-text-align-center {
   @include desktop {
     font-size: 20px;
@@ -477,7 +416,6 @@ a.wp-block-button__link.has-text-color {
     padding: 20px;
     color: rgba(36, 36, 23, 0.9);
   }
-
   @include desktop {
     p {
       display: initial;
@@ -491,10 +429,8 @@ p.trigger-p {
   line-height: 1.5;
   margin: 20px 40px;
 }
-
 .desktop_farming_third_para {
   display: none;
-
   @include desktop {
     display: block;
   }
@@ -513,73 +449,68 @@ p.trigger-p {
   .farming_nav--option ul li:nth-child(4) {
     @include nav-focused-avr;
   }
-
   @include desktop {
   }
 }
-
 .class_icon_container {
   img {
     width: 35%;
   }
 }
-
-
-.wp-block-group.group_desktop_kitchen{
+.wp-block-group.group_desktop_kitchen {
   background: none;
-  @include desktop{
-  padding: 0 ;
-  .wp-block-group__inner-container{
-  display: inline-block;
-  margin: 0;
-}}}
+  @include desktop {
+    padding: 0;
+    .wp-block-group__inner-container {
+      display: inline-block;
+      margin: 0;
+    }
+  }
+}
 .text-kitchen .wp-block-group__inner-container {
-  .kitchen_desktop_only{
+  .kitchen_desktop_only {
     display: none;
-    @include desktop{
+    @include desktop {
       display: inline-block;
     }
   }
   @include desktop {
     display: grid;
-    grid-template-rows:1fr auto 1fr ;
-    gap:30px;
+    grid-template-rows: 1fr auto 1fr;
+    gap: 30px;
     background-color: hsla(0, 0%, 100%, 0.5);
     border-radius: 30px;
     color: rgba(36, 36, 23, 0.9);
     padding: 40px;
-    h2{
+    h2 {
       margin: 0;
       padding-left: 34px;
       text-align: center;
     }
-    
   }
-  .order-here{
+  .order-here {
     color: black;
     border: 1px solid black;
     border-radius: 50px;
     font-weight: 600;
     padding: 10px 35px;
     grid-row: 3/-1;
-    grid-column: 1/span 3;
-    font-size: calc(.5rem + .5vw);
-    height:fit-content;
-    margin:0 auto;
+    grid-column: 1 / span 3;
+    font-size: calc(0.5rem + 0.5vw);
+    height: fit-content;
+    margin: 0 auto;
   }
-
   figure {
     @include desktop {
       height: 18vw;
       width: 25vw;
       margin: 0px;
-      grid-row:2/ 3 ;
-      &:hover{
+      grid-row: 2/ 3;
+      &:hover {
         transform: scale(1.1);
         transition: transform 1s ease;
       }
     }
-
     img {
       @include desktop {
         width: 100%;
@@ -590,38 +521,37 @@ p.trigger-p {
     }
   }
 }
-.farming-content-container{
-  .wp-block-group{
-    @include desktop{
-    margin: 0;
-  }}
- .wp-block-group__inner-container {
-  @include desktop {
-    display: grid;
-    grid-template-columns: 5fr 4fr;
-    .wp-block-group__inner-container{
-      display: block;
-      text-align: left;
-      padding-right: 20px;
-      p{
-        font-size: calc(.4rem + .5vw);
+.farming-content-container {
+  .wp-block-group {
+    @include desktop {
+      margin: 0;
+    }
+  }
+  .wp-block-group__inner-container {
+    @include desktop {
+      display: grid;
+      grid-template-columns: 5fr 4fr;
+      .wp-block-group__inner-container {
+        display: block;
         text-align: left;
-        padding:10px 0;
-        font-weight: 400;
+        padding-right: 20px;
+        p {
+          font-size: calc(0.4rem + 0.5vw);
+          text-align: left;
+          padding: 10px 0;
+          font-weight: 400;
+        }
+      }
+      figure {
+        margin: 10px;
+        width: 25vw;
+        height: 25vw;
       }
     }
-    figure{
-      margin:10px;
-      width: 25vw;
-      height: 25vw;
-    }
-}}}
-
-
-
+  }
+}
 .kitchen_stretch_image {
   margin: 0;
-
   img {
     width: 100vw;
   }
@@ -632,18 +562,16 @@ p.trigger-p {
     display: flex;
   }
 }
-.order-here{
+.order-here {
   display: none;
-  @include desktop{
+  @include desktop {
     display: inline-block;
   }
 }
-
 .text-kitchen {
   @include desktop {
     padding: 0px 100px 0 100px;
   }
-
   .kitchen_stretch_image {
     @include desktop {
       margin: 0;
@@ -654,19 +582,16 @@ p.trigger-p {
     font-weight: 300;
     line-height: 1.5;
     padding: 0 20px 0 20px;
-
     @include desktop {
       font-size: 14px;
       text-align: inherit;
     }
   }
 }
-
 .menu-african-retreat-container {
   width: 100%;
   height: 100%;
 }
-
 .farming__content {
   @include desktop {
     display: flex;
@@ -676,7 +601,6 @@ p.trigger-p {
     color: rgba(36, 36, 23, 0.9);
   }
 }
-
 .wp-block-button.farming_res_btn.reserve-button.is-style-outline {
   @include desktop {
     display: none;
@@ -686,9 +610,7 @@ p.trigger-p {
   text-align: -webkit-center;
   margin: 0 40px 0 40px;
 }
-
 /// about page
-
 h2.about_title_afr {
   display: none;
   @include desktop {
