@@ -524,15 +524,48 @@ p.trigger-p {
   }
 }
 
-#farming_1st .wp-block-group__inner-container {
+
+.wp-block-group.group_desktop_kitchen{
+  background: none;
+  @include desktop{
+  padding: 0 ;
+  .wp-block-group__inner-container{
+  display: inline-block;
+  margin: 0;
+}}}
+.wp-block-group__inner-container {
+  .kitchen_desktop_only{
+    display: none;
+    @include desktop{
+      display: inline-block;
+    }
+  }
   @include desktop {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    display: grid;
+    grid-template-rows:1fr auto 1fr ;
+    gap:30px;
     background-color: hsla(0, 0%, 100%, 0.5);
     border-radius: 30px;
     color: rgba(36, 36, 23, 0.9);
-    padding: 60px;
+    padding: 40px;
+    h2{
+      margin: 0;
+      padding-left: 35px;
+      text-align: center;
+    }
+    
+  }
+  .order-here{
+    color: black;
+    border: 1px solid black;
+    border-radius: 50px;
+    font-weight: 600;
+    padding: 10px 35px;
+    grid-row: 3/-1;
+    grid-column: 1/span 3;
+    font-size: calc(.5rem + .5vw);
+    height:fit-content;
+    margin:0 auto;
   }
 
   figure {
@@ -540,6 +573,11 @@ p.trigger-p {
       height: 15vw;
       width: 20vw;
       margin: 0px;
+      grid-row:2/ 3 ;
+      &:hover{
+        transform: scale(1.1);
+        transition: transform 1s ease;
+      }
     }
 
     img {
@@ -552,34 +590,28 @@ p.trigger-p {
     }
   }
 }
-
-#farming_second .wp-block-group__inner-container {
+.farming__content .wp-block-group__inner-container {
   @include desktop {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: hsla(0, 0%, 100%, 0.5);
-    border-radius: 30px;
-    color: rgba(36, 36, 23, 0.9);
-    padding: 60px;
-  }
-
-  figure {
-    @include desktop {
-      height: 15vw;
-      width: 20vw;
-      margin: 0px;
-    }
-    img {
-      @include desktop {
-        width: 100%;
-        object-fit: cover;
-        height: 100%;
-        border-radius: 30px;
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    .wp-block-group__inner-container{
+      display: block;
+      text-align: left;
+      padding-right: 20px;
+      p{
+        text-align: left;
+        padding:10px 0;
+        font-weight: 400;
       }
     }
-  }
-}
+    figure{
+      margin:10px;
+      width: 25vw;
+      height: 25vw;
+    }
+  }}
+
+
 
 .kitchen_stretch_image {
   margin: 0;
@@ -594,36 +626,11 @@ p.trigger-p {
     display: flex;
   }
 }
-#farming_third .wp-block-group__inner-container {
-  @include desktop {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: hsla(0, 0%, 100%, 0.5);
-    border-radius: 30px;
-    color: rgba(36, 36, 23, 0.9);
-    padding: 60px;
-  }
-  figure {
-    @include desktop {
-      height: 15vw;
-      width: 20vw;
-      margin: 0px;
-    }
-
-    img {
-      @include desktop {
-        width: 100%;
-        object-fit: cover;
-        height: 100%;
-        border-radius: 30px;
-      }
-    }
-  }
-}
-
-.text-kitchen .kitchen_desktop_only {
+.order-here{
   display: none;
+  @include desktop{
+    display: inline-block;
+  }
 }
 
 .text-kitchen {
