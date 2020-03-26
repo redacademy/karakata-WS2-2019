@@ -23,8 +23,6 @@
     $('.services-provided').removeClass('trigger-sp2')
   });
 
-  console.log(functionVars.karakata_home_url)
-
   let classesPull = function (val, card) {
     // used to generate the classes pages ticket content based in which category is selected
     if($(card).hasClass('triggered-c') === false) {

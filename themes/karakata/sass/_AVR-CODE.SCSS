@@ -104,6 +104,11 @@ p.section-tag {
 .farming-container .trigger-sp1 {
   @include desktop {
     grid-template-columns: 1fr 3fr;
+    justify-items: center;
+
+    .back-button {
+      margin-top: 5vw;
+    }
   }
 }
 
@@ -184,7 +189,7 @@ p.view-all {
   margin: 0;
   padding: 8px 10px 8px 8px;
   @include desktop {
-    width: 20vw;
+    width: 15vw;
   }
 }
 .meta-data-container {
@@ -220,7 +225,7 @@ p.view-all {
   padding: 1.5vw 11vw 0;
 
   @include desktop {
-    padding: .75vw 5.5vw 0;
+    padding: .75vw 3.5vw 0;
   }
 
   p {

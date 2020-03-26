@@ -8,7 +8,6 @@
       return ((elemBottom >= docViewTop) && (elemTop < docViewBottom) );
       }
       $('#arrow-down').click(function() {    
-            console.log(isScrolledIntoView('#1'));
             
             if(isScrolledIntoView('#1')){
                   window.location.href = "#2";
@@ -21,7 +20,7 @@
             } else if(isScrolledIntoView('#5')){
                   window.location.href = "#6";
             } else if(isScrolledIntoView('#6')){
-                  console.log(isScrolledIntoView('#6'));
+                  (isScrolledIntoView('#6'));
                   window.location.href = "#1";
             }  
       });
