@@ -273,17 +273,14 @@
         }
         
         // get playlist from server
-        console.log(window.location.pathname)
 
-
-        if (window.location.pathname === '/karakata/music/songs/') {
-            console.log('correct page')
+        
+        if (window.location.pathname === '/music/songs/' || window.location.pathname === '/karakata/music/songs/') {
 
             $.ajax({
                 method: 'GET',
                 url: functionVars.karakata_url + 'acf/v3/beats' ,
                 success: function (data) {
-                    console.log('inside the ajax')
                     data.forEach((song) => {
                         playlist.songURL.push( song.acf.song.url )
                         playlist.songTitle.push( song.acf.song.title )
@@ -297,8 +294,6 @@
                     xhr.setRequestHeader('X-WP-Nonce', functionVars.karakata_nonce);
                     }
             });
-        }else {
-            console.log('wrong paage')
         }
         // play
 
