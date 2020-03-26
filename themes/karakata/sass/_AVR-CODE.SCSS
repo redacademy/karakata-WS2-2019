@@ -533,7 +533,7 @@ p.trigger-p {
   display: inline-block;
   margin: 0;
 }}}
-.wp-block-group__inner-container {
+.text-kitchen .wp-block-group__inner-container {
   .kitchen_desktop_only{
     display: none;
     @include desktop{
@@ -550,7 +550,7 @@ p.trigger-p {
     padding: 40px;
     h2{
       margin: 0;
-      padding-left: 35px;
+      padding-left: 34px;
       text-align: center;
     }
     
@@ -590,7 +590,12 @@ p.trigger-p {
     }
   }
 }
-.farming__content .wp-block-group__inner-container {
+.farming-content-container{
+  .wp-block-group{
+    @include desktop{
+    margin: 0;
+  }}
+ .wp-block-group__inner-container {
   @include desktop {
     display: grid;
     grid-template-columns: 5fr 4fr;
@@ -599,6 +604,7 @@ p.trigger-p {
       text-align: left;
       padding-right: 20px;
       p{
+        font-size: calc(.4rem + .5vw);
         text-align: left;
         padding:10px 0;
         font-weight: 400;
@@ -609,7 +615,7 @@ p.trigger-p {
       width: 25vw;
       height: 25vw;
     }
-  }}
+  }}}
 
 
 
