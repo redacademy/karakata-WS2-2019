@@ -376,7 +376,7 @@
 
     $('.more-button').on('click', function() {
       if ($('.trigger-p').hasClass('hidden')) {
-        $('.hidden').removeClass('hidden');
+        $('.trigger-p').removeClass('hidden');
       } else {
         $('.trigger-p').addClass('hidden');
       }

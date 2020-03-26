@@ -24,17 +24,14 @@
   background-size: cover;
   .inner-nav {
     width: 95%;
-<<<<<<< Updated upstream
-    display: flex;
-    justify-content: center;
-=======
->>>>>>> Stashed changes
     align-items: center;
     order: 0;
     border-radius: 30px;
     height: 13vw;
     @include submenu-avr;
     @include desktop {
+      display: flex;
+      justify-content: center;
       text-align: -webkit-center;
       margin-bottom: 50px;
       margin-top: 0;
