@@ -35,6 +35,7 @@
       $.ajax({
           method: 'GET',
           url: functionVars.karakata_url + 'acf/v3/services_post_type' ,
+          async: false,
           success: function (data) {
             data.forEach((song) => {
               if(song.acf.category === val) {
