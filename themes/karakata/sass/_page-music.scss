@@ -286,6 +286,14 @@
     }
 }
 
+.sd {
+    display: none;
+
+    @include desktop {
+        display: flex
+    }
+}
+
 .mp {
     display: flex;
     justify-content: center;

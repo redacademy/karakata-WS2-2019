@@ -61,12 +61,12 @@
             </a>
         </div>
     </div>
-    <div class = "progress-bar mp">
+    <div class = "progress-bar mp sd">
         <input type="range" min="1" max="0" value="0" class="progress">
         <div class = "progress-overlay"></div>
     </div>
-    <div class = "playtime mp"><span class = "formatted-minutes">00</span>:<span class = "formatted-seconds">00</span>/<span class = "minutes">00</span>:<span class = "seconds">00</span></div>
-    <div class = "volume-container mp">
+    <div class = "playtime mp sd"><span class = "formatted-minutes">00</span>:<span class = "formatted-seconds">00</span>/<span class = "minutes">00</span>:<span class = "seconds">00</span></div>
+    <div class = "volume-container mp sd">
         <div class = "volume-icon-container">
             <img class="volume-icon" src = "<?php echo get_template_directory_uri() . '/Icons/Volume.svg' ?>">
         </div>
