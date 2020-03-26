@@ -276,6 +276,7 @@
 
         if (window.location.pathname === '/karakata/music/songs/') {
             console.log('correct page')
+            console.log(window.location.pathname)
 
             $.ajax({
                 method: 'GET',
