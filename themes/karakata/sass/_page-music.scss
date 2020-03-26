@@ -4,7 +4,7 @@
     padding-bottom: 45vw;
 
     @include desktop {
-        padding-bottom: 8vw;
+        padding-bottom: 3vw;
     }
 
     .music-content-container {
@@ -171,7 +171,7 @@
     }
 }
 
-.progress-bar {
+.media-player .progress-bar {
     display: none;
 
     @include desktop {
