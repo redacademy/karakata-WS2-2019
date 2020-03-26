@@ -71,11 +71,11 @@
   position: relative;
   padding-bottom: 50px;
   @include desktop {
+    display: grid;
     padding: 0 120px;
     line-height: 1;
     font-size: 16px;
     margin-top: 0px;
-    display: flex;
   }
   // @include desktop {
   //   padding: 0;
@@ -83,9 +83,11 @@
 }
 p.section-tag {
   margin: 0;
-  font-size: 22px;
+  font-size: 4vw;
+
   @include desktop {
     margin: 1rem;
+    font-size: 2vw;
   }
 }
 /////// CLASSES PAGE
@@ -98,13 +100,28 @@ p.section-tag {
     grid-template-columns: auto auto auto;
   }
 }
+
+.farming-container .trigger-sp1 {
+  @include desktop {
+    grid-template-columns: 1fr 3fr;
+  }
+}
+
+.about-content .trigger-sp2 {
+  @include desktop {
+    justify-content: flex-start;  
+  }
+}
+
 .service-icon-desktop {
   @include desktop {
     display: flex;
     flex-flow: column;
     justify-content: center;
+    
   }
 }
+
 .haha123 {
   position: absolute;
   top: 0;
@@ -127,15 +144,10 @@ p.section-tag {
   width: 43vw;
   height: 36vw;
   border-radius: 17%;
-  text-align: center;
   background-color: rgba(white, 0.5);
-  padding: 20px;
   margin: 5px;
-  display: flex;
-  place-content: center;
-  flex-direction: column;
   @include desktop {
-    width: 19vw;
+    width: 15vw;
     height: 13vw;
   }
 }
@@ -193,7 +205,7 @@ p.view-all {
   width: 90vw;
   height: auto;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 8vw auto;
   align-items: center;
   justify-content: center;
   background: white;
@@ -205,11 +217,26 @@ p.view-all {
   }
 }
 .event-information-wrap {
-  padding: 5px 45px 0;
+  padding: 1.5vw 11vw 0;
+
+  @include desktop {
+    padding: .75vw 5.5vw 0;
+  }
+
+  p {
+    margin: 0px;
+  }
 }
 p.event-title-tab {
   font-weight: 500;
-  font-size: 30px;
+  // font-size: 30px;
+  font-size: 8vw;
+  margin: 3vw 0vw;
+
+  @include desktop {
+    font-size: 4vw;
+    margin: 1.5vw 0vw;
+  }
 }
 .ticket-rotate {
   -webkit-transition: -webkit-transform;
@@ -230,7 +257,11 @@ i.fas.fa-map-marker-alt {
 a.link-more-information {
   color: black;
   text-decoration-line: none;
-  font-size: 21px;
+  font-size: 5vw;
+
+  @include desktop {
+    font-size: 2.5vw;
+  }
 }
 .event-information-btn {
   text-align-last: end;
@@ -242,13 +273,56 @@ i.fas.fa-angle-double-right {
   font-size: 23px;
 }
 p.event-ticket-tab {
-  font-size: 24px;
+  // font-size: 24px;
   font-weight: 700;
-  color: gray;
+  font-size: 6vw;
+
+  @include desktop {
+    font-size: 3vw;
+  }
 }
-p.event-address-tab {
-  font-size: 24px;
+
+.event-address-tab {
+  display: flex;
+  align-items: center;
+  color: darkgray;
   font-weight: 400;
+  font-size: 5vw;
+  margin-bottom: 2vw;
+
+  @include desktop {
+    font-size: 2.5vw;
+    margin-bottom: 1vw;
+  }
+}
+
+.class-address {
+  display: flex;
+  width: 3vw;
+  height: 5vw;
+  margin-right: 4vw;
+
+  @include desktop {
+    width: 1.5vw;
+    height: 2.5vw;
+    margin-right: 2vw;
+  }
+
+  img {
+    @include desktop {
+      width: 100%;
+    }
+  }
+}
+
+p.event-text-tab {
+  font-size: 4vw;
+  margin: 3vw 0vw;
+
+  @include desktop {
+    font-size: 2vw;
+    margin: 1.5vw 0vw;
+  }
 }
 p.desktop_text_kitchen {
   display: none;
@@ -443,18 +517,29 @@ p.trigger-p {
   .classes_nav--option ul li:nth-child(2) {
     @include nav-focused-avr;
   }
-  .kitchen_nav--option ul li:nth-child(3) {
+  .farming_nav--option ul li:nth-child(3) {
     @include nav-focused-avr;
   }
-  .farming_nav--option ul li:nth-child(4) {
+  .kitchen_nav--option ul li:nth-child(4) {
     @include nav-focused-avr;
   }
   @include desktop {
   }
 }
 .class_icon_container {
+  height: 100%;
+  width: 100%;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    margin: 0px;
+  }
   img {
     width: 35%;
+    height: 35%;
   }
 }
 .wp-block-group.group_desktop_kitchen {

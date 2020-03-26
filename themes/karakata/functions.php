@@ -95,6 +95,7 @@ function red_starter_scripts() {
 		'karakata_url' => esc_url_raw( rest_url() ),
 		'karakata_nonce' => wp_create_nonce( 'wp_rest' ),
 		'karakata_template_path' => get_template_directory_uri(),
+		'karakata_home_url' => get_home_url(),
 	) );
 }
 add_action( 'wp_enqueue_scripts', 'red_starter_scripts' );
