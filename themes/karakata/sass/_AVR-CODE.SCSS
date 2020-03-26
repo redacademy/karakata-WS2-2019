@@ -570,8 +570,8 @@ p.trigger-p {
 
   figure {
     @include desktop {
-      height: 15vw;
-      width: 20vw;
+      height: 18vw;
+      width: 25vw;
       margin: 0px;
       grid-row:2/ 3 ;
       &:hover{
@@ -615,7 +615,7 @@ p.trigger-p {
       width: 25vw;
       height: 25vw;
     }
-  }}}
+}}}
 
 
 
