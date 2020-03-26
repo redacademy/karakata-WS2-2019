@@ -31,6 +31,7 @@ access_log
 # ========================================================== #
 plugins/*
 !plugins/karakara-functionality/
+!plugins/login-customizer-css/
 
 # Ignore everything in "themes" except the active theme. #
 # ====================================================== #
