@@ -40,6 +40,8 @@
 					?>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 					<div class="social-media">
+
+					
 <!-- you can change you social media links here!-------------------------------------------------------------------------------------------------- -->
 
 
