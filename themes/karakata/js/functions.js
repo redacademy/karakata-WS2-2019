@@ -375,10 +375,10 @@
     /////////////////FARMING
 
     $('.more-button').on('click', function() {
-      if ($('.trigger-p').hasClass('hidden')) {
-        $('.trigger-p').removeClass('hidden');
+      if ($('.trigger-p').hasClass('hide')) {
+        $('.trigger-p').removeClass('hide');
       } else {
-        $('.trigger-p').addClass('hidden');
+        $('.trigger-p').addClass('hide');
       }
     });
 
